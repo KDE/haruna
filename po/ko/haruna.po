@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-11-02 00:53+0000\n"
+"POT-Creation-Date: 2026-11-04 01:01+0000\n"
 "PO-Revision-Date: 2026-10-05 22:28+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -63,6 +63,14 @@ msgstr "개발자"
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "다기능 명령행 오디오/비디오 다운로더"
 
+#: src/Database/database.cpp:83
+#, kde-format
+msgid ""
+"Using memory database since database version (%1) of the application is "
+"lower than the version of the database file (%2). Changes are not persisted. "
+"Either update to the latest version of delete/rename the database file (%3)."
+msgstr ""
+
 #: src/lockmanager.cpp:49
 #, kde-format
 msgctxt "@info reason for blocking sleep and screen locking"
@@ -112,60 +120,137 @@ msgid "Settings"
 msgstr "설정"
 
 #: src/models/actionsmodel.cpp:80
+#, fuzzy, kde-format
+#| msgid "Haruna Settings"
+msgctxt "@action"
+msgid "Open General Settings"
+msgstr "Haruna 설정"
+
+#: src/models/actionsmodel.cpp:88
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Settings"
+msgctxt "@action"
+msgid "Open Osd Settings"
+msgstr "설정"
+
+#: src/models/actionsmodel.cpp:96
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Open Playlist"
+msgctxt "@action"
+msgid "Open Playback Settings"
+msgstr "재생 목록 열기"
+
+#: src/models/actionsmodel.cpp:104
+#, kde-format
+msgctxt "@action"
+msgid "Open Video Settings"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:112
+#, kde-format
+msgctxt "@action"
+msgid "Open Audio Settings"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:120
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitles on"
+msgctxt "@action"
+msgid "Open Subtitles Settings"
+msgstr "자막 켜짐"
+
+#: src/models/actionsmodel.cpp:128
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Open Playlist"
+msgctxt "@action"
+msgid "Open Playlist Settings"
+msgstr "재생 목록 열기"
+
+#: src/models/actionsmodel.cpp:136
+#, kde-format
+msgctxt "@action"
+msgid "Open Mouse Settings"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:144
 #, kde-format
 msgctxt "@action"
 msgid "Configure Keyboard Shortcuts"
 msgstr "키보드 단축키 설정"
 
-#: src/models/actionsmodel.cpp:88
+#: src/models/actionsmodel.cpp:152
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Open custom commands config file"
+msgctxt "@action"
+msgid "Open Custom Commands Settings"
+msgstr "사용자 정의 명령 설정 파일 열기"
+
+#: src/models/actionsmodel.cpp:160
+#, kde-format
+msgctxt "@action"
+msgid "Open Database Settings"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:168
+#, kde-format
+msgctxt "@action"
+msgid "Open Debug Settings"
+msgstr ""
+
+#: src/models/actionsmodel.cpp:176
 #, kde-format
 msgctxt "@action"
 msgid "Exit Fullscreen"
 msgstr "전체 화면 모드 끝내기"
 
-#: src/models/actionsmodel.cpp:96
+#: src/models/actionsmodel.cpp:184
 #, kde-format
 msgctxt "@action"
 msgid "Step Frame Forward"
 msgstr "프레임 앞으로 탐색"
 
-#: src/models/actionsmodel.cpp:104
+#: src/models/actionsmodel.cpp:192
 #, kde-format
 msgctxt "@action"
 msgid "Step Frame Backward"
 msgstr "프레임 뒤로 탐색"
 
-#: src/models/actionsmodel.cpp:112
+#: src/models/actionsmodel.cpp:200
 #, kde-format
 msgctxt "@action"
 msgid "Load Last Played File"
 msgstr "마지막으로 재생한 파일 열기"
 
-#: src/models/actionsmodel.cpp:120
+#: src/models/actionsmodel.cpp:208
 #, kde-format
 msgctxt "@action"
 msgid "Mute"
 msgstr "음소거"
 
-#: src/models/actionsmodel.cpp:128
+#: src/models/actionsmodel.cpp:216
 #, kde-format
 msgctxt "@action"
 msgid "Open Context Menu"
 msgstr "상황에 맞는 메뉴 열기"
 
-#: src/models/actionsmodel.cpp:132
+#: src/models/actionsmodel.cpp:220
 #, kde-format
 msgctxt "@action"
 msgid "Opens and closes the context menu at the position of the mouse pointer"
 msgstr "상황에 맞는 메뉴를 현재 마우스 포인터 위치에서 열고 닫기"
 
-#: src/models/actionsmodel.cpp:136
+#: src/models/actionsmodel.cpp:224
 #, kde-format
 msgctxt "@action"
 msgid "Open File"
 msgstr "파일 열기"
 
-#: src/models/actionsmodel.cpp:144
+#: src/models/actionsmodel.cpp:232
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Open File"
@@ -173,379 +258,379 @@ msgctxt "@action"
 msgid "Open Folder"
 msgstr "파일 열기"
 
-#: src/models/actionsmodel.cpp:152
+#: src/models/actionsmodel.cpp:240
 #, kde-format
 msgctxt "@action"
 msgid "Add External Subtitle…"
 msgstr "외부 자막 추가…"
 
-#: src/models/actionsmodel.cpp:160
+#: src/models/actionsmodel.cpp:248
 #, kde-format
 msgctxt "@action"
 msgid "Open URL"
 msgstr "URL 열기"
 
-#: src/models/actionsmodel.cpp:168
+#: src/models/actionsmodel.cpp:256
 #, kde-format
 msgctxt "@action"
 msgid "Increase Playback Speed"
 msgstr "재생 속도 증가"
 
-#: src/models/actionsmodel.cpp:176
+#: src/models/actionsmodel.cpp:264
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Playback Speed"
 msgstr "재생 속도 감소"
 
-#: src/models/actionsmodel.cpp:184
+#: src/models/actionsmodel.cpp:272
 #, kde-format
 msgctxt "@action"
 msgid "Reset Playback Speed"
 msgstr "재생 속도 초기화"
 
-#: src/models/actionsmodel.cpp:192
+#: src/models/actionsmodel.cpp:280
 #, kde-format
 msgctxt "@action"
 msgid "Play/Pause"
 msgstr "재생/일시 정지"
 
-#: src/models/actionsmodel.cpp:200
+#: src/models/actionsmodel.cpp:288
 #, kde-format
 msgctxt "@action"
 msgid "Stop"
 msgstr "정지"
 
-#: src/models/actionsmodel.cpp:208
+#: src/models/actionsmodel.cpp:296
 #, kde-format
 msgctxt "@action"
 msgid "Play Next"
 msgstr "다음 재생"
 
-#: src/models/actionsmodel.cpp:216
+#: src/models/actionsmodel.cpp:304
 #, kde-format
 msgctxt "@action"
 msgid "Play Previous"
 msgstr "이전 재생"
 
-#: src/models/actionsmodel.cpp:224
+#: src/models/actionsmodel.cpp:312
 #, kde-format
 msgctxt "@action"
 msgid "Quit"
 msgstr "끝내기"
 
-#: src/models/actionsmodel.cpp:232
+#: src/models/actionsmodel.cpp:320
 #, kde-format
 msgctxt "@action"
 msgid "Restart Playback"
 msgstr "재생 다시 시작"
 
-#: src/models/actionsmodel.cpp:240
+#: src/models/actionsmodel.cpp:328
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Forward"
 msgstr "작은 단위 앞으로 탐색"
 
-#: src/models/actionsmodel.cpp:248
+#: src/models/actionsmodel.cpp:336
 #, kde-format
 msgctxt "@action"
 msgid "Seek Small Step Backward"
 msgstr "작은 단위 뒤로 탐색"
 
-#: src/models/actionsmodel.cpp:256
+#: src/models/actionsmodel.cpp:344
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Forward"
 msgstr "중간 단위 앞으로 탐색"
 
-#: src/models/actionsmodel.cpp:264
+#: src/models/actionsmodel.cpp:352
 #, kde-format
 msgctxt "@action"
 msgid "Seek Medium Step Backward"
 msgstr "중간 단위 뒤로 탐색"
 
-#: src/models/actionsmodel.cpp:272
+#: src/models/actionsmodel.cpp:360
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Forward"
 msgstr "큰 단위 앞으로 탐색"
 
-#: src/models/actionsmodel.cpp:280
+#: src/models/actionsmodel.cpp:368
 #, kde-format
 msgctxt "@action"
 msgid "Seek Big Step Backward"
 msgstr "큰 단위 뒤로 탐색"
 
-#: src/models/actionsmodel.cpp:288
+#: src/models/actionsmodel.cpp:376
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Chapter"
 msgstr "다음 챕터로 이동"
 
-#: src/models/actionsmodel.cpp:296
+#: src/models/actionsmodel.cpp:384
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Chapter"
 msgstr "이전 챕터로 이동"
 
-#: src/models/actionsmodel.cpp:304
+#: src/models/actionsmodel.cpp:392
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Next Subtitle"
 msgstr "다음 자막으로 이동"
 
-#: src/models/actionsmodel.cpp:312
+#: src/models/actionsmodel.cpp:400
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Previous Subtitle"
 msgstr "이전 자막으로 이동"
 
-#: src/models/actionsmodel.cpp:320
+#: src/models/actionsmodel.cpp:408
 #, kde-format
 msgctxt "@action"
 msgid "Seek To Watch Later Position"
 msgstr "마지막으로 본 위치로 탐색"
 
-#: src/models/actionsmodel.cpp:328
+#: src/models/actionsmodel.cpp:416
 #, kde-format
 msgctxt "@action"
 msgid "Set Loop"
 msgstr "구간 반복 설정"
 
-#: src/models/actionsmodel.cpp:336
+#: src/models/actionsmodel.cpp:424
 #, kde-format
 msgctxt "@action"
 msgid "Screenshot"
 msgstr "스크린샷"
 
-#: src/models/actionsmodel.cpp:344
+#: src/models/actionsmodel.cpp:432
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Subtitles"
 msgstr "자막 전환"
 
-#: src/models/actionsmodel.cpp:352
+#: src/models/actionsmodel.cpp:440
 #, kde-format
 msgctxt "@action"
 msgid "Increase Subtitle Font Size"
 msgstr "자막 글꼴 크기 확대"
 
-#: src/models/actionsmodel.cpp:360
+#: src/models/actionsmodel.cpp:448
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Subtitle Font Size"
 msgstr "자막 글꼴 크기 축소"
 
-#: src/models/actionsmodel.cpp:368
+#: src/models/actionsmodel.cpp:456
 #, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Up"
 msgstr "자막 위로 이동"
 
-#: src/models/actionsmodel.cpp:376
+#: src/models/actionsmodel.cpp:464
 #, kde-format
 msgctxt "@action"
 msgid "Move Subtitle Down"
 msgstr "자막 아래로 이동"
 
-#: src/models/actionsmodel.cpp:384
+#: src/models/actionsmodel.cpp:472
 #, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Earlier"
 msgstr "이전 자막 표시"
 
-#: src/models/actionsmodel.cpp:392
+#: src/models/actionsmodel.cpp:480
 #, kde-format
 msgctxt "@action"
 msgid "Show Subtitles Later"
 msgstr "다음 자막 표시"
 
-#: src/models/actionsmodel.cpp:400
+#: src/models/actionsmodel.cpp:488
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Up Subtitle"
 msgstr "자막 위로 순환"
 
-#: src/models/actionsmodel.cpp:408
+#: src/models/actionsmodel.cpp:496
 #, kde-format
 msgctxt "@action"
 msgid "Cycle Down Subtitle"
 msgstr "자막 아래로 순환"
 
-#: src/models/actionsmodel.cpp:416
+#: src/models/actionsmodel.cpp:504
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Deinterlacing"
 msgstr "디인터레이싱 전환"
 
-#: src/models/actionsmodel.cpp:424
+#: src/models/actionsmodel.cpp:512
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Fullscreen"
 msgstr "전체 화면 전환"
 
-#: src/models/actionsmodel.cpp:432
+#: src/models/actionsmodel.cpp:520
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Menu Bar"
 msgstr "메뉴 표시줄 전환"
 
-#: src/models/actionsmodel.cpp:440
+#: src/models/actionsmodel.cpp:528
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Header"
 msgstr "머리글 전환"
 
-#: src/models/actionsmodel.cpp:448 src/qml/Settings/SettingsWindow.qml:142
+#: src/models/actionsmodel.cpp:536 src/Settings/SettingsWindow.qml:145
 #, kde-format
 msgctxt "@action"
 msgid "Playlist"
 msgstr "재생 목록"
 
-#: src/models/actionsmodel.cpp:456
+#: src/models/actionsmodel.cpp:544
 #, kde-format
 msgctxt "@action"
 msgid "Toggle Transcript Panel"
 msgstr "받아쓰기 패널 전환"
 
-#: src/models/actionsmodel.cpp:464
+#: src/models/actionsmodel.cpp:552
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Left"
 msgstr "동영상 왼쪽으로 이동"
 
-#: src/models/actionsmodel.cpp:472
+#: src/models/actionsmodel.cpp:560
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Right"
 msgstr "동영상 오른쪽으로 이동"
 
-#: src/models/actionsmodel.cpp:480
+#: src/models/actionsmodel.cpp:568
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Up"
 msgstr "동영상 위로 이동"
 
-#: src/models/actionsmodel.cpp:488
+#: src/models/actionsmodel.cpp:576
 #, kde-format
 msgctxt "@action"
 msgid "Move Video Down"
 msgstr "동영상 아래로 이동"
 
-#: src/models/actionsmodel.cpp:496
+#: src/models/actionsmodel.cpp:584
 #, kde-format
 msgctxt "@action"
 msgid "Rotate clockwise"
 msgstr "시계 방향으로 회전"
 
-#: src/models/actionsmodel.cpp:504
+#: src/models/actionsmodel.cpp:592
 #, kde-format
 msgctxt "@action"
 msgid "Rotate counter clockwise"
 msgstr "반시계 방향으로 회전"
 
-#: src/models/actionsmodel.cpp:512
+#: src/models/actionsmodel.cpp:600
 #, kde-format
 msgctxt "@action"
 msgid "Volume Up"
 msgstr "음량 증가"
 
-#: src/models/actionsmodel.cpp:520
+#: src/models/actionsmodel.cpp:608
 #, kde-format
 msgctxt "@action"
 msgid "Volume Down"
 msgstr "음량 감소"
 
-#: src/models/actionsmodel.cpp:528
+#: src/models/actionsmodel.cpp:616
 #, kde-format
 msgctxt "@action"
 msgid "Zoom In"
 msgstr "확대"
 
-#: src/models/actionsmodel.cpp:536
+#: src/models/actionsmodel.cpp:624
 #, kde-format
 msgctxt "@action"
 msgid "Zoom Out"
 msgstr "축소"
 
-#: src/models/actionsmodel.cpp:544
+#: src/models/actionsmodel.cpp:632
 #, kde-format
 msgctxt "@action"
 msgid "Reset Zoom"
 msgstr "크기 조정 초기화"
 
-#: src/models/actionsmodel.cpp:552
+#: src/models/actionsmodel.cpp:640
 #, kde-format
 msgctxt "@action"
 msgid "Increase Contrast"
 msgstr "명암 증가"
 
-#: src/models/actionsmodel.cpp:560
+#: src/models/actionsmodel.cpp:648
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Contrast"
 msgstr "명암 감소"
 
-#: src/models/actionsmodel.cpp:568
+#: src/models/actionsmodel.cpp:656
 #, kde-format
 msgctxt "@action"
 msgid "Reset Contrast"
 msgstr "명암 초기화"
 
-#: src/models/actionsmodel.cpp:576
+#: src/models/actionsmodel.cpp:664
 #, kde-format
 msgctxt "@action"
 msgid "Increase Brightness"
 msgstr "밝기 증가"
 
-#: src/models/actionsmodel.cpp:584
+#: src/models/actionsmodel.cpp:672
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Brightness"
 msgstr "밝기 감소"
 
-#: src/models/actionsmodel.cpp:592
+#: src/models/actionsmodel.cpp:680
 #, kde-format
 msgctxt "@action"
 msgid "Reset Brightness"
 msgstr "밝기 초기화"
 
-#: src/models/actionsmodel.cpp:600
+#: src/models/actionsmodel.cpp:688
 #, kde-format
 msgctxt "@action"
 msgid "Increase Gamma"
 msgstr "감마 증가"
 
-#: src/models/actionsmodel.cpp:608
+#: src/models/actionsmodel.cpp:696
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Gamma"
 msgstr "감마 감소"
 
-#: src/models/actionsmodel.cpp:616
+#: src/models/actionsmodel.cpp:704
 #, kde-format
 msgctxt "@action"
 msgid "Reset Gamma"
 msgstr "감마 초기화"
 
-#: src/models/actionsmodel.cpp:624
+#: src/models/actionsmodel.cpp:712
 #, kde-format
 msgctxt "@action"
 msgid "Increase Saturation"
 msgstr "채도 증가"
 
-#: src/models/actionsmodel.cpp:632
+#: src/models/actionsmodel.cpp:720
 #, kde-format
 msgctxt "@action"
 msgid "Decrease Saturation"
 msgstr "채도 감소"
 
-#: src/models/actionsmodel.cpp:640
+#: src/models/actionsmodel.cpp:728
 #, kde-format
 msgctxt "@action"
 msgid "Reset Saturation"
 msgstr "채도 초기화"
 
-#: src/models/actionsmodel.cpp:791
+#: src/models/actionsmodel.cpp:879
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -555,7 +640,7 @@ msgstr ""
 "선택한 단축키가 <b>%1</b> 동작의 단축키와 충돌합니다.<br><br>다시 할당하시겠"
 "습니까?"
 
-#: src/models/actionsmodel.cpp:797
+#: src/models/actionsmodel.cpp:885
 #, kde-format
 msgctxt "@action:button"
 msgid "Reassign"
@@ -637,68 +722,68 @@ msgstr "명령행 동영상 재생기"
 msgid "Cross-platform solution to record, convert and stream audio and video"
 msgstr "오디오와 비디오를 기록, 변환, 스트림할 수 있는 크로스 플랫폼 솔루션"
 
-#: src/mpv/mpvitem.cpp:324
+#: src/mpv/mpvitem.cpp:323
 #, kde-format
 msgctxt "@info:tooltip; %1 is a video title/filename"
 msgid "Could not play: %1"
 msgstr "재생할 수 없음: %1"
 
-#: src/mpv/mpvitem.cpp:430
+#: src/mpv/mpvitem.cpp:425
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Volume: %1"
 msgstr "음량: %1"
 
-#: src/mpv/mpvitem.cpp:463
+#: src/mpv/mpvitem.cpp:459
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: +%1 seconds"
 msgstr "자막 시간 조정: +%1초"
 
-#: src/mpv/mpvitem.cpp:465
+#: src/mpv/mpvitem.cpp:461
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Subtitle timing: %1 seconds"
 msgstr "자막 시간 조정: %1초"
 
-#: src/mpv/mpvitem.cpp:514
+#: src/mpv/mpvitem.cpp:510
 #, kde-format
 msgctxt "@info:tooltip; %1 is an absolute path"
 msgid "File doesn't exist: %1"
 msgstr "파일이 없음: %1"
 
-#: src/mpv/mpvitem.cpp:546
+#: src/mpv/mpvitem.cpp:542
 #, kde-format
 msgctxt "%1 current item number, %2 total items count, %3 item name"
 msgid "[%1/%2] %3"
 msgstr "[%1/%2] %3"
 
-#: src/mpv/mpvitem.cpp:559
+#: src/mpv/mpvitem.cpp:555
 #, kde-format
 msgctxt ""
 "@action The \"None\" subtitle track is used to clear/unset selected track"
 msgid "None"
 msgstr "없음"
 
-#: src/mpv/mpvitem.cpp:618
+#: src/mpv/mpvitem.cpp:614
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot failed"
 msgstr "스크린샷 찍기 실패"
 
-#: src/mpv/mpvitem.cpp:623
+#: src/mpv/mpvitem.cpp:619
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Screenshot taken"
 msgstr "스크린샷 찍음"
 
-#: src/mpv/mpvitem.cpp:625
+#: src/mpv/mpvitem.cpp:621
 #, kde-format
 msgctxt "@info:tooltip osd; %1 is a filename with path"
 msgid "Screenshot: %1"
 msgstr "스크린샷: %1"
 
-#: src/mpv/mpvitem.cpp:664
+#: src/mpv/mpvitem.cpp:660
 #, kde-format
 msgctxt "Error message when video can't be decoded/played"
 msgid ""
@@ -708,13 +793,13 @@ msgstr ""
 "동영상 트랙이 감지되지 않았습니다. 코덱이 없어서 동영상 트랙을 디코드/재성할 "
 "수 없습니다"
 
-#: src/mpv/mpvitem.cpp:700
+#: src/mpv/mpvitem.cpp:696
 #, kde-format
 msgctxt "@info:tooltip osd"
 msgid "Skipped chapter: %1"
 msgstr "챕터 건너뜀: %1"
 
-#: src/mpv/mpvitem.cpp:797
+#: src/mpv/mpvitem.cpp:793
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -722,13 +807,13 @@ msgctxt ""
 msgid "Audio: %1 %2"
 msgstr "오디오: %1 %2"
 
-#: src/mpv/mpvitem.cpp:808
+#: src/mpv/mpvitem.cpp:804
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Subtitle: none"
 msgstr "자막: 없음"
 
-#: src/mpv/mpvitem.cpp:814 src/mpv/mpvitem.cpp:831
+#: src/mpv/mpvitem.cpp:810 src/mpv/mpvitem.cpp:827
 #, kde-format
 msgctxt ""
 "@info:tooltip; %1 is the track number, %2 is a string in the form: `track."
@@ -736,28 +821,28 @@ msgctxt ""
 msgid "Subtitle: %1 %2"
 msgstr "자막: %1 %2"
 
-#: src/mpv/mpvitem.cpp:825
+#: src/mpv/mpvitem.cpp:821
 #, kde-format
 msgctxt "@info:tooltip; osd message when no sub is selected"
 msgid "Secondary subtitle: none"
 msgstr "보조 자막: 없음"
 
-#: src/playlist/Playlist.qml:114
+#: src/Playlist/Playlist.qml:120
 msgctxt "@action:button"
 msgid "Add new playlist"
 msgstr "새 재생 목록 추가"
 
-#: src/playlist/Playlist.qml:127
+#: src/Playlist/Playlist.qml:133
 msgctxt "@action:button"
 msgid "Search"
 msgstr "검색"
 
-#: src/playlist/Playlist.qml:147
+#: src/Playlist/Playlist.qml:153
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "추가…"
 
-#: src/playlist/Playlist.qml:155
+#: src/Playlist/Playlist.qml:161
 #, fuzzy
 #| msgctxt "@label:button folder"
 #| msgid "Folder"
@@ -765,132 +850,132 @@ msgctxt "@action:button"
 msgid "Folder"
 msgstr "폴더"
 
-#: src/playlist/Playlist.qml:163
+#: src/Playlist/Playlist.qml:169
 msgctxt "@action:button"
 msgid "Files"
 msgstr "파일"
 
-#: src/playlist/Playlist.qml:171
+#: src/Playlist/Playlist.qml:177
 msgctxt "@action:button"
 msgid "URL"
 msgstr "URL"
 
-#: src/playlist/Playlist.qml:181
+#: src/Playlist/Playlist.qml:187
 msgctxt "@action:button"
 msgid "Playlist"
 msgstr "재생 목록"
 
-#: src/playlist/Playlist.qml:190
+#: src/Playlist/Playlist.qml:196
 msgctxt "@action:button"
 msgid "Sort"
 msgstr "정렬"
 
-#: src/playlist/Playlist.qml:199
+#: src/Playlist/Playlist.qml:205
 msgctxt "@action:button"
 msgid "Ascending"
 msgstr "오름차순"
 
-#: src/playlist/Playlist.qml:216
+#: src/Playlist/Playlist.qml:222
 msgctxt "@action:button"
 msgid "Descending"
 msgstr "내림차순"
 
-#: src/playlist/Playlist.qml:239
+#: src/Playlist/Playlist.qml:245
 msgctxt "@action:button"
 msgid "None"
 msgstr "없음"
 
-#: src/playlist/Playlist.qml:249
+#: src/Playlist/Playlist.qml:255
 msgctxt "@action:button"
 msgid "File Name"
 msgstr "파일 이름"
 
-#: src/playlist/Playlist.qml:259
+#: src/Playlist/Playlist.qml:265
 msgctxt "@action:button"
 msgid "Title"
 msgstr "제목"
 
-#: src/playlist/Playlist.qml:269
+#: src/Playlist/Playlist.qml:275
 msgctxt "@action:button"
 msgid "Duration"
 msgstr "시간"
 
-#: src/playlist/Playlist.qml:279
+#: src/Playlist/Playlist.qml:285
 msgctxt "@action:button"
 msgid "Modified Date"
 msgstr "수정한 날짜"
 
-#: src/playlist/Playlist.qml:289
+#: src/Playlist/Playlist.qml:295
 msgctxt "@action:button"
 msgid "File Size"
 msgstr "파일 크기"
 
-#: src/playlist/Playlist.qml:299
+#: src/Playlist/Playlist.qml:305
 msgctxt "@action:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "트랙 번호"
 
-#: src/playlist/Playlist.qml:309
+#: src/Playlist/Playlist.qml:315
 msgctxt "@action:button"
 msgid "Sample Rate"
 msgstr "샘플링 레이트"
 
-#: src/playlist/Playlist.qml:319
+#: src/Playlist/Playlist.qml:325
 msgctxt "@action:button"
 msgid "Bitrate"
 msgstr "비트 전송률"
 
-#: src/playlist/Playlist.qml:334
+#: src/Playlist/Playlist.qml:340
 msgctxt "@action:button"
 msgid "Custom…"
 msgstr "사용자 정의…"
 
-#: src/playlist/Playlist.qml:345
+#: src/Playlist/Playlist.qml:351
 msgctxt "@action:button"
 msgid "Playback"
 msgstr "재생"
 
-#: src/playlist/Playlist.qml:351
+#: src/Playlist/Playlist.qml:357
 msgctxt "@action:button"
 msgid "Repeat playlist"
 msgstr "재생 목록 반복"
 
-#: src/playlist/Playlist.qml:362
+#: src/Playlist/Playlist.qml:368
 msgctxt "@action:button"
 msgid "Stop after last item"
 msgstr "마지막 항목 이후 정지"
 
-#: src/playlist/Playlist.qml:372
+#: src/Playlist/Playlist.qml:378
 msgctxt "@action:button"
 msgid "Repeat item"
 msgstr "항목 반복"
 
-#: src/playlist/Playlist.qml:383
+#: src/Playlist/Playlist.qml:389
 msgctxt "@action:button"
 msgid "Stop after item"
 msgstr "항목 이후 정지"
 
-#: src/playlist/Playlist.qml:393
+#: src/Playlist/Playlist.qml:399
 msgctxt "@action:button"
 msgid "Random Playback"
 msgstr "무작위 순서 재생"
 
-#: src/playlist/Playlist.qml:405
+#: src/Playlist/Playlist.qml:411
 msgctxt "@action:button"
 msgid "Clear"
 msgstr "지우기"
 
-#: src/playlist/Playlist.qml:413
+#: src/Playlist/Playlist.qml:419
 msgctxt "@action:button"
 msgid "Save As"
 msgstr "다른 이름으로 저장"
 
-#: src/playlist/Playlist.qml:423
+#: src/Playlist/Playlist.qml:429
 msgctxt "@action:inmenu"
 msgid "Update all metadata"
 msgstr "모든 메타데이터 업데이트"
 
-#: src/playlist/Playlist.qml:431
+#: src/Playlist/Playlist.qml:437
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata for all files in the playlist\n"
@@ -903,12 +988,12 @@ msgstr ""
 "데이터베이스에 있는 메타데이터를 파일에 있는 것으로 업데이트합니다.\n"
 "메타데이터는 나중에 빠르게 가져오기 위해서 데이터베이스에 저장합니다."
 
-#: src/playlist/Playlist.qml:447 src/playlist/Playlist.qml:468
+#: src/Playlist/Playlist.qml:453 src/Playlist/Playlist.qml:474
 msgctxt "@action:button"
 msgid "Add"
 msgstr "추가"
 
-#: src/playlist/Playlist.qml:450 src/qml/Main.qml:325
+#: src/Playlist/Playlist.qml:456 src/qml/Main.qml:321
 msgctxt "@info"
 msgid ""
 "Neither <a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> nor <a href="
@@ -917,108 +1002,108 @@ msgstr ""
 "<a href=\"https://github.com/yt-dlp/yt-dlp\">yt-dlp</a> 또는 <a href="
 "\"https://github.com/ytdl-org/youtube-dl\">youtube-dl</a>을 찾을 수 없습니다."
 
-#: src/playlist/Playlist.qml:467
+#: src/Playlist/Playlist.qml:473
 msgctxt "@placeholder"
 msgid "playlist name"
 msgstr "재생 목록 이름"
 
-#: src/playlist/Playlist.qml:555 src/playlist/PlaylistItemContextMenu.qml:116
+#: src/Playlist/Playlist.qml:561 src/Playlist/PlaylistItemContextMenu.qml:117
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "모두 선택"
 
-#: src/playlist/Playlist.qml:560 src/playlist/PlaylistItemContextMenu.qml:121
+#: src/Playlist/Playlist.qml:566 src/Playlist/PlaylistItemContextMenu.qml:122
 msgctxt "@action:inmenu"
 msgid "Deselect All"
 msgstr "모두 선택 해제"
 
-#: src/playlist/Playlist.qml:565 src/playlist/PlaylistItemContextMenu.qml:126
+#: src/Playlist/Playlist.qml:571 src/Playlist/PlaylistItemContextMenu.qml:127
 msgctxt "@action:inmenu"
 msgid "Invert Selection"
 msgstr "선택 반전"
 
-#: src/playlist/Playlist.qml:572 src/playlist/PlaylistItemContextMenu.qml:154
+#: src/Playlist/Playlist.qml:578 src/Playlist/PlaylistItemContextMenu.qml:155
 msgctxt "@action:inmenu"
 msgid "Scroll to Playing Item"
 msgstr "현재 재생 중인 항목으로 스크롤"
 
-#: src/playlist/Playlist.qml:658 src/qml/Settings/VideoSettings.qml:74
+#: src/Playlist/Playlist.qml:664 src/Settings/VideoPage.qml:74
 msgctxt "@title:window"
 msgid "Select file"
 msgstr "파일 선택"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:52
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:52
 msgctxt "@title:configure sort window"
 msgid "Advanced Sort and Group By"
 msgstr "고급 정렬과 그룹화"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:69
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:67
 msgctxt "@label which playlist is affected, %1 is the playlist name"
 msgid "Playlist: %1"
 msgstr "재생 목록: %1"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:76
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:72
 msgctxt "@label sort"
 msgid "Sorting"
 msgstr "정렬"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:101
-#: src/playlist/PlaylistAdvancedSortWindow.qml:362
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:98
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:358
 msgctxt "@action:inmenu"
 msgid "Filter"
 msgstr "필터"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:120
-#: src/playlist/PlaylistAdvancedSortWindow.qml:381
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:117
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:377
 msgctxt "@title:menu"
 msgid "Filter"
 msgstr "필터"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:127
-#: src/playlist/PlaylistAdvancedSortWindow.qml:388
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:124
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:384
 msgctxt "@action:inmenu all"
 msgid "All"
 msgstr "모두"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:138
-#: src/playlist/PlaylistAdvancedSortWindow.qml:399
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:135
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:395
 msgctxt "@action:inmenu file"
 msgid "File"
 msgstr "파일"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:149
-#: src/playlist/PlaylistAdvancedSortWindow.qml:410
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:146
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:406
 msgctxt "@action:inmenu audio"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:160
-#: src/playlist/PlaylistAdvancedSortWindow.qml:421
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:157
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:417
 msgctxt "@action:inmenu video"
 msgid "Video"
 msgstr "비디오"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:207
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:204
 msgctxt "@action:inmenu"
 msgid "Ascending"
 msgstr "오름차순"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:220
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:217
 msgctxt "@action:inmenu"
 msgid "Descending"
 msgstr "내림차순"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:338
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:333
 msgctxt "@label group"
 msgid "Grouping"
 msgstr "그룹화"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:436
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:432
 msgctxt "@action:inmenu"
 msgid "Show Sections"
 msgstr "선택 표시"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:446
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:442
 msgctxt "@info:tooltip"
 msgid ""
 "Show/Hide section labels in the playlist view. <br>If the playlist is not "
@@ -1029,77 +1114,77 @@ msgstr ""
 "성에 따라서 같은 순서대로 정렬되어 있지 않다면 여러 부분이 생길 수도 있습니"
 "다."
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:557
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:553
 msgctxt "@action:inmenu add new line button"
 msgid "Add New Line"
 msgstr "새 줄 추가"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:772
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:768
 msgctxt "@info:tooltip show blank"
 msgid "Property is hidden if empty or not unique."
 msgstr "비어 있거나 유일하지 않으면 속성이 숨겨집니다."
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:774
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:770
 msgctxt "@info:tooltip hide blank"
 msgid "Property is shown, if empty a placeholder will be shown."
 msgstr "속성이 표시되며, 비어 있으면 자리 비움자를 표시합니다."
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:779
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:775
 msgctxt "@info:tooltip group order"
 msgid "Sort ascending"
 msgstr "오름차순 정렬"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:781
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:777
 msgctxt "@info:tooltip group order"
 msgid "Sort descending"
 msgstr "내림차순 정렬"
 
-#: src/playlist/PlaylistAdvancedSortWindow.qml:783
+#: src/Playlist/PlaylistAdvancedSortWindow.qml:779
 msgctxt "@info:tooltip group order"
 msgid "Same as primary sort order"
 msgstr "주 정렬 순서와 동일"
 
-#: src/playlist/PlaylistItemContextMenu.qml:24
+#: src/Playlist/PlaylistItemContextMenu.qml:25
 msgctxt "@action:inmenu"
 msgid "Open Containing Folder"
 msgstr "포함하는 폴더 열기"
 
-#: src/playlist/PlaylistItemContextMenu.qml:31
+#: src/Playlist/PlaylistItemContextMenu.qml:32
 msgctxt "@action:inmenu"
 msgid "Open in Browser"
 msgstr "브라우저로 열기"
 
-#: src/playlist/PlaylistItemContextMenu.qml:43
+#: src/Playlist/PlaylistItemContextMenu.qml:44
 msgctxt "@action:inmenu"
 msgid "Open in Thumbnail Generator"
 msgstr "섬네일 생성기에서 열기"
 
-#: src/playlist/PlaylistItemContextMenu.qml:62
+#: src/Playlist/PlaylistItemContextMenu.qml:63
 msgctxt "@action:inmenu %1 is 'MediaInfo' (app name)"
 msgid "Open in %1"
 msgstr "%1에서 열기"
 
-#: src/playlist/PlaylistItemContextMenu.qml:75
+#: src/Playlist/PlaylistItemContextMenu.qml:76
 msgctxt "@action:inmenu"
 msgid "Copy Name"
 msgstr "이름 복사"
 
-#: src/playlist/PlaylistItemContextMenu.qml:82
+#: src/Playlist/PlaylistItemContextMenu.qml:83
 msgctxt "@action:inmenu"
 msgid "Copy Path"
 msgstr "경로 복사"
 
-#: src/playlist/PlaylistItemContextMenu.qml:83
+#: src/Playlist/PlaylistItemContextMenu.qml:84
 msgctxt "@action:inmenu"
 msgid "Copy URL"
 msgstr "URL 복사"
 
-#: src/playlist/PlaylistItemContextMenu.qml:91
+#: src/Playlist/PlaylistItemContextMenu.qml:92
 msgctxt "@action:inmenu"
 msgid "Update metadata"
 msgstr "메타데이터 업데이트"
 
-#: src/playlist/PlaylistItemContextMenu.qml:102
+#: src/Playlist/PlaylistItemContextMenu.qml:103
 msgctxt "@info:tooltip"
 msgid ""
 "Update metadata in the database with metadata inside the file.\n"
@@ -1108,422 +1193,422 @@ msgstr ""
 "데이터베이스에 있는 메타데이터를 파일에 있는 것으로 업데이트합니다.\n"
 "메타데이터는 나중에 빠르게 가져오기 위해서 데이터베이스에 저장합니다."
 
-#: src/playlist/PlaylistItemContextMenu.qml:133
+#: src/Playlist/PlaylistItemContextMenu.qml:134
 msgctxt "@action:inmenu"
 msgid "Remove from Playlist"
 msgstr "재생 목록에서 삭제"
 
-#: src/playlist/PlaylistItemContextMenu.qml:140
+#: src/Playlist/PlaylistItemContextMenu.qml:141
 msgctxt "@action:inmenu"
 msgid "Remove Selected from Playlist"
 msgstr "재생 목록에서 선택 항목 삭제"
 
-#: src/playlist/PlaylistItemContextMenu.qml:147
-#: src/playlist/PlaylistTabBar.qml:61
+#: src/Playlist/PlaylistItemContextMenu.qml:148
+#: src/Playlist/PlaylistTabDelegate.qml:306
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "이름 바꾸기"
 
-#: src/playlist/PlaylistItemContextMenu.qml:166
+#: src/Playlist/PlaylistItemContextMenu.qml:167
 msgctxt "@action:inmenu"
 msgid "Move File to Trash"
 msgstr "파일을 휴지통으로 이동"
 
-#: src/playlist/PlaylistItemContextMenu.qml:173
+#: src/Playlist/PlaylistItemContextMenu.qml:174
 msgctxt "@action:inmenu"
 msgid "Move Selected Files to Trash"
 msgstr "선택한 파일을 휴지통으로 이동"
 
-#: src/playlist/playlistmultiproxiesmodel.cpp:196
+#: src/Playlist/playlistsmanager.cpp:194
 #, kde-format
 msgctxt "@info:tooltip; %1 playlist with same name"
 msgid "Playlists with same name is not allowed: %1"
 msgstr "같은 이름의 재생 목록을 사용할 수 없음: %1"
 
-#: src/playlist/playlistsortproxymodel.cpp:32
+#: src/Playlist/playlistsortproxymodel.cpp:32
 #, kde-format
 msgctxt "@label:button file name"
 msgid "File Name"
 msgstr "파일 이름"
 
-#: src/playlist/playlistsortproxymodel.cpp:38
+#: src/Playlist/playlistsortproxymodel.cpp:38
 #, kde-format
 msgctxt "@label:button duration"
 msgid "Duration"
 msgstr "시간"
 
-#: src/playlist/playlistsortproxymodel.cpp:44
+#: src/Playlist/playlistsortproxymodel.cpp:44
 #, kde-format
 msgctxt "@label:button date"
 msgid "Date"
 msgstr "날짜"
 
-#: src/playlist/playlistsortproxymodel.cpp:50
+#: src/Playlist/playlistsortproxymodel.cpp:50
 #, kde-format
 msgctxt "@label:button file size"
 msgid "File Size"
 msgstr "파일 크기"
 
-#: src/playlist/playlistsortproxymodel.cpp:56
+#: src/Playlist/playlistsortproxymodel.cpp:56
 #, kde-format
 msgctxt "@label:button title"
 msgid "Title"
 msgstr "제목"
 
-#: src/playlist/playlistsortproxymodel.cpp:62
+#: src/Playlist/playlistsortproxymodel.cpp:62
 #, kde-format
 msgctxt "@label:button, as in 'Track no on a Audio CD', not 'subtitle track'"
 msgid "Track No"
 msgstr "트랙 번호"
 
-#: src/playlist/playlistsortproxymodel.cpp:68
+#: src/Playlist/playlistsortproxymodel.cpp:68
 #, kde-format
 msgctxt "@label:button sample rate"
 msgid "Sample Rate"
 msgstr "샘플링 레이트"
 
-#: src/playlist/playlistsortproxymodel.cpp:74
+#: src/Playlist/playlistsortproxymodel.cpp:74
 #, kde-format
 msgctxt "@label:button bitrate"
 msgid "Bitrate"
 msgstr "비트 전송률"
 
-#: src/playlist/playlistsortproxymodel.cpp:81
+#: src/Playlist/playlistsortproxymodel.cpp:81
 #, kde-format
 msgctxt "@label:button folder"
 msgid "Folder"
 msgstr "폴더"
 
-#: src/playlist/playlistsortproxymodel.cpp:88
+#: src/Playlist/playlistsortproxymodel.cpp:88
 #, kde-format
 msgctxt "@label:button file type"
 msgid "Type"
 msgstr "형식"
 
-#: src/playlist/playlistsortproxymodel.cpp:95
+#: src/Playlist/playlistsortproxymodel.cpp:95
 #, kde-format
 msgctxt "@label:button file extension"
 msgid "Extension"
 msgstr "확장자"
 
-#: src/playlist/playlistsortproxymodel.cpp:102
+#: src/Playlist/playlistsortproxymodel.cpp:102
 #, kde-format
 msgctxt "@label:button disc no"
 msgid "Disc No"
 msgstr "디스크 번호"
 
-#: src/playlist/playlistsortproxymodel.cpp:109
+#: src/Playlist/playlistsortproxymodel.cpp:109
 #, kde-format
 msgctxt "@label:button release year"
 msgid "Release Year"
 msgstr "발매 연도"
 
-#: src/playlist/playlistsortproxymodel.cpp:116
+#: src/Playlist/playlistsortproxymodel.cpp:116
 #, kde-format
 msgctxt "@label:button genre"
 msgid "Genre"
 msgstr "장르"
 
-#: src/playlist/playlistsortproxymodel.cpp:123
+#: src/Playlist/playlistsortproxymodel.cpp:123
 #, kde-format
 msgctxt "@label:button album"
 msgid "Album"
 msgstr "앨범"
 
-#: src/playlist/playlistsortproxymodel.cpp:130
+#: src/Playlist/playlistsortproxymodel.cpp:130
 #, kde-format
 msgctxt "@label:button artist"
 msgid "Artist"
 msgstr "아티스트"
 
-#: src/playlist/playlistsortproxymodel.cpp:137
+#: src/Playlist/playlistsortproxymodel.cpp:137
 #, kde-format
 msgctxt "@label:button album artist"
 msgid "Album Artist"
 msgstr "앨범 아티스트"
 
-#: src/playlist/playlistsortproxymodel.cpp:144
+#: src/Playlist/playlistsortproxymodel.cpp:144
 #, kde-format
 msgctxt "@label:button composer"
 msgid "Composer"
 msgstr "작곡가"
 
-#: src/playlist/playlistsortproxymodel.cpp:151
+#: src/Playlist/playlistsortproxymodel.cpp:151
 #, kde-format
 msgctxt "@label:button lyricist"
 msgid "Lyricist"
 msgstr "작사자"
 
-#: src/playlist/playlistsortproxymodel.cpp:158
+#: src/Playlist/playlistsortproxymodel.cpp:158
 #, kde-format
 msgctxt "@label:button audio codec"
 msgid "Audio Codec"
 msgstr "오디오 코덱"
 
-#: src/playlist/playlistsortproxymodel.cpp:165
+#: src/Playlist/playlistsortproxymodel.cpp:165
 #, kde-format
 msgctxt "@label:button framerate"
 msgid "Framerate"
 msgstr "프레임 속도"
 
-#: src/playlist/playlistsortproxymodel.cpp:172
+#: src/Playlist/playlistsortproxymodel.cpp:172
 #, kde-format
 msgctxt "@label:button video codec"
 msgid "Video Codec"
 msgstr "비디오 코덱"
 
-#: src/playlist/playlistsortproxymodel.cpp:179
+#: src/Playlist/playlistsortproxymodel.cpp:179
 #, kde-format
 msgctxt "@label:button video orientation"
 msgid "Orientation"
 msgstr "방향"
 
-#: src/playlist/playlistsortproxymodel.cpp:186
+#: src/Playlist/playlistsortproxymodel.cpp:186
 #, kde-format
 msgctxt "@label:button resolution"
 msgid "Resolution"
 msgstr "해상도"
 
-#: src/playlist/playlistsortproxymodel.cpp:339
+#: src/Playlist/playlistsortproxymodel.cpp:339
 #, kde-format
 msgctxt "@label:button put new line"
 msgid "New Line"
 msgstr "새 줄"
 
-#: src/playlist/playlistsortproxymodel.cpp:533
+#: src/Playlist/playlistsortproxymodel.cpp:533
 #, kde-format
 msgctxt "@title:group"
 msgid "No Genre"
 msgstr "장르 없음"
 
-#: src/playlist/playlistsortproxymodel.cpp:534
+#: src/Playlist/playlistsortproxymodel.cpp:534
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album"
 msgstr "앨범 없음"
 
-#: src/playlist/playlistsortproxymodel.cpp:535
+#: src/Playlist/playlistsortproxymodel.cpp:535
 #, kde-format
 msgctxt "@title:group"
 msgid "No Artist"
 msgstr "아티스트 없음"
 
-#: src/playlist/playlistsortproxymodel.cpp:536
+#: src/Playlist/playlistsortproxymodel.cpp:536
 #, kde-format
 msgctxt "@title:group"
 msgid "No Album Artist"
 msgstr "앨범 아티스트 없음"
 
-#: src/playlist/playlistsortproxymodel.cpp:537
+#: src/Playlist/playlistsortproxymodel.cpp:537
 #, kde-format
 msgctxt "@title:group"
 msgid "No Composer"
 msgstr "작곡가 없음"
 
-#: src/playlist/playlistsortproxymodel.cpp:538
+#: src/Playlist/playlistsortproxymodel.cpp:538
 #, kde-format
 msgctxt "@title:group"
 msgid "No Lyricist"
 msgstr "작사가 없음"
 
-#: src/playlist/playlistsortproxymodel.cpp:539
+#: src/Playlist/playlistsortproxymodel.cpp:539
 #, kde-format
 msgctxt "@title:group"
 msgid "No Release Year"
 msgstr "발매 연도 없음"
 
-#: src/playlist/playlistsortproxymodel.cpp:540
+#: src/Playlist/playlistsortproxymodel.cpp:540
 #, kde-format
 msgctxt "@title:group"
 msgid "Not a Video"
 msgstr "비디오가 아님"
 
-#: src/playlist/playlistsortproxymodel.cpp:541
+#: src/Playlist/playlistsortproxymodel.cpp:541
 #, kde-format
 msgctxt "@title:group"
 msgid "No Audio Codec"
 msgstr "오디오 코덱 없음"
 
-#: src/playlist/playlistsortproxymodel.cpp:542
+#: src/Playlist/playlistsortproxymodel.cpp:542
 #, kde-format
 msgctxt "@title:group"
 msgid "No Video Codec"
 msgstr "비디오 코덱 없음"
 
-#: src/playlist/playlistsortproxymodel.cpp:565
+#: src/Playlist/playlistsortproxymodel.cpp:565
 #, kde-format
 msgctxt "@title:group disc"
 msgid "Disc"
 msgstr "디스크"
 
-#: src/playlist/playlistsortproxymodel.cpp:620
+#: src/Playlist/playlistsortproxymodel.cpp:620
 #, kde-format
 msgctxt "@title:group"
 msgid "Video File"
 msgstr "비디오 파일"
 
-#: src/playlist/playlistsortproxymodel.cpp:623
+#: src/Playlist/playlistsortproxymodel.cpp:623
 #, kde-format
 msgctxt "@title:group"
 msgid "Audio File"
 msgstr "오디오 파일"
 
-#: src/playlist/playlistsortproxymodel.cpp:647
+#: src/Playlist/playlistsortproxymodel.cpp:647
 #, kde-format
 msgctxt "@title:group"
 msgid "Landscape"
 msgstr "가로"
 
-#: src/playlist/playlistsortproxymodel.cpp:651
+#: src/Playlist/playlistsortproxymodel.cpp:651
 #, kde-format
 msgctxt "@title:group"
 msgid "Portrait"
 msgstr "세로"
 
-#: src/playlist/playlistsortproxymodel.cpp:655
+#: src/Playlist/playlistsortproxymodel.cpp:655
 #, kde-format
 msgctxt "@title:group"
 msgid "Square"
 msgstr "사각형"
 
-#: src/playlist/PlaylistTabBar.qml:67
-msgctxt "@action:inmenu"
-msgid "Remove"
-msgstr "삭제"
-
-#: src/playlist/PlaylistTabDelegate.qml:153
+#: src/Playlist/PlaylistTabDelegate.qml:152
 msgctxt "@label:title name of default playlist tab"
 msgid "Default"
 msgstr "기본값"
 
-#: src/playlist/PlaylistTabDelegate.qml:211
+#: src/Playlist/PlaylistTabDelegate.qml:210
 msgctxt "@info:tooltip"
 msgid "Click and hold"
 msgstr "클릭하고 누르고 있기"
 
-#: src/qml/Actions.qml:148
+#: src/Playlist/PlaylistTabDelegate.qml:312
+msgctxt "@action:inmenu"
+msgid "Remove"
+msgstr "삭제"
+
+#: src/qml/Actions.qml:192
 msgctxt ""
 "osd message when trying to open subtitle selection dialog while no file is "
 "open"
 msgid "Can’t load subtitle when no file is open"
 msgstr "연 파일이 없을 때 자막을 불러올 수 없음"
 
-#: src/qml/Actions.qml:167 src/qml/Actions.qml:173 src/qml/Actions.qml:178
+#: src/qml/Actions.qml:211 src/qml/Actions.qml:217 src/qml/Actions.qml:222
 msgctxt "@info:tooltip"
 msgid "Playback speed: %1"
 msgstr "재생 속도: %1"
 
-#: src/qml/Actions.qml:280
+#: src/qml/Actions.qml:324
 msgctxt "@info:tooltip; %1 is the timestamp where the loop starts"
 msgid "Loop start: %1"
 msgstr "반복 시작: %1"
 
-#: src/qml/Actions.qml:289
+#: src/qml/Actions.qml:333
 msgctxt "@info:tooltip, use en dash for the range"
 msgid "Loop: %1–%2"
 msgstr "반복: %1 - %2"
 
-#: src/qml/Actions.qml:297
+#: src/qml/Actions.qml:341
 msgctxt "@info:tooltip"
 msgid "Loop cleared"
 msgstr "반복 해제됨"
 
-#: src/qml/Actions.qml:318
+#: src/qml/Actions.qml:362
 msgctxt "@info:tooltip"
 msgid "Subtitles off"
 msgstr "자막 꺼짐"
 
-#: src/qml/Actions.qml:318
+#: src/qml/Actions.qml:362
 msgctxt "@info:tooltip"
 msgid "Subtitles on"
 msgstr "자막 켜짐"
 
-#: src/qml/Actions.qml:334 src/qml/Actions.qml:341
+#: src/qml/Actions.qml:378 src/qml/Actions.qml:385
 msgctxt "@info:tooltip"
 msgid "Subtitle scale: %1"
 msgstr "자막 크기 조정: %1"
 
-#: src/qml/Actions.qml:356
+#: src/qml/Actions.qml:400
 msgctxt "@info:tooltip"
 msgid "Deinterlace: %1"
 msgstr "디인터레이스: %1"
 
-#: src/qml/Actions.qml:422 src/qml/Actions.qml:429
+#: src/qml/Actions.qml:466 src/qml/Actions.qml:473
 msgctxt "@info:tooltip"
 msgid "Zoom: %1"
 msgstr "확대: %1"
 
-#: src/qml/Actions.qml:435
+#: src/qml/Actions.qml:479
 msgctxt "@info:tooltip"
 msgid "Zoom: 0"
 msgstr "확대: 0"
 
-#: src/qml/Actions.qml:442 src/qml/Actions.qml:449
+#: src/qml/Actions.qml:486 src/qml/Actions.qml:493
 msgctxt "@info:tooltip"
 msgid "Contrast: %1"
 msgstr "명암: %1"
 
-#: src/qml/Actions.qml:455
+#: src/qml/Actions.qml:499
 msgctxt "@info:tooltip"
 msgid "Contrast: 0"
 msgstr "명암: 0"
 
-#: src/qml/Actions.qml:462 src/qml/Actions.qml:469
+#: src/qml/Actions.qml:506 src/qml/Actions.qml:513
 msgctxt "@info:tooltip"
 msgid "Brightness: %1"
 msgstr "밝기: %1"
 
-#: src/qml/Actions.qml:475
+#: src/qml/Actions.qml:519
 msgctxt "@info:tooltip"
 msgid "Brightness: 0"
 msgstr "밝기: 0"
 
-#: src/qml/Actions.qml:482 src/qml/Actions.qml:489
+#: src/qml/Actions.qml:526 src/qml/Actions.qml:533
 msgctxt "@info:tooltip"
 msgid "Gamma: %1"
 msgstr "감마: %1"
 
-#: src/qml/Actions.qml:495
+#: src/qml/Actions.qml:539
 msgctxt "@info:tooltip"
 msgid "Gamma: 0"
 msgstr "감마: 0"
 
-#: src/qml/Actions.qml:502 src/qml/Actions.qml:509
+#: src/qml/Actions.qml:546 src/qml/Actions.qml:553
 msgctxt "@info:tooltip"
 msgid "Saturation: %1"
 msgstr "채도: %1"
 
-#: src/qml/Actions.qml:515
+#: src/qml/Actions.qml:559
 msgctxt "@info:tooltip"
 msgid "Saturation: 0"
 msgstr "채도: 0"
 
-#: src/qml/Footer.qml:152
+#: src/qml/Footer.qml:150
 msgctxt "@info:tooltip"
 msgid "Start playback"
 msgstr "재생 시작"
 
-#: src/qml/Footer.qml:152
+#: src/qml/Footer.qml:150
 msgctxt "@info:tooltip"
 msgid "Pause playback"
 msgstr "재생 일시 정지"
 
-#: src/qml/Footer.qml:172
+#: src/qml/Footer.qml:170
 msgctxt "@info:tooltip"
 msgid "Play previous file"
 msgstr "이전 파일 재생"
 
-#: src/qml/Footer.qml:192
+#: src/qml/Footer.qml:190
 msgctxt "@info:tooltip"
 msgid "Play next file"
 msgstr "다음 파일 재생"
 
-#: src/qml/Footer.qml:211
+#: src/qml/Footer.qml:209
 msgctxt "@info:tooltip"
 msgid "Open chapters menu"
 msgstr "챕터 메뉴 열기"
 
-#: src/qml/Footer.qml:281
+#: src/qml/Footer.qml:279
 msgctxt "@info:tooltip"
 msgid "Remaining: %1"
 msgstr "남은 시간: %1"
@@ -1538,32 +1623,32 @@ msgctxt "@title:window"
 msgid "Select Color"
 msgstr "색 선택"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:69 src/qml/Menus/FileMenu.qml:33
+#: src/qml/Haruna/Components/HamburgerMenu.qml:68 src/qml/Menus/FileMenu.qml:33
 #: src/qml/Menus/Global/GlobalFileMenu.qml:48
 msgctxt "@title:menu"
 msgid "Recent Files"
 msgstr "최근 파일"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:98
+#: src/qml/Haruna/Components/HamburgerMenu.qml:97
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:27
 #: src/qml/Menus/SubtitlesMenu.qml:25
 msgctxt "@title:menu"
 msgid "Primary Subtitle"
 msgstr "주 자막"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:104
+#: src/qml/Haruna/Components/HamburgerMenu.qml:103
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:61
 #: src/qml/Menus/SubtitlesMenu.qml:31
 msgctxt "@title:menu"
 msgid "Secondary Subtitle"
 msgstr "보조 자막"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:113
+#: src/qml/Haruna/Components/HamburgerMenu.qml:112
 msgctxt "@title:menu"
 msgid "Audio Track"
 msgstr "오디오 트랙"
 
-#: src/qml/Haruna/Components/HamburgerMenu.qml:136
+#: src/qml/Haruna/Components/HamburgerMenu.qml:135
 msgctxt "@title:menu"
 msgid "&More"
 msgstr "더 보기(&M)"
@@ -1633,22 +1718,22 @@ msgstr ""
 "자막을 \"%1\" 설정에서 정의한 경로에서 재귀적으로 검색합니다.\n"
 "상대 경로 폴더만 검색합니다."
 
-#: src/qml/Header.qml:79
+#: src/qml/Header.qml:77
 msgctxt "@action:intoolbar"
 msgid "Subtitles"
 msgstr "자막"
 
-#: src/qml/Header.qml:103
+#: src/qml/Header.qml:101
 msgctxt "@action:intoolbar"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/HProgressBar.qml:330
+#: src/qml/HProgressBar.qml:331
 msgctxt "@action:inmenu"
 msgid "Skip Chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/HProgressBar.qml:338
+#: src/qml/HProgressBar.qml:339
 msgctxt "@info:tooltip"
 msgid ""
 "Automatically skips chapters containing certain words/characters.\n"
@@ -1662,17 +1747,17 @@ msgctxt "@title:window"
 msgid "Haruna"
 msgstr "Haruna"
 
-#: src/qml/Main.qml:322
+#: src/qml/Main.qml:318
 msgctxt "@action:button"
 msgid "Open"
 msgstr "열기"
 
-#: src/qml/Main.qml:359
+#: src/qml/Main.qml:355
 msgctxt "@title:window"
 msgid "Select File"
 msgstr "파일 선택"
 
-#: src/qml/Main.qml:385
+#: src/qml/Main.qml:381
 msgctxt "@title:window"
 msgid "Select Subtitles File"
 msgstr "자막 파일 선택"
@@ -1714,77 +1799,86 @@ msgctxt "@title:menu"
 msgid "Seek"
 msgstr "탐색"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:19
-#: src/qml/Menus/SettingsMenu.qml:19
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:15
+#: src/qml/Menus/SettingsMenu.qml:15
 msgctxt "@title:menu"
 msgid "&Settings"
 msgstr "설정(&S)"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:22
-#: src/qml/Menus/SettingsMenu.qml:22
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:18
+#: src/qml/Menus/SettingsMenu.qml:19
 msgctxt "@action:inmenu"
 msgid "General"
 msgstr "일반"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:28
-#: src/qml/Menus/SettingsMenu.qml:28
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:24
+#: src/qml/Menus/SettingsMenu.qml:23
+msgctxt "@action:inmenu"
+msgid "Osd"
+msgstr ""
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:30
+#: src/qml/Menus/SettingsMenu.qml:27
 msgctxt "@action:inmenu"
 msgid "Playback"
 msgstr "재생"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:34
-#: src/qml/Menus/SettingsMenu.qml:34
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:36
+#: src/qml/Menus/SettingsMenu.qml:31
 msgctxt "@action:inmenu"
 msgid "Video"
 msgstr "비디오"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:40
-#: src/qml/Menus/SettingsMenu.qml:40
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:42
+#: src/qml/Menus/SettingsMenu.qml:35
 msgctxt "@action:inmenu"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:46
-#: src/qml/Menus/SettingsMenu.qml:46
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:48
+#: src/qml/Menus/SettingsMenu.qml:39
 msgctxt "@action:inmenu"
 msgid "Subtitles"
 msgstr "자막"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:52
-#: src/qml/Menus/SettingsMenu.qml:52
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:54
+#: src/qml/Menus/SettingsMenu.qml:43
 msgctxt "@action:inmenu"
 msgid "Playlist"
 msgstr "재생 목록"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:58
-#: src/qml/Menus/SettingsMenu.qml:58
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:60
+#: src/qml/Menus/SettingsMenu.qml:47
 msgctxt "@action:inmenu"
 msgid "Mouse"
 msgstr "마우스"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:64
-#: src/qml/Menus/SettingsMenu.qml:64
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:66
+#: src/qml/Menus/SettingsMenu.qml:51
 msgctxt "@action:inmenu"
 msgid "Shortcuts"
 msgstr "단축키"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:71
-#: src/qml/Menus/SettingsMenu.qml:71
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:73
+#: src/qml/Menus/SettingsMenu.qml:55
 msgctxt "@action:inmenu"
 msgid "Custom Commands"
 msgstr "사용자 정의 명령"
 
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:77
-#: src/qml/Menus/SettingsMenu.qml:77
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
+#: src/qml/Menus/SettingsMenu.qml:59
+#, fuzzy
+#| msgctxt "@action"
+#| msgid "Database"
+msgctxt "@action:inmenu"
+msgid "Database"
+msgstr "데이터베이스"
+
+#: src/qml/Menus/Global/GlobalSettingsMenu.qml:85
+#: src/qml/Menus/SettingsMenu.qml:63
 msgctxt "@action:inmenu"
 msgid "Debug"
 msgstr "디버그"
-
-#: src/qml/Menus/Global/GlobalSettingsMenu.qml:83
-#: src/qml/Menus/SettingsMenu.qml:83
-msgctxt "@action:inmenu"
-msgid "About"
-msgstr "정보"
 
 #: src/qml/Menus/Global/GlobalSubtitlesMenu.qml:22
 #: src/qml/Menus/SubtitlesMenu.qml:20
@@ -1802,7 +1896,7 @@ msgctxt "@title:menu"
 msgid "Adjustments"
 msgstr "조정"
 
-#: src/qml/Menus/Global/GlobalViewMenu.qml:17 src/qml/Menus/ViewMenu.qml:17
+#: src/qml/Menus/Global/GlobalViewMenu.qml:18 src/qml/Menus/ViewMenu.qml:17
 msgctxt "@title:menu"
 msgid "&View"
 msgstr "보기(&V)"
@@ -1817,12 +1911,12 @@ msgctxt "@action:inmenu"
 msgid "Show Menubar"
 msgstr "메뉴 표시줄 표시"
 
-#: src/qml/Menus/Global/GlobalViewMenu.qml:43 src/qml/Menus/ViewMenu.qml:37
+#: src/qml/Menus/Global/GlobalViewMenu.qml:42 src/qml/Menus/ViewMenu.qml:37
 msgctxt "@action:inmenu"
 msgid "Hide Toolbar"
 msgstr "도구 모음 숨기기"
 
-#: src/qml/Menus/Global/GlobalViewMenu.qml:45 src/qml/Menus/ViewMenu.qml:39
+#: src/qml/Menus/Global/GlobalViewMenu.qml:44 src/qml/Menus/ViewMenu.qml:39
 msgctxt "@action:inmenu"
 msgid "Show Toolbar"
 msgstr "도구 모음 표시"
@@ -1847,15 +1941,13 @@ msgctxt "@label:title"
 msgid "Loading…"
 msgstr "불러오는 중…"
 
-#: src/qml/Settings/AudioSettings.qml:26
-#: src/qml/Settings/SubtitlesSettings.qml:123
+#: src/Settings/AudioPage.qml:26 src/Settings/SubtitlesPage.qml:123
 msgctxt "@label:textbox"
 msgid "Preferred language"
 msgstr "선호하는 언어"
 
-#: src/qml/Settings/AudioSettings.qml:53 src/qml/Settings/AudioSettings.qml:80
-#: src/qml/Settings/SubtitlesSettings.qml:152
-#: src/qml/Settings/SubtitlesSettings.qml:180
+#: src/Settings/AudioPage.qml:53 src/Settings/AudioPage.qml:80
+#: src/Settings/SubtitlesPage.qml:152 src/Settings/SubtitlesPage.qml:180
 msgctxt "@info:tooltip"
 msgid ""
 "Track selection priority:<br>- preferred track id<br>- track matching the "
@@ -1864,42 +1956,42 @@ msgstr ""
 "트랙 선택 속성:<br>- 선호하는 트랙 ID<br>- 선호하는 언어와 일치하는 트랙"
 "<br>- 기본 트랙<br>- 트랙 없음"
 
-#: src/qml/Settings/AudioSettings.qml:62
+#: src/Settings/AudioPage.qml:62
 msgctxt "@label:spinbox"
 msgid "Preferred track id"
 msgstr "선호하는 트랙 ID"
 
-#: src/qml/Settings/AudioSettings.qml:90
+#: src/Settings/AudioPage.qml:90
 msgctxt "@label:spinbox"
 msgid "Volume step"
 msgstr "음량 단계"
 
-#: src/qml/Settings/AudioSettings.qml:109
+#: src/Settings/AudioPage.qml:109
 msgctxt "@title"
 msgid "Replay gain"
 msgstr "리플레이게인"
 
-#: src/qml/Settings/AudioSettings.qml:115
+#: src/Settings/AudioPage.qml:115
 msgctxt "@label:listbox"
 msgid "Mode"
 msgstr "모드"
 
-#: src/qml/Settings/AudioSettings.qml:127
+#: src/Settings/AudioPage.qml:127
 msgctxt "@item:listbox replay gain"
 msgid "Disabled"
 msgstr "사용 안 함"
 
-#: src/qml/Settings/AudioSettings.qml:133
+#: src/Settings/AudioPage.qml:133
 msgctxt "@item:listbox replay gain"
 msgid "Track"
 msgstr "트랙"
 
-#: src/qml/Settings/AudioSettings.qml:139
+#: src/Settings/AudioPage.qml:139
 msgctxt "@item:listbox replay gain"
 msgid "Album"
 msgstr "앨범"
 
-#: src/qml/Settings/AudioSettings.qml:153
+#: src/Settings/AudioPage.qml:153
 msgctxt "@info:tooltip"
 msgid ""
 "Adjust volume gain according to <i>replaygain</i> values stored in the file "
@@ -1910,37 +2002,34 @@ msgstr ""
 "범 게인을 선택했다면 앨범 게인 값이 있을 때 적용하며, 값이 없으면 트랙 게인"
 "을 대신 사용합니다."
 
-#: src/qml/Settings/AudioSettings.qml:166
+#: src/Settings/AudioPage.qml:166
 msgctxt "@label:spinbox"
 msgid "Prevent clipping"
 msgstr "클리핑 방지"
 
-#: src/qml/Settings/AudioSettings.qml:174
+#: src/Settings/AudioPage.qml:174
 msgctxt "@info:tooltip"
 msgid "Prevent clipping by lowering the gain"
 msgstr "게인을 낮춰서 클리핑 방지"
 
-#: src/qml/Settings/AudioSettings.qml:183
+#: src/Settings/AudioPage.qml:183
 msgctxt "@label:spinbox"
 msgid "Preamp (dB)"
 msgstr "프리앰프(dB)"
 
-#: src/qml/Settings/AudioSettings.qml:206
-#: src/qml/Settings/AudioSettings.qml:244
-#: src/qml/Settings/SubtitlesSettings.qml:247
-#: src/qml/Settings/SubtitlesSettings.qml:348
-#: src/qml/Settings/SubtitlesSettings.qml:408
-#: src/qml/Settings/SubtitlesSettings.qml:493
+#: src/Settings/AudioPage.qml:206 src/Settings/AudioPage.qml:244
+#: src/Settings/SubtitlesPage.qml:247 src/Settings/SubtitlesPage.qml:348
+#: src/Settings/SubtitlesPage.qml:408 src/Settings/SubtitlesPage.qml:493
 msgctxt "@info:tooltip"
 msgid "Reset to default value"
 msgstr "기본값으로 초기화"
 
-#: src/qml/Settings/AudioSettings.qml:221
+#: src/Settings/AudioPage.qml:221
 msgctxt "@label:spinbox"
 msgid "Fallback (dB)"
 msgstr "폴백(dB)"
 
-#: src/qml/Settings/AudioSettings.qml:251
+#: src/Settings/AudioPage.qml:251
 msgctxt "@info:tooltip"
 msgid ""
 "Gain in dB to apply if the file has no replay gain tags.<br><br>This setting "
@@ -1953,17 +2042,17 @@ msgstr ""
 "<br>- 리플레이게인 설정이 활성화되어 있으나 파일에 리플레이게인 메타데이터가 "
 "없을 때<br>이 설정이 적용되었다면 다른 리플레이게인 설정이 무시됩니다."
 
-#: src/qml/Settings/CustomCommandsSettings.qml:54
+#: src/Settings/CustomCommandsPage.qml:48
 msgctxt "@label:textbox"
 msgid "No custom commands yet"
 msgstr "사용자 정의 명령 없음"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:56
+#: src/Settings/CustomCommandsPage.qml:50
 msgctxt "@action:button"
 msgid "&Add Command"
 msgstr "명령 추가(&A)"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:106
+#: src/Settings/CustomCommandsPage.qml:100
 msgctxt "@info:tooltip"
 msgid ""
 "Checked: property will be set at startup\n"
@@ -1972,69 +2061,68 @@ msgstr ""
 "선택함: 시작할 때 속성 설정\n"
 "선택하지 않음: 시작할 때 속성 설정하지 않음"
 
-#: src/qml/Settings/CustomCommandsSettings.qml:191
+#: src/Settings/CustomCommandsPage.qml:184
 msgctxt "@action:intoolbar"
 msgid "&Add"
 msgstr "추가(&A)"
 
-#: src/qml/Settings/DatabaseSettings.qml:24
+#: src/Settings/DatabasePage.qml:25
 msgctxt "@label"
 msgid "Clear recent files"
 msgstr "최근 파일 비우기"
 
-#: src/qml/Settings/DatabaseSettings.qml:31
-#: src/qml/Settings/DatabaseSettings.qml:47
-#: src/qml/Settings/DatabaseSettings.qml:63
+#: src/Settings/DatabasePage.qml:32 src/Settings/DatabasePage.qml:48
+#: src/Settings/DatabasePage.qml:64
 msgctxt "@action:button:"
 msgid "Clear"
 msgstr "지우기"
 
-#: src/qml/Settings/DatabaseSettings.qml:35
+#: src/Settings/DatabasePage.qml:36
 msgctxt "@info:tooltip"
 msgid "Deletes all recent files saved in the database"
 msgstr "데이터베이스에 저장된 모든 최근 파일 삭제"
 
-#: src/qml/Settings/DatabaseSettings.qml:40
+#: src/Settings/DatabasePage.qml:41
 msgctxt "@label"
 msgid "Clear metadata"
 msgstr "메타데이터 지우기"
 
-#: src/qml/Settings/DatabaseSettings.qml:51
+#: src/Settings/DatabasePage.qml:52
 msgctxt "@info:tooltip"
 msgid "Deletes all metadata saved in the database"
 msgstr "데이터베이스에 저장된 모든 메타데이터 삭제"
 
-#: src/qml/Settings/DatabaseSettings.qml:56
+#: src/Settings/DatabasePage.qml:57
 msgctxt "@label"
 msgid "Clear playback positions"
 msgstr "재생 위치 지우기"
 
-#: src/qml/Settings/DatabaseSettings.qml:67
+#: src/Settings/DatabasePage.qml:68
 msgctxt "@info:tooltip"
 msgid "Deletes all playback positions saved in the database"
 msgstr "데이터베이스에 저장된 모든 재생 위치 삭제"
 
-#: src/qml/Settings/DebugSettings.qml:28
+#: src/Settings/DebugPage.qml:26
 msgctxt "@label:textbox"
 msgid "Config file"
 msgstr "설정 파일"
 
-#: src/qml/Settings/DebugSettings.qml:40
+#: src/Settings/DebugPage.qml:38
 msgctxt "@label:textbox"
 msgid "Custom commands config file"
 msgstr "사용자 정의 명령 설정 파일"
 
-#: src/qml/Settings/DebugSettings.qml:52
+#: src/Settings/DebugPage.qml:50
 msgctxt "@label:textbox"
 msgid "Shortcuts config file"
 msgstr "단축키 설정 파일"
 
-#: src/qml/Settings/DebugSettings.qml:64
+#: src/Settings/DebugPage.qml:62
 msgctxt "@label:textbox"
 msgid "Playlists config file"
 msgstr "재생 목록 설정 파일"
 
-#: src/qml/Settings/DebugSettings.qml:76
+#: src/Settings/DebugPage.qml:74
 msgctxt "@info:usagetip"
 msgid ""
 "If fields are empty that means there is no config file/folder (e.g when "
@@ -2043,27 +2131,27 @@ msgstr ""
 "필드가 비어 있으면 설정 파일이나 폴더가 없음을 의미합니다(예: 시스템 기본 설"
 "정 사용)."
 
-#: src/qml/Settings/DebugSettings.qml:84
+#: src/Settings/DebugPage.qml:82
 msgctxt "@option:check"
 msgid "Enable mpv logging"
 msgstr "mpv 로그 활성화"
 
-#: src/qml/Settings/DebugSettings.qml:107
+#: src/Settings/DebugPage.qml:104
 msgctxt "@info:tooltip"
 msgid "Open file"
 msgstr "파일 열기"
 
-#: src/qml/Settings/DebugSettings.qml:116
+#: src/Settings/DebugPage.qml:113
 msgctxt "@info:tooltip"
 msgid "Open containing folder"
 msgstr "포함하는 폴더 열기"
 
-#: src/qml/Settings/EditCustomCommand.qml:52
+#: src/Settings/EditCustomCommand.qml:46
 msgctxt "@label:textbox"
 msgid "Command"
 msgstr "명령"
 
-#: src/qml/Settings/EditCustomCommand.qml:68
+#: src/Settings/EditCustomCommand.qml:62
 msgctxt "@info:tooltip"
 msgid ""
 "What mpv command to run, see <a href=\"https://mpv.io/manual/stable/#list-of-"
@@ -2087,17 +2175,17 @@ msgstr ""
 "strong> 사용.<br><strong>cycle</strong>: 속성의 가능한 값을 따라서 전환. 예: "
 "<strong>cycle aid up</strong>."
 
-#: src/qml/Settings/EditCustomCommand.qml:85
+#: src/Settings/EditCustomCommand.qml:79
 msgctxt "@label:textbox"
 msgid "OSD Message"
 msgstr "OSD 메시지"
 
-#: src/qml/Settings/EditCustomCommand.qml:95
+#: src/Settings/EditCustomCommand.qml:89
 msgctxt "placeholder text; %1 is an example of how to display an mpv property"
 msgid "Filename: %1"
 msgstr "파일 이름: %1"
 
-#: src/qml/Settings/EditCustomCommand.qml:101
+#: src/Settings/EditCustomCommand.qml:95
 msgctxt "@info:tooltip"
 msgid ""
 "An OSD message to display when triggering an action type custom command."
@@ -2108,17 +2196,17 @@ msgstr ""
 "${property_name}을 사용하면 속성의 값을 표시합니다. 예: <strong>음량: "
 "${volume}</strong>"
 
-#: src/qml/Settings/EditCustomCommand.qml:110
+#: src/Settings/EditCustomCommand.qml:104
 msgctxt "@label"
 msgid "Type"
 msgstr "종류"
 
-#: src/qml/Settings/EditCustomCommand.qml:131
+#: src/Settings/EditCustomCommand.qml:125
 msgctxt "@option:radio"
 msgid "Keyboard shortcut"
 msgstr "키보드 단축키"
 
-#: src/qml/Settings/EditCustomCommand.qml:132
+#: src/Settings/EditCustomCommand.qml:126
 msgctxt "@info:tooltip"
 msgid ""
 "The command will be triggered with a shortcut. The shortcut can be set after "
@@ -2127,37 +2215,37 @@ msgstr ""
 "이 명령은 단축키를 입력했을 때 트리거됩니다. 저장한 후 단축키를 설정할 수 있"
 "습니다."
 
-#: src/qml/Settings/EditCustomCommand.qml:141
+#: src/Settings/EditCustomCommand.qml:135
 msgctxt "@option:radio"
 msgid "Run at startup"
 msgstr "시작할 때 실행"
 
-#: src/qml/Settings/EditCustomCommand.qml:142
+#: src/Settings/EditCustomCommand.qml:136
 msgctxt "@info:tooltip"
 msgid "The command will be run at application startup."
 msgstr "앱을 시작할 때 실행할 명령입니다."
 
-#: src/qml/Settings/EditCustomCommand.qml:154
+#: src/Settings/EditCustomCommand.qml:148
 msgctxt "@action:intoolbar"
 msgid "Delete"
 msgstr "삭제"
 
-#: src/qml/Settings/EditCustomCommand.qml:169
+#: src/Settings/EditCustomCommand.qml:163
 msgctxt "@action:intoolbar"
 msgid "Cancel"
 msgstr "취소"
 
-#: src/qml/Settings/EditCustomCommand.qml:176
+#: src/Settings/EditCustomCommand.qml:170
 msgctxt "@action:intoolbar"
 msgid "&Save"
 msgstr "저장(&S)"
 
-#: src/qml/Settings/GeneralSettings.qml:27
+#: src/Settings/GeneralPage.qml:27
 msgctxt "@label:spinbox"
 msgid "Maximum recent files"
 msgstr "최대 최근 파일"
 
-#: src/qml/Settings/GeneralSettings.qml:45
+#: src/Settings/GeneralPage.qml:45
 msgctxt "@info:tooltip"
 msgid ""
 "The number of recent files to display. Enter 0 (zero) to disable.<br>Every "
@@ -2169,12 +2257,12 @@ msgstr ""
 "을 저장합니다.<br>굵게 표시된 항목은 파일/URL 열기 동작이나 외부 앱(명령행, "
 "파일 관리자, 끌어다 놓기 등)으로 연 파일입니다."
 
-#: src/qml/Settings/GeneralSettings.qml:58
+#: src/Settings/GeneralPage.qml:58
 msgctxt "@option:check"
 msgid "Allow only one instance"
 msgstr "인스턴스 한 개만 허용"
 
-#: src/qml/Settings/GeneralSettings.qml:67
+#: src/Settings/GeneralPage.qml:67
 msgctxt "@info:tooltip"
 msgid ""
 "Trying to open another Haruna instance will do nothing.<br>Trying to open "
@@ -2183,57 +2271,57 @@ msgstr ""
 "다른 Haruna 인스턴스를 열려고 할 때 아무것도 일어나지 않습니다.<br>Haruna로 "
 "다른 파일을 열려고 할 때 현재 실행 중인 인스턴스에서 파일을 엽니다."
 
-#: src/qml/Settings/GeneralSettings.qml:78
+#: src/Settings/GeneralPage.qml:78
 msgctxt "@option:check"
 msgid "Add file to playlist"
 msgstr "재생 목록에 파일 추가"
 
-#: src/qml/Settings/GeneralSettings.qml:88
+#: src/Settings/GeneralPage.qml:88
 msgctxt "@info:tooltip"
 msgid "File will be added to the end of the playlist."
 msgstr "파일을 재생 목록의 맨 끝에 추가합니다"
 
-#: src/qml/Settings/GeneralSettings.qml:97
+#: src/Settings/GeneralPage.qml:97
 msgctxt "@option:check"
 msgid "Play new file"
 msgstr "새 파일 재생"
 
-#: src/qml/Settings/GeneralSettings.qml:108
+#: src/Settings/GeneralPage.qml:108
 msgctxt "@title"
 msgid "Interface"
 msgstr "인터페이스"
 
-#: src/qml/Settings/GeneralSettings.qml:114
+#: src/Settings/GeneralPage.qml:114
 msgctxt "@label:spinbox"
 msgid "Footer style"
 msgstr "바닥글 스타일"
 
-#: src/qml/Settings/GeneralSettings.qml:126
+#: src/Settings/GeneralPage.qml:126
 msgctxt "@item:listbox the footer style"
 msgid "Default"
 msgstr "기본값"
 
-#: src/qml/Settings/GeneralSettings.qml:132
+#: src/Settings/GeneralPage.qml:132
 msgctxt "@item:listbox the footer style"
 msgid "Floating"
 msgstr "떠다님"
 
-#: src/qml/Settings/GeneralSettings.qml:146
+#: src/Settings/GeneralPage.qml:146
 msgctxt "@label:listbox"
 msgid "Show floating footer on"
 msgstr "떠다니는 바닥글 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:161
+#: src/Settings/GeneralPage.qml:161
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Every mouse movement"
 msgstr "항상 마우스가 움직일 때"
 
-#: src/qml/Settings/GeneralSettings.qml:167
+#: src/Settings/GeneralPage.qml:167
 msgctxt "@item:listbox how to trigger the floating footer"
 msgid "Bottom mouse movement"
 msgstr "아래쪽에서 마우스가 움직일 때"
 
-#: src/qml/Settings/GeneralSettings.qml:182
+#: src/Settings/GeneralPage.qml:182
 msgctxt "@info:tooltip"
 msgid ""
 "What action shows the footer.<br><strong>Every mouse movement</strong> — "
@@ -2244,52 +2332,52 @@ msgstr ""
 "역에서 마우스를 움직일 때마다<br><strong>아래쪽에서 마우스 움직임</strong>: "
 "동영상 영역 아래쪽에서 마우스를 움직일 때마다"
 
-#: src/qml/Settings/GeneralSettings.qml:190
+#: src/Settings/GeneralPage.qml:190
 msgctxt "@label:spinbox"
 msgid "Preview thumbnail"
 msgstr "미리 보기 섬네일"
 
-#: src/qml/Settings/GeneralSettings.qml:195
+#: src/Settings/GeneralPage.qml:195
 msgctxt "@option:check"
 msgid "Show preview thumbnail"
 msgstr "미리 보기 섬네일 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:202
+#: src/Settings/GeneralPage.qml:202
 msgctxt "@info:tooltip"
 msgid "Shows a preview while hovering the seek/progress bar."
 msgstr "검색/진행 표시줄에서 마우스를 올려 두었을 때 미리 보기를 표시합니다."
 
-#: src/qml/Settings/GeneralSettings.qml:211
+#: src/Settings/GeneralPage.qml:211
 msgctxt "@option:check"
 msgid "Use accurate preview"
 msgstr "정확한 미리 보기 사용"
 
-#: src/qml/Settings/GeneralSettings.qml:221
+#: src/Settings/GeneralPage.qml:221
 msgctxt "@info:tooltip"
 msgid "Generating an accurate preview is slow"
 msgstr "정확한 미리 보기를 생성하는 데에는 시간이 걸릴 수 있습니다"
 
-#: src/qml/Settings/GeneralSettings.qml:229
+#: src/Settings/GeneralPage.qml:229
 msgctxt "@label:spinbox"
 msgid "Thumbnail width"
 msgstr "섬네일 너비"
 
-#: src/qml/Settings/GeneralSettings.qml:247
+#: src/Settings/GeneralPage.qml:247
 msgctxt "@label"
 msgid "Window"
 msgstr "창"
 
-#: src/qml/Settings/GeneralSettings.qml:253
+#: src/Settings/GeneralPage.qml:253
 msgctxt "@option:check"
 msgid "Resize to fit video"
 msgstr "동영상 크기에 맞게 조정"
 
-#: src/qml/Settings/GeneralSettings.qml:264
+#: src/Settings/GeneralPage.qml:264
 msgctxt "@info:tooltip"
 msgid "Not supported on Wayland."
 msgstr "Wayland에서는 지원하지 않습니다."
 
-#: src/qml/Settings/GeneralSettings.qml:265
+#: src/Settings/GeneralPage.qml:265
 msgctxt "@info:tooltip"
 msgid ""
 "The window is resized according to the video resolution.<br>The maximum size "
@@ -2298,12 +2386,12 @@ msgstr ""
 "창 크기를 동영상 해상도에 맞게 조정합니다.<br>최대 크기는 제한되어 있지 않으"
 "며 운영 체제에 의존합니다."
 
-#: src/qml/Settings/GeneralSettings.qml:275
+#: src/Settings/GeneralPage.qml:275
 msgctxt "@option:check"
 msgid "Start in fullscreen mode"
 msgstr "전체 화면 모드에서 시작하기"
 
-#: src/qml/Settings/GeneralSettings.qml:284
+#: src/Settings/GeneralPage.qml:284
 msgctxt "@info:tooltip"
 msgid ""
 "Enter fullscreen mode when the application starts.<br>This takes precedence "
@@ -2312,19 +2400,19 @@ msgstr ""
 "앱을 시작할 때 전체 화면 모드로 시작합니다.<br>동영상 크기에 맞게 조정, 창 크"
 "기와 위치 기억 설정보다 더 우선적으로 적용됩니다."
 
-#: src/qml/Settings/GeneralSettings.qml:295
+#: src/Settings/GeneralPage.qml:295
 msgctxt "@option:check"
 msgid "Remember window size and position"
 msgstr "창 크기와 위치 기억"
 
-#: src/qml/Settings/GeneralSettings.qml:308
+#: src/Settings/GeneralPage.qml:308
 msgctxt ""
 "@info:tooltip extra wayland info for the “Remember window size and position” "
 "setting"
 msgid "<b>Restoring position is not supported on Wayland.</b><br><br>"
 msgstr "Wayland에서는 위치 복원을 지원하지 않습니다."
 
-#: src/qml/Settings/GeneralSettings.qml:310
+#: src/Settings/GeneralPage.qml:310
 msgctxt "@info:tooltip"
 msgid ""
 "Changes to the window’s size and position are saved and used for newly "
@@ -2333,23 +2421,22 @@ msgstr ""
 "창 크기와 위치가 변경되었을 때 새로운 값을 저장하여 새로 열린 창에 사용합니"
 "다.<br><br>%1\"동영상 크기에 맞게 조정\" 설정은 이 설정에 우선합니다."
 
-#: src/qml/Settings/GeneralSettings.qml:322
+#: src/Settings/GeneralPage.qml:322
 msgctxt "@option:check"
 msgid "Show menubar"
 msgstr "메뉴 표시줄 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:333
-#: src/qml/Settings/PlaylistSettings.qml:169
+#: src/Settings/GeneralPage.qml:333 src/Settings/PlaylistPage.qml:169
 msgctxt "@option:check"
 msgid "Show toolbar"
 msgstr "도구 모음 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:345
+#: src/Settings/GeneralPage.qml:345
 msgctxt "@option:check"
 msgid "Show explanatory tooltips"
 msgstr "설명하는 풍선 도움말 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:354
+#: src/Settings/GeneralPage.qml:354
 msgctxt "@info:tooltip"
 msgid ""
 "Only affects tooltips that explain how something works or what it does."
@@ -2361,173 +2448,173 @@ msgstr ""
 "보를 표시하는 풍선 도움말은 비활성화되지 않습니다(예: 마우스 커서 위치의 시간"
 "을 나타내는 검색 표시줄 풍선 도움말, 축약된 텍스트에 대한 풍선 도움말)."
 
-#: src/qml/Settings/GeneralSettings.qml:364
+#: src/Settings/GeneralPage.qml:364
 msgctxt "@option:check"
 msgid "Show chapter markers"
 msgstr "챕터 마커 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:375
+#: src/Settings/GeneralPage.qml:375
 msgctxt "@option:check"
 msgid "Show progress on taskbar icon"
 msgstr "작업 표시줄 아이콘에 진행 상황 표시"
 
-#: src/qml/Settings/GeneralSettings.qml:384
+#: src/Settings/GeneralPage.qml:384
 msgctxt "@label:listbox"
 msgid "Color scheme"
 msgstr "색 배열"
 
-#: src/qml/Settings/GeneralSettings.qml:429
+#: src/Settings/GeneralPage.qml:429
 msgctxt "@label:listbox"
 msgid "GUI style"
 msgstr "GUI 스타일"
 
-#: src/qml/Settings/GeneralSettings.qml:462
+#: src/Settings/GeneralPage.qml:462
 msgctxt "@item:listbox default GUI style"
 msgid "Default"
 msgstr "기본값"
 
-#: src/qml/Settings/MouseSettings.qml:51
+#: src/Settings/MousePage.qml:51
 msgctxt "@label represents a mouse double click, for example `Right x2`"
 msgid "x2"
 msgstr "x2"
 
-#: src/qml/Settings/MouseSettings.qml:93
+#: src/Settings/MousePage.qml:93
 msgctxt "@label:action change action associated with mouse event"
 msgid "Change action"
 msgstr "동작 변경"
 
-#: src/qml/Settings/MouseSettings.qml:107
+#: src/Settings/MousePage.qml:107
 msgctxt "@label:action delete mouse event"
 msgid "Delete"
 msgstr "삭제"
 
-#: src/qml/Settings/MouseSettings.qml:135
+#: src/Settings/MousePage.qml:135
 msgctxt "@action:intoolbar add a mouse button action"
 msgid "&Add"
 msgstr "추가(&A)"
 
-#: src/qml/Settings/MouseSettings.qml:170
+#: src/Settings/MousePage.qml:170
 msgctxt "@title:window"
 msgid "Add mouse button action"
 msgstr "마우스 단추 동작 추가"
 
-#: src/qml/Settings/MouseSettings.qml:183
+#: src/Settings/MousePage.qml:183
 msgctxt "@label:listbox"
 msgid "Mouse button"
 msgstr "마우스 단추"
 
-#: src/qml/Settings/MouseSettings.qml:200
+#: src/Settings/MousePage.qml:200
 msgctxt "@item:listbox left mouse button"
 msgid "Left"
 msgstr "왼쪽"
 
-#: src/qml/Settings/MouseSettings.qml:206
+#: src/Settings/MousePage.qml:206
 msgctxt "@item:listbox middle mouse button"
 msgid "Middle"
 msgstr "가운데"
 
-#: src/qml/Settings/MouseSettings.qml:212
+#: src/Settings/MousePage.qml:212
 msgctxt "@item:listbox right mouse button"
 msgid "Right"
 msgstr "오른쪽"
 
-#: src/qml/Settings/MouseSettings.qml:218
+#: src/Settings/MousePage.qml:218
 msgctxt "@item:listbox forward mouse button"
 msgid "Forward"
 msgstr "앞으로"
 
-#: src/qml/Settings/MouseSettings.qml:224
+#: src/Settings/MousePage.qml:224
 msgctxt "@item:listbox back mouse button"
 msgid "Back"
 msgstr "뒤로"
 
-#: src/qml/Settings/MouseSettings.qml:230
+#: src/Settings/MousePage.qml:230
 msgctxt "@item:listbox mouse scroll up"
 msgid "Scroll up"
 msgstr "위로 스크롤"
 
-#: src/qml/Settings/MouseSettings.qml:236
+#: src/Settings/MousePage.qml:236
 msgctxt "@item:listbox mouse scroll down"
 msgid "Scroll down"
 msgstr "아래로 스크롤"
 
-#: src/qml/Settings/MouseSettings.qml:245
+#: src/Settings/MousePage.qml:245
 msgctxt "@label:listbox"
 msgid "Modifier key"
 msgstr "수정자 키"
 
-#: src/qml/Settings/MouseSettings.qml:263
+#: src/Settings/MousePage.qml:263
 msgctxt "@item:listbox no modifier key"
 msgid "No modifier"
 msgstr "수정자 키 없음"
 
-#: src/qml/Settings/MouseSettings.qml:269
+#: src/Settings/MousePage.qml:269
 msgctxt "@item:listbox control modifier key"
 msgid "Control"
 msgstr "Control"
 
-#: src/qml/Settings/MouseSettings.qml:275
+#: src/Settings/MousePage.qml:275
 msgctxt "@item:listbox shift modifier key"
 msgid "Shift"
 msgstr "Shift"
 
-#: src/qml/Settings/MouseSettings.qml:281
+#: src/Settings/MousePage.qml:281
 msgctxt "@item:listbox alt modifier key"
 msgid "Alt"
 msgstr "Alt"
 
-#: src/qml/Settings/MouseSettings.qml:287
+#: src/Settings/MousePage.qml:287
 msgctxt "@item:listbox meta modifier key"
 msgid "Meta"
 msgstr "Meta"
 
-#: src/qml/Settings/MouseSettings.qml:299
+#: src/Settings/MousePage.qml:299
 msgctxt ""
 "@label:check whether mouse button action should trigger on double click"
 msgid "Trigger on double click"
 msgstr "두 번 클릭할 때 트리거"
 
-#: src/qml/Settings/MouseSettings.qml:309
+#: src/Settings/MousePage.qml:309
 msgctxt "@label"
 msgid "Action"
 msgstr "동작"
 
-#: src/qml/Settings/MouseSettings.qml:317
+#: src/Settings/MousePage.qml:317
 msgctxt "@action:button select mouse button action"
 msgid "Select action"
 msgstr "동작 선택"
 
-#: src/qml/Settings/MouseSettings.qml:333
+#: src/Settings/MousePage.qml:333
 msgctxt "@action:button"
 msgid "Change action"
 msgstr "동작 변경"
 
-#: src/qml/Settings/MouseSettings.qml:344
+#: src/Settings/MousePage.qml:344
 msgctxt "@info"
 msgid "No action selected"
 msgstr "선택한 동작 없음"
 
-#: src/qml/Settings/MouseSettings.qml:367
+#: src/Settings/MousePage.qml:367
 msgctxt "@info"
 msgid "Mouse button combination is already assigned to “%1”"
 msgstr "마우스 단추 조합이 \"%1\"에 이미 할당되어 있음"
 
-#: src/qml/Settings/OsdSettings.qml:25
+#: src/Settings/OsdPage.qml:24
 msgctxt "@label:spinbox"
 msgid "OSD font size"
 msgstr "OSD 글꼴 크기"
 
-#: src/qml/Settings/OsdSettings.qml:44
+#: src/Settings/OsdPage.qml:43
 msgctxt "@title"
 msgid "Choose when to show osd"
 msgstr ""
 
-#: src/qml/Settings/PlaybackSettings.qml:27
+#: src/Settings/PlaybackPage.qml:27
 msgctxt "@label:spinbox"
 msgid "Seek small step"
 msgstr "작은 탐색 단위"
 
-#: src/qml/Settings/PlaybackSettings.qml:47
+#: src/Settings/PlaybackPage.qml:47
 msgctxt "@info:tooltip seek small step setting"
 msgid ""
 "How much to seek when triggering the corresponding action. Seek mode is <a "
@@ -2538,12 +2625,12 @@ msgstr ""
 "mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>입"
 "니다"
 
-#: src/qml/Settings/PlaybackSettings.qml:54
+#: src/Settings/PlaybackPage.qml:54
 msgctxt "@label:spinbox"
 msgid "Seek medium step"
 msgstr "중간 탐색 단위"
 
-#: src/qml/Settings/PlaybackSettings.qml:74
+#: src/Settings/PlaybackPage.qml:74
 msgctxt "@info:tooltip seek medium step setting"
 msgid ""
 "How much to seek when triggering the corresponding action. Seek mode is <a "
@@ -2555,12 +2642,12 @@ msgstr ""
 "mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>입"
 "니다. 마우스 커서가 진행 표시줄 위에 있을 때 휠을 돌렸을 때에도 사용됩니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:82
+#: src/Settings/PlaybackPage.qml:82
 msgctxt "@label:spinbox"
 msgid "Seek big step"
 msgstr "큰 탐색 단위"
 
-#: src/qml/Settings/PlaybackSettings.qml:101
+#: src/Settings/PlaybackPage.qml:101
 msgctxt "@info:tooltip seek big step setting"
 msgid ""
 "How much to seek when triggering the corresponding action. Seek mode is <a "
@@ -2571,12 +2658,12 @@ msgstr ""
 "mpv.io/manual/stable/#command-interface-seek-<target>-[<flags>]'>exact</a>입"
 "니다"
 
-#: src/qml/Settings/PlaybackSettings.qml:107
+#: src/Settings/PlaybackPage.qml:107
 msgctxt "@label"
 msgid "Hardware decoding"
 msgstr "하드웨어 디코딩"
 
-#: src/qml/Settings/PlaybackSettings.qml:149
+#: src/Settings/PlaybackPage.qml:149
 msgctxt "@info:tooltip hardware decoding setting"
 msgid ""
 "Specify the hardware video decoding API that should be used if possible. "
@@ -2613,41 +2700,41 @@ msgstr ""
 "자 정의 시작 명령으로 <strong>set hwdec <i>decoder_name</i></strong>을 입력하"
 "십시오."
 
-#: src/qml/Settings/PlaybackSettings.qml:173
+#: src/Settings/PlaybackPage.qml:173
 msgctxt "@option:check"
 msgid "Open last played file on startup"
 msgstr "시작할 때 마지막으로 재생한 파일 열기"
 
-#: src/qml/Settings/PlaybackSettings.qml:182
+#: src/Settings/PlaybackPage.qml:182
 msgctxt "@info:tooltip open last played file setting"
 msgid ""
 "On startup it opens the file that was playing when the application was "
 "closed."
 msgstr "시작할 때 마지막으로 앱을 닫을 때 재생했던 파일을 엽니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:194
+#: src/Settings/PlaybackPage.qml:194
 msgctxt "@option:check"
 msgid "Pause on minimize"
 msgstr "최소화 시 일시 정지"
 
-#: src/qml/Settings/PlaybackSettings.qml:203
+#: src/Settings/PlaybackPage.qml:203
 msgctxt "@info:tooltip pause on minimize setting"
 msgid ""
 "Pauses the player while the window is minimized, playback resumes when "
 "restored."
 msgstr "창이 최소화되었을 때 재생을 일시 정지하며 복원될 때 다시 시작합니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:215
+#: src/Settings/PlaybackPage.qml:215
 msgctxt "@title"
 msgid "Playback position"
 msgstr "재생 위치"
 
-#: src/qml/Settings/PlaybackSettings.qml:225
+#: src/Settings/PlaybackPage.qml:225
 msgctxt "@option:check"
 msgid "Restore playback position"
 msgstr "재생 위치 복원"
 
-#: src/qml/Settings/PlaybackSettings.qml:234
+#: src/Settings/PlaybackPage.qml:234
 msgctxt "@info:tooltip save playback position"
 msgid ""
 "Saves the file position during playback, opening the same file again will "
@@ -2664,49 +2751,49 @@ msgstr[0] ""
 "다.\n"
 "매 %1초마다 동영상 위치를 저장하며, 마지막 10초는 제외됩니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:251
+#: src/Settings/PlaybackPage.qml:251
 msgctxt "@option:check"
 msgid "Start playing"
 msgstr "재생 시작"
 
-#: src/qml/Settings/PlaybackSettings.qml:261
+#: src/Settings/PlaybackPage.qml:261
 msgctxt "@info:tooltip start playing setting"
 msgid "The file will be playing after restoring the playback position"
 msgstr "재생 위치를 복원한 후 파일 재생이 시작됨"
 
-#: src/qml/Settings/PlaybackSettings.qml:269
+#: src/Settings/PlaybackPage.qml:269
 msgctxt "@label:spinbox when to save position"
 msgid "Save position"
 msgstr "위치 저장"
 
-#: src/qml/Settings/PlaybackSettings.qml:290
+#: src/Settings/PlaybackPage.qml:290
 msgctxt "@info when to save position"
 msgid "for any duration"
 msgstr "모든 시간에"
 
-#: src/qml/Settings/PlaybackSettings.qml:293
+#: src/Settings/PlaybackPage.qml:293
 msgctxt "@info when to save position"
 msgid "if duration is longer than %1 minute"
 msgid_plural "if duration is longer than %1 minutes"
 msgstr[0] "시간이 %1분보다 더 길 때"
 
-#: src/qml/Settings/PlaybackSettings.qml:320
+#: src/Settings/PlaybackPage.qml:320
 msgctxt "@info:tooltip how often to save position"
 msgid "every %1 second"
 msgid_plural "every %1 seconds"
 msgstr[0] "%1초마다"
 
-#: src/qml/Settings/PlaybackSettings.qml:333
+#: src/Settings/PlaybackPage.qml:333
 msgctxt "@title"
 msgid "Chapters"
 msgstr "챕터"
 
-#: src/qml/Settings/PlaybackSettings.qml:342
+#: src/Settings/PlaybackPage.qml:342
 msgctxt "@option:check"
 msgid "Skip chapters"
 msgstr "챕터 건너뛰기"
 
-#: src/qml/Settings/PlaybackSettings.qml:350
+#: src/Settings/PlaybackPage.qml:350
 msgctxt "@info:tooltip skip chapters setting"
 msgid ""
 "When enabled it automatically skips chapters containing certain words/"
@@ -2714,17 +2801,17 @@ msgid ""
 msgstr ""
 "이 옵션을 사용하면 지정한 단어나 문자를 포함한 챕터를 자동으로 건너뜁니다."
 
-#: src/qml/Settings/PlaybackSettings.qml:356
+#: src/Settings/PlaybackPage.qml:356
 msgctxt "@label:textbox"
 msgid "Keywords"
 msgstr "키워드"
 
-#: src/qml/Settings/PlaybackSettings.qml:365
+#: src/Settings/PlaybackPage.qml:365
 msgctxt "placeholder text"
 msgid "op, ed, chapter 1"
 msgstr "op, ed, 챕터 1"
 
-#: src/qml/Settings/PlaybackSettings.qml:371
+#: src/Settings/PlaybackPage.qml:371
 msgctxt "@info:tooltip skip words setting"
 msgid ""
 "Skip chapters containing these words. Comma separated list. The match is not "
@@ -2735,87 +2822,87 @@ msgstr ""
 "어 기반이 아닙니다. 예를 들어 <strong>오</strong>를 입력하면 <strong><u>오</"
 "u>프닝</strong>과 같은 단어에도 일치합니다.JK"
 
-#: src/qml/Settings/PlaybackSettings.qml:395
+#: src/Settings/PlaybackPage.qml:395
 msgctxt "@title"
 msgid "Youtube-dl"
 msgstr "Youtube-dl"
 
-#: src/qml/Settings/PlaybackSettings.qml:401
+#: src/Settings/PlaybackPage.qml:401
 msgctxt "@label"
 msgid "Format selection"
 msgstr "형식 선택"
 
-#: src/qml/Settings/PlaybackSettings.qml:426
+#: src/Settings/PlaybackPage.qml:426
 msgctxt "@item:listbox the custom youtube-dl format selection"
 msgid "Custom"
 msgstr "사용자 정의"
 
-#: src/qml/Settings/PlaybackSettings.qml:432
+#: src/Settings/PlaybackPage.qml:432
 msgctxt "@item:listbox the default youtube-dl format selection"
 msgid "Default"
 msgstr "기본값"
 
-#: src/qml/Settings/PlaybackSettings.qml:447
+#: src/Settings/PlaybackPage.qml:447
 msgctxt "@info:tooltip format selection setting"
 msgid "Selects a video source that is closest to the selected format."
 msgstr "선택한 형식에 가장 가까운 동영상 원본을 선택합니다."
 
-#: src/qml/Settings/PlaylistSettings.qml:26
+#: src/Settings/PlaylistPage.qml:26
 msgctxt "@label:listbox"
 msgid "Position"
 msgstr "위치"
 
-#: src/qml/Settings/PlaylistSettings.qml:38
+#: src/Settings/PlaylistPage.qml:38
 msgctxt "@item:listbox playlist position"
 msgid "Left"
 msgstr "왼쪽"
 
-#: src/qml/Settings/PlaylistSettings.qml:44
+#: src/Settings/PlaylistPage.qml:44
 msgctxt "@item:listbox playlist position"
 msgid "Right"
 msgstr "오른쪽"
 
-#: src/qml/Settings/PlaylistSettings.qml:59
+#: src/Settings/PlaylistPage.qml:59
 msgctxt "@label:listbox"
 msgid "Playlist style"
 msgstr "재생 목록 스타일"
 
-#: src/qml/Settings/PlaylistSettings.qml:71
+#: src/Settings/PlaylistPage.qml:71
 msgctxt "@item:listbox the style of the playlist"
 msgid "Default"
 msgstr "기본값"
 
-#: src/qml/Settings/PlaylistSettings.qml:77
+#: src/Settings/PlaylistPage.qml:77
 msgctxt "@item:listbox the style of the playlist"
 msgid "With thumbnails"
 msgstr "섬네일 포함"
 
-#: src/qml/Settings/PlaylistSettings.qml:92
+#: src/Settings/PlaylistPage.qml:92
 msgctxt "@label:listbox"
 msgid "Playback behavior"
 msgstr "재생 행동"
 
-#: src/qml/Settings/PlaylistSettings.qml:106
+#: src/Settings/PlaylistPage.qml:106
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat playlist"
 msgstr "재생 목록 반복"
 
-#: src/qml/Settings/PlaylistSettings.qml:112
+#: src/Settings/PlaylistPage.qml:112
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after last item"
 msgstr "마지막 항목 이후 정지"
 
-#: src/qml/Settings/PlaylistSettings.qml:118
+#: src/Settings/PlaylistPage.qml:118
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Repeat item"
 msgstr "항목 반복"
 
-#: src/qml/Settings/PlaylistSettings.qml:124
+#: src/Settings/PlaylistPage.qml:124
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Stop after item"
 msgstr "항목 이후 정지"
 
-#: src/qml/Settings/PlaylistSettings.qml:147
+#: src/Settings/PlaylistPage.qml:147
 msgctxt "@info:tooltip playback description"
 msgid ""
 "<strong>Repeat playlist</strong>: playlist is repeated "
@@ -2829,17 +2916,17 @@ msgstr ""
 "<br><strong>항목 반복</strong>: 현재 항목을 영원히 반복합니다<br><strong>항"
 "목 이후 정지</strong>: 현재 재생 항목을 재생한 후 재생을 정지합니다"
 
-#: src/qml/Settings/PlaylistSettings.qml:159
+#: src/Settings/PlaylistPage.qml:159
 msgctxt "@item:listbox the playback behavior of the playlist"
 msgid "Random playback"
 msgstr "무작위 순서 재생"
 
-#: src/qml/Settings/PlaylistSettings.qml:181
+#: src/Settings/PlaylistPage.qml:181
 msgctxt "@option:check"
 msgid "Overlay video"
 msgstr "동영상 오버레이"
 
-#: src/qml/Settings/PlaylistSettings.qml:188
+#: src/Settings/PlaylistPage.qml:188
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist goes on top of the video\n"
@@ -2848,37 +2935,37 @@ msgstr ""
 "이 옵션을 사용하면 재생 목록을 동영상 위에 표시합니다\n"
 "이 옵션을 사용하지 않으면 동영상의 크기를 조절합니다"
 
-#: src/qml/Settings/PlaylistSettings.qml:198
+#: src/Settings/PlaylistPage.qml:198
 msgctxt "@option:check"
 msgid "Show media title instead of file name"
 msgstr "파일 이름 대신 미디어 제목 표시"
 
-#: src/qml/Settings/PlaylistSettings.qml:208
+#: src/Settings/PlaylistPage.qml:208
 msgctxt "@option:check"
 msgid "Auto load videos from same folder"
 msgstr "같은 폴더의 동영상 자동으로 불러오기"
 
-#: src/qml/Settings/PlaylistSettings.qml:218
+#: src/Settings/PlaylistPage.qml:218
 msgctxt "@option:check"
 msgid "Show row number"
 msgstr "줄 번호 표시"
 
-#: src/qml/Settings/PlaylistSettings.qml:228
+#: src/Settings/PlaylistPage.qml:228
 msgctxt "@option:check"
 msgid "Toggle with mouse"
 msgstr "마우스로 전환"
 
-#: src/qml/Settings/PlaylistSettings.qml:237
+#: src/Settings/PlaylistPage.qml:237
 msgctxt "@option:check"
 msgid "Increase font size when fullscreen"
 msgstr "전체 화면에서 글꼴 크기 증가"
 
-#: src/qml/Settings/PlaylistSettings.qml:250
+#: src/Settings/PlaylistPage.qml:250
 msgctxt "@option:check"
 msgid "Remember last playlist state"
 msgstr "마지막 재생 목록 상태 기억"
 
-#: src/qml/Settings/PlaylistSettings.qml:257
+#: src/Settings/PlaylistPage.qml:257
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the playlist state (visible/hidden) is remembered across "
@@ -2886,98 +2973,98 @@ msgid ""
 msgstr ""
 "이 옵션을 사용하면 실행할 때마다 재생 목록 상태(표시/숨기기)을 기억합니다"
 
-#: src/qml/Settings/PlaylistSettings.qml:268
+#: src/Settings/PlaylistPage.qml:268
 msgctxt "@option:check"
 msgid "Open items with single click"
 msgstr "한 번 클릭으로 항목 열기"
 
-#: src/qml/Settings/SettingsWindow.qml:70
+#: src/Settings/SettingsWindow.qml:73
 msgctxt "@title:window"
 msgid "Settings"
 msgstr "설정"
 
-#: src/qml/Settings/SettingsWindow.qml:87
+#: src/Settings/SettingsWindow.qml:90
 msgctxt "@action"
 msgid "General"
 msgstr "일반"
 
-#: src/qml/Settings/SettingsWindow.qml:96
+#: src/Settings/SettingsWindow.qml:99
 msgctxt "@action"
 msgid "Osd"
 msgstr ""
 
-#: src/qml/Settings/SettingsWindow.qml:105
+#: src/Settings/SettingsWindow.qml:108
 msgctxt "@action"
 msgid "Playback"
 msgstr "재생"
 
-#: src/qml/Settings/SettingsWindow.qml:114
+#: src/Settings/SettingsWindow.qml:117
 msgctxt "@action"
 msgid "Video"
 msgstr "비디오"
 
-#: src/qml/Settings/SettingsWindow.qml:124
+#: src/Settings/SettingsWindow.qml:127
 msgctxt "@action"
 msgid "Audio"
 msgstr "오디오"
 
-#: src/qml/Settings/SettingsWindow.qml:133
+#: src/Settings/SettingsWindow.qml:136
 msgctxt "@action"
 msgid "Subtitles"
 msgstr "자막"
 
-#: src/qml/Settings/SettingsWindow.qml:151
+#: src/Settings/SettingsWindow.qml:154
 msgctxt "@action"
 msgid "Mouse"
 msgstr "마우스"
 
-#: src/qml/Settings/SettingsWindow.qml:160
+#: src/Settings/SettingsWindow.qml:163
 msgctxt "@action"
 msgid "Shortcuts"
 msgstr "단축키"
 
-#: src/qml/Settings/SettingsWindow.qml:169
+#: src/Settings/SettingsWindow.qml:172
 msgctxt "@action"
 msgid "Custom Commands"
 msgstr "사용자 정의 명령"
 
-#: src/qml/Settings/SettingsWindow.qml:184
+#: src/Settings/SettingsWindow.qml:181
 msgctxt "@action"
 msgid "Database"
 msgstr "데이터베이스"
 
-#: src/qml/Settings/SettingsWindow.qml:193
+#: src/Settings/SettingsWindow.qml:190
 msgctxt "@action"
 msgid "Debug"
 msgstr "디버그"
 
-#: src/qml/Settings/SettingsWindow.qml:203
+#: src/Settings/SettingsWindow.qml:199
 msgctxt "@action"
 msgid "About"
 msgstr "정보"
 
-#: src/qml/Settings/SubtitlesSettings.qml:106
+#: src/Settings/SubtitlesPage.qml:106
 msgctxt "@label:check"
 msgid "Auto select track"
 msgstr "트랙 자동 선택"
 
-#: src/qml/Settings/SubtitlesSettings.qml:115
+#: src/Settings/SubtitlesPage.qml:115
 msgctxt "@info:tooltip"
 msgid ""
 "When checked a subtitle track will be automatically selected and displayed"
 msgstr "이 옵션을 사용하면 자막 트랙을 자동으로 선택하여 표시합니다"
 
-#: src/qml/Settings/SubtitlesSettings.qml:161
+#: src/Settings/SubtitlesPage.qml:161
 msgctxt "@label:spinbox"
 msgid "Preferred track"
 msgstr "선호하는 트랙"
 
-#: src/qml/Settings/SubtitlesSettings.qml:193
+#: src/Settings/SubtitlesPage.qml:193
 msgctxt "@option:check"
 msgid "Allow subtitles in black borders"
 msgstr "검은 테두리로 둘러싼 자막 표시 허용"
 
-#: src/qml/Settings/SubtitlesSettings.qml:200
+#: src/Settings/SubtitlesPage.qml:200
 msgctxt "@info:tooltip"
 msgid ""
 "When checked the subtitles can be rendered outside the video, in the black "
@@ -2986,103 +3073,102 @@ msgstr ""
 "이 옵션을 사용하면 자막이 동영상 바깥쪽 검은 테두리에 표시될 수 있습니다. 일"
 "부 .ass 자막에서는 작동하지 않을 수도 있습니다."
 
-#: src/qml/Settings/SubtitlesSettings.qml:208
+#: src/Settings/SubtitlesPage.qml:208
 msgctxt "@title"
 msgid "Styling"
 msgstr "스타일"
 
-#: src/qml/Settings/SubtitlesSettings.qml:214
+#: src/Settings/SubtitlesPage.qml:214
 msgctxt "@label:listbox"
 msgid "Font family"
 msgstr "글꼴 종류"
 
-#: src/qml/Settings/SubtitlesSettings.qml:230
+#: src/Settings/SubtitlesPage.qml:230
 msgctxt "@info:tooltip"
 msgid "Click to change font"
 msgstr ""
 
-#: src/qml/Settings/SubtitlesSettings.qml:256
+#: src/Settings/SubtitlesPage.qml:256
 msgctxt "@label:spinbox"
 msgid "Font size"
 msgstr "글꼴 크기"
 
-#: src/qml/Settings/SubtitlesSettings.qml:271
+#: src/Settings/SubtitlesPage.qml:271
 msgctxt "@label"
 msgid "Font style"
 msgstr "글꼴 스타일"
 
-#: src/qml/Settings/SubtitlesSettings.qml:276
+#: src/Settings/SubtitlesPage.qml:276
 msgctxt "@option:check"
 msgid "Bold"
 msgstr "굵게"
 
-#: src/qml/Settings/SubtitlesSettings.qml:287
+#: src/Settings/SubtitlesPage.qml:287
 msgctxt "@option:check"
 msgid "Italic"
 msgstr "이탤릭"
 
-#: src/qml/Settings/SubtitlesSettings.qml:296
+#: src/Settings/SubtitlesPage.qml:296
 msgctxt "@label:textbox"
 msgid "Font color"
 msgstr "글자색"
 
-#: src/qml/Settings/SubtitlesSettings.qml:357
+#: src/Settings/SubtitlesPage.qml:357
 msgctxt "@label:textbox"
 msgid "Shadow color"
 msgstr "그림자 색상"
 
-#: src/qml/Settings/SubtitlesSettings.qml:417
+#: src/Settings/SubtitlesPage.qml:417
 msgctxt "@label:spinbox"
 msgid "Shadow offset"
 msgstr "그림자 오프셋"
 
-#: src/qml/Settings/SubtitlesSettings.qml:434
-#: src/qml/Settings/SubtitlesSettings.qml:519
+#: src/Settings/SubtitlesPage.qml:434 src/Settings/SubtitlesPage.qml:519
 msgctxt "@info:tooltip"
 msgid "Set to 0 (zero) to disable."
 msgstr "0으로 설정하면 비활성화합니다."
 
-#: src/qml/Settings/SubtitlesSettings.qml:442
+#: src/Settings/SubtitlesPage.qml:442
 msgctxt "@label:textbox"
 msgid "Border color"
 msgstr "테두리 색상"
 
-#: src/qml/Settings/SubtitlesSettings.qml:502
+#: src/Settings/SubtitlesPage.qml:502
 msgctxt "@label:spinbox"
 msgid "Border width"
 msgstr "경계선 두께"
 
-#: src/qml/Settings/SubtitlesSettings.qml:527
+#: src/Settings/SubtitlesPage.qml:527
 msgctxt "@label:listbox"
 msgid "Border style"
 msgstr "경계선 스타일"
 
-#: src/qml/Settings/SubtitlesSettings.qml:539
+#: src/Settings/SubtitlesPage.qml:539
 msgctxt "@item:listbox border style"
 msgid "Outline and Shadow"
 msgstr "외곽선과 그림자"
 
-#: src/qml/Settings/SubtitlesSettings.qml:545
+#: src/Settings/SubtitlesPage.qml:545
 msgctxt "@item:listbox border style"
 msgid "Opaque Box"
 msgstr "불투명한 상자"
 
-#: src/qml/Settings/SubtitlesSettings.qml:551
+#: src/Settings/SubtitlesPage.qml:551
 msgctxt "@item:listbox border style"
 msgid "Background Box"
 msgstr "배경 상자"
 
-#: src/qml/Settings/VideoSettings.qml:30
+#: src/Settings/VideoPage.qml:30
 msgctxt "@label:listbox"
 msgid "Default cover"
 msgstr "기본 커버"
 
-#: src/qml/Settings/VideoSettings.qml:39
+#: src/Settings/VideoPage.qml:39
 msgctxt "placeholder text"
 msgid "path to image"
 msgstr "그림 경로"
 
-#: src/qml/Settings/VideoSettings.qml:51
+#: src/Settings/VideoPage.qml:51
 msgctxt "@info:tooltip"
 msgid ""
 "Used for music files that don’t have a video track, an embedded cover image "
@@ -3091,22 +3177,22 @@ msgstr ""
 "동영상 트랙이 없거나, 임베드된 커버 그림이 없거나, 같은 폴더에 커버/폴더 그"
 "림 파일이 없는 음악 파일에 사용합니다."
 
-#: src/qml/Settings/VideoSettings.qml:88
+#: src/Settings/VideoPage.qml:88
 msgctxt "@title"
 msgid "Screenshots"
 msgstr "스크린샷"
 
-#: src/qml/Settings/VideoSettings.qml:97
+#: src/Settings/VideoPage.qml:97
 msgctxt "@label:listbox"
 msgid "Format"
 msgstr "형식"
 
-#: src/qml/Settings/VideoSettings.qml:136
+#: src/Settings/VideoPage.qml:136
 msgctxt "@label:textbox"
 msgid "Template"
 msgstr "템플릿"
 
-#: src/qml/Settings/VideoSettings.qml:165
+#: src/Settings/VideoPage.qml:165
 msgctxt "@info:tooltip"
 msgid ""
 "Specify the filename template used to save screenshots. The template "
@@ -3167,37 +3253,37 @@ msgstr ""
 "li><li><strong>%wT</strong> 밀리초(000-999)</li><li><strong>%%</strong> % 문"
 "자로 대체됨.</li></ul><br>"
 
-#: src/qml/Settings/VideoSettings.qml:200
+#: src/Settings/VideoPage.qml:200
 msgctxt "@title"
 msgid "Image adjustments"
 msgstr "그림 조정"
 
-#: src/qml/Settings/VideoSettings.qml:210
+#: src/Settings/VideoPage.qml:210
 msgctxt "@label:slider"
 msgid "Contrast"
 msgstr "명암"
 
-#: src/qml/Settings/VideoSettings.qml:229
+#: src/Settings/VideoPage.qml:229
 msgctxt "@label:slider"
 msgid "Brightness"
 msgstr "밝기"
 
-#: src/qml/Settings/VideoSettings.qml:248
+#: src/Settings/VideoPage.qml:248
 msgctxt "@label:slider"
 msgid "Gamma"
 msgstr "감마"
 
-#: src/qml/Settings/VideoSettings.qml:267
+#: src/Settings/VideoPage.qml:267
 msgctxt "@label:slider"
 msgid "Saturation"
 msgstr "채도"
 
-#: src/qml/Settings/VideoSettings.qml:283
+#: src/Settings/VideoPage.qml:283
 msgctxt "@info"
 msgid "Middle click on the sliders to reset them"
 msgstr "슬라이더에서 가운데 단추로 클릭하여 초기화"
 
-#: src/transcript/subtitleparser.cpp:96
+#: src/Transcript/subtitleparser.cpp:96
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu all"
 #| msgid "All"
@@ -3205,17 +3291,17 @@ msgctxt "@item:listbox combobox option to show all ASS subtitle styles"
 msgid "All"
 msgstr "모두"
 
-#: src/transcript/Transcript.qml:129
+#: src/Transcript/Transcript.qml:130
 msgctxt "@info:tooltip"
 msgid "Select subtitle"
 msgstr "자막 선택"
 
-#: src/transcript/Transcript.qml:190
+#: src/Transcript/Transcript.qml:191
 msgctxt "@info:tooltip"
 msgid "Follow active subtitle"
 msgstr "활성 자막 따라가기"
 
-#: src/transcript/Transcript.qml:215
+#: src/Transcript/Transcript.qml:216
 #, fuzzy
 #| msgctxt "@action"
 #| msgid "Subtitle Cycle Up"
@@ -3223,13 +3309,13 @@ msgctxt "@info:tooltip"
 msgid "ASS subtitle styles"
 msgstr "다음 자막으로 전환"
 
-#: src/utilities/commandlineoptions.cpp:33
+#: src/Utilities/commandlineoptions.cpp:33
 #, kde-format
 msgctxt "@info:shell"
 msgid "File to open"
 msgstr "열 파일"
 
-#: src/utilities/commandlineoptions.cpp:37
+#: src/Utilities/commandlineoptions.cpp:37
 #, kde-format
 msgctxt "@info:shell"
 msgid ""
@@ -3239,43 +3325,19 @@ msgstr ""
 "yt-dlp 형식 설정 문자열을 재정의합니다. GUI에서 설정을 변경하면 이 설정이 무"
 "시됩니다"
 
-#: src/utilities/osdutils.cpp:45
+#: src/Utilities/osdutils.cpp:77
 #, kde-format
 msgctxt "@option:check"
 msgid "AB loop"
 msgstr ""
 
-#: src/utilities/osdutils.cpp:46
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
-msgctxt "@option:check"
-msgid "Skip chapter"
-msgstr "챕터 건너뛰기"
-
-#: src/utilities/osdutils.cpp:47
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Deinterlacing"
-msgctxt "@option:check"
-msgid "Toggle deinterlace"
-msgstr "디인터레이싱 전환"
-
-#: src/utilities/osdutils.cpp:48
+#: src/Utilities/osdutils.cpp:78
 #, kde-format
 msgctxt "@option:check"
 msgid "Image adjustments (contrast, brightness, gamma and saturation)"
 msgstr ""
 
-#: src/utilities/osdutils.cpp:49
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Play new file"
-msgctxt "@option:check"
-msgid "Playing new file"
-msgstr "새 파일 재생"
-
-#: src/utilities/osdutils.cpp:50
+#: src/Utilities/osdutils.cpp:79
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Playback Speed Increase"
@@ -3283,23 +3345,23 @@ msgctxt "@option:check"
 msgid "Playback speed change"
 msgstr "재생 속도 증가"
 
-#: src/utilities/osdutils.cpp:51
+#: src/Utilities/osdutils.cpp:80
 #, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#| msgctxt "@option:check"
+#| msgid "Play new file"
 msgctxt "@option:check"
-msgid "Taking screenshot"
-msgstr "스크린샷"
+msgid "Playing new file"
+msgstr "새 파일 재생"
 
-#: src/utilities/osdutils.cpp:52
+#: src/Utilities/osdutils.cpp:81
 #, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#| msgctxt "@option:check"
+#| msgid "Skip chapters"
 msgctxt "@option:check"
-msgid "Subtitle timing change"
-msgstr "자막 시간 조정: %1초"
+msgid "Skip chapter"
+msgstr "챕터 건너뛰기"
 
-#: src/utilities/osdutils.cpp:53
+#: src/Utilities/osdutils.cpp:82
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Subtitle scale: %1"
@@ -3307,7 +3369,31 @@ msgctxt "@option:check"
 msgid "Subtitle scale change"
 msgstr "자막 크기 조정: %1"
 
-#: src/utilities/osdutils.cpp:54
+#: src/Utilities/osdutils.cpp:83
+#, fuzzy, kde-format
+#| msgctxt "@info:tooltip"
+#| msgid "Subtitle timing: %1 seconds"
+msgctxt "@option:check"
+msgid "Subtitle timing change"
+msgstr "자막 시간 조정: %1초"
+
+#: src/Utilities/osdutils.cpp:84
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Screenshot"
+msgctxt "@option:check"
+msgid "Taking screenshot"
+msgstr "스크린샷"
+
+#: src/Utilities/osdutils.cpp:85
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Toggle Deinterlacing"
+msgctxt "@option:check"
+msgid "Toggle deinterlace"
+msgstr "디인터레이싱 전환"
+
+#: src/Utilities/osdutils.cpp:86
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Toggle Subtitles"
@@ -3315,7 +3401,7 @@ msgctxt "@option:check"
 msgid "Toggle subtitle"
 msgstr "자막 전환"
 
-#: src/utilities/osdutils.cpp:55
+#: src/Utilities/osdutils.cpp:87
 #, fuzzy, kde-format
 #| msgctxt "@info:tooltip"
 #| msgid "Save changes"
@@ -3323,7 +3409,7 @@ msgctxt "@option:check"
 msgid "Track change"
 msgstr "변경 사항 저장"
 
-#: src/utilities/osdutils.cpp:56
+#: src/Utilities/osdutils.cpp:88
 #, fuzzy, kde-format
 #| msgctxt "@action"
 #| msgid "Volume Down"
@@ -3331,7 +3417,7 @@ msgctxt "@option:check"
 msgid "Volume change"
 msgstr "음량 감소"
 
-#: src/youtube/youtube.cpp:80
+#: src/YouTube/youtube.cpp:80
 #, kde-format
 msgctxt "@info:tooltip; error when yt-dlp fails to get playlist"
 msgid ""
@@ -3342,6 +3428,10 @@ msgstr ""
 "ID가 %1인 재생 목록을 가져올 수 없음\n"
 "\n"
 "%2"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "About"
+#~ msgstr "정보"
 
 #~ msgctxt "@option:check"
 #~ msgid "Show OSD message on skip"
@@ -3432,10 +3522,6 @@ msgstr ""
 #~ msgstr "설정 폴더 열기"
 
 #~ msgctxt "@info:tooltip"
-#~ msgid "Open custom commands config file"
-#~ msgstr "사용자 정의 명령 설정 파일 열기"
-
-#~ msgctxt "@info:tooltip"
 #~ msgid "Set default value"
 #~ msgstr "기본값 설정"
 
@@ -3458,10 +3544,6 @@ msgstr ""
 #~ msgid "Sets the icon theme to breeze.<br>Requires restart."
 #~ msgstr ""
 #~ "아이콘 테마를 Breeze로 설정합니다.<br>적용하려면 다시 시작해야 합니다."
-
-#~ msgctxt "@action:button"
-#~ msgid "Open Playlist"
-#~ msgstr "재생 목록 열기"
 
 #~ msgctxt "@option:check"
 #~ msgid "Autoplay"
@@ -3820,9 +3902,6 @@ msgstr ""
 #~| msgid "Screenshot"
 #~ msgid "Screenshot format"
 #~ msgstr "스크린샷"
-
-#~ msgid "Haruna Settings"
-#~ msgstr "Haruna 설정"
 
 #~ msgid "Show Menu Bar"
 #~ msgstr "메뉴 표시줄 표시"
