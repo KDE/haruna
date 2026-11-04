@@ -780,6 +780,23 @@ void MpvItem::stop()
     playlistModel->setIsPlaying(false);
 }
 
+void MpvItem::seek(int seconds, SeekMode seekMode)
+{
+    switch (seekMode) {
+    case SeekMode::Absolute:
+        commandAsync({u"seek"_s, QString::number(seconds), u"absolute"_s});
+        break;
+
+    case SeekMode::Keyframes:
+        commandAsync({u"seek"_s, QString::number(seconds), u"keyframes"_s});
+        break;
+
+    case SeekMode::Exact:
+        commandAsync({u"seek"_s, QString::number(seconds), u"exact"_s});
+        break;
+    }
+}
+
 void MpvItem::setTrack(int row, TrackType type)
 {
     switch (type) {

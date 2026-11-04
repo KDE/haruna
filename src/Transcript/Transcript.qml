@@ -263,7 +263,7 @@ ResizeablePage {
                     id: transcriptItemDelegate
 
                     onSeek: function (time) {
-                        root.m_mpv.command(["seek", time, "absolute"])
+                        root.m_mpv.seek(time, MpvItem.SeekMode.Absolute)
                     }
                 }
 
