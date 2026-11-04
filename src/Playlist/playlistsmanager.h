@@ -83,6 +83,7 @@ private:
     void saveVisiblePlaylist();
     void savePlaylist(const QString &playlistName, PlaylistFilterProxyModel *proxyModel);
     void savePlaylistCache();
+    QJsonObject playlistToJson(uint i);
 
     std::vector<PlaylistsModelItem> m_data;
     uint m_activeIndex{0};

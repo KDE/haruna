@@ -542,45 +542,52 @@ void PlaylistsManager::savePlaylistCache()
             array.append(m_data.at(i).jsonData);
             continue;
         }
-        QJsonObject json;
-        json.insert(u"name", m_data.at(i).playlistName);
-        json.insert(u"isActive", (m_activeIndex == i));
-        json.insert(u"currentItem", static_cast<int>(m_data.at(i).playlist->playlistModel()->playingItem()));
-        json.insert(u"showSections", m_data.at(i).playlist->showSections());
-
-        // Save sorting and grouping for non-default playlists
-        QJsonArray sortProperties;
-        QJsonArray groups;
-        int index = 0;
-        const auto activeSortProperties = m_data.at(i).playlist->activeSortPropertiesModel()->properties();
-        for (const auto &property : activeSortProperties) {
-            QJsonObject propertyStruct;
-            propertyStruct.insert(u"index", index);
-            propertyStruct.insert(u"sort", property.sort);
-            propertyStruct.insert(u"order", property.order);
-
-            sortProperties.append(propertyStruct);
-            index++;
-        }
-
-        index = 0;
-        const auto activeGroupProperties = m_data.at(i).playlist->activeGroupModel()->properties();
-        for (const auto &property : activeGroupProperties) {
-            QJsonObject groupStruct;
-            groupStruct.insert(u"index", index);
-            groupStruct.insert(u"group", property.sort);
-            groupStruct.insert(u"hideBlank", property.hideBlank);
-
-            groups.append(groupStruct);
-            index++;
-        }
-        json.insert(u"sortBy", sortProperties);
-        json.insert(u"groupBy", groups);
+        QJsonObject json = playlistToJson(i);
         array.append(json);
     }
     QJsonDocument doc(array);
     cacheFile.write(doc.toJson(QJsonDocument::Indented));
     cacheFile.close();
+}
+
+QJsonObject PlaylistsManager::playlistToJson(uint i)
+{
+    QJsonObject json;
+    json.insert(u"name", m_data.at(i).playlistName);
+    json.insert(u"isActive", (m_activeIndex == i));
+    json.insert(u"currentItem", static_cast<int>(m_data.at(i).playlist->playlistModel()->playingItem()));
+    json.insert(u"showSections", m_data.at(i).playlist->showSections());
+
+    // Save sorting and grouping for non-default playlists
+    QJsonArray sortProperties;
+    QJsonArray groups;
+    int index = 0;
+    const auto activeSortProperties = m_data.at(i).playlist->activeSortPropertiesModel()->properties();
+    for (const auto &property : activeSortProperties) {
+        QJsonObject propertyStruct;
+        propertyStruct.insert(u"index", index);
+        propertyStruct.insert(u"sort", property.sort);
+        propertyStruct.insert(u"order", property.order);
+
+        sortProperties.append(propertyStruct);
+        index++;
+    }
+
+    index = 0;
+    const auto activeGroupProperties = m_data.at(i).playlist->activeGroupModel()->properties();
+    for (const auto &property : activeGroupProperties) {
+        QJsonObject groupStruct;
+        groupStruct.insert(u"index", index);
+        groupStruct.insert(u"group", property.sort);
+        groupStruct.insert(u"hideBlank", property.hideBlank);
+
+        groups.append(groupStruct);
+        index++;
+    }
+    json.insert(u"sortBy", sortProperties);
+    json.insert(u"groupBy", groups);
+
+    return json;
 }
 
 PlaylistFilterProxyModel *PlaylistsManager::activePlaylist()
