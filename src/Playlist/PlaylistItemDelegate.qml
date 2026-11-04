@@ -18,7 +18,9 @@ Item {
     required property int index
     required property string rowNumber
     required property string title
+    required property string titleWithFallback
     required property string name
+    required property string nameWithFallbackRole
     required property double duration
     required property string formattedDuration
     required property string path

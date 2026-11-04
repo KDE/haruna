@@ -49,6 +49,7 @@ public:
 
     enum Roles {
         NameRole = Qt::UserRole,
+        NameWithFallbackRole,
         RowNumberRole,
         // General
         DurationRole,
@@ -70,6 +71,7 @@ public:
         DiscNoRole,
         GenreRole,
         TitleRole,
+        TitleWithFallbackRole,
         ReleaseYearRole,
         AlbumRole,
         ArtistRole,

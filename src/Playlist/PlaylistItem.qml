@@ -117,7 +117,7 @@ PlaylistItemDelegate {
                 verticalAlignment: Qt.AlignVCenter
                 elide: Text.ElideRight
                 font.pointSize: root.getFontSize()
-                text: PlaylistSettings.showMediaTitle ? root.title : root.name
+                text: PlaylistSettings.showMediaTitle ? root.titleWithFallback : root.nameWithFallbackRole
                 Layout.fillWidth: true
             }
 

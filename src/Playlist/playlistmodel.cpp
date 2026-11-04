@@ -88,6 +88,12 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case NameRole:
         return item.filename;
+    case NameWithFallbackRole: {
+        if (!item.filename.isEmpty()) {
+            return item.filename;
+        }
+        return item.url.toString();
+    }
     case RowNumberRole:
         return padNumberWithZeros(index.row() + 1, rowCount());
     case PathRole:
@@ -125,7 +131,16 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case DiscNoRole:
         return item.audio.discNo;
     case TitleRole:
-        return item.mediaTitle.isEmpty() ? item.filename : item.mediaTitle;
+        return item.mediaTitle;
+    case TitleWithFallbackRole: {
+        if (!item.mediaTitle.isEmpty()) {
+            return item.mediaTitle;
+        }
+        if (!item.filename.isEmpty()) {
+            return item.filename;
+        }
+        return item.url.toString();
+    }
     case ReleaseYearRole:
         return item.audio.releaseYear;
     case GenreRole:
@@ -265,6 +280,11 @@ bool PlaylistModel::setData(const QModelIndex &index, const QVariant &value, int
     }
 
     Q_EMIT dataChanged(index, index, {role});
+
+    if (role == Roles::NameRole || role == Roles::TitleRole) {
+        Q_EMIT dataChanged(index, index, {Roles::NameWithFallbackRole, Roles::TitleWithFallbackRole});
+    }
+
     return true;
 }
 
@@ -273,6 +293,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
     // clang-format off
     static QHash<int, QByteArray> roles = {
         {NameRole,              QByteArrayLiteral("name")},
+        {NameWithFallbackRole,  QByteArrayLiteral("nameWithFallbackRole")},
         {RowNumberRole,         QByteArrayLiteral("rowNumber")},
         {TitleRole,             QByteArrayLiteral("title")},
         {PathRole,              QByteArrayLiteral("path")},
@@ -292,6 +313,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
         {TrackNoRole,           QByteArrayLiteral("trackNo")},
         {DiscNoRole,            QByteArrayLiteral("discNo")},
         {TitleRole,             QByteArrayLiteral("title")},
+        {TitleWithFallbackRole, QByteArrayLiteral("titleWithFallback")},
         {ReleaseYearRole,       QByteArrayLiteral("releaseYear")},
         {GenreRole,             QByteArrayLiteral("genre")},
         {AlbumRole,             QByteArrayLiteral("album")},
@@ -419,7 +441,7 @@ void PlaylistModel::appendItem(const QUrl &url)
     } else {
         if (url.scheme().startsWith(u"http"_s)) {
             item.url = url;
-            item.filename = url.toString();
+            item.filename = QString{};
             item.fileType = u"http"_s;
             QVariantMap data{{u"row"_s, QVariant::fromValue(row)}};
             youtube.getVideoInfo(url, data);
@@ -558,7 +580,7 @@ void PlaylistModel::addM3uItems(const QUrl &url, Behavior behavior)
             item.url = url;
             item.duration = metadata.duration.value_or(0.0);
             item.formattedDuration = item.duration == 0.0 ? QString{} : MiscUtils::formatTime(item.duration);
-            item.mediaTitle = metadata.title.value_or(url.toString());
+            item.mediaTitle = metadata.title.value_or(QString{});
             item.filename = item.mediaTitle;
             item.fileType = u"http"_s;
 
@@ -609,8 +631,8 @@ void PlaylistModel::addYouTubePlaylist(const QJsonArray &playlist, const QString
 
         PlaylistItem item;
         item.url = QUrl::fromUserInput(url);
-        item.filename = !title.isEmpty() ? title : url;
-        item.mediaTitle = !title.isEmpty() ? title : url;
+        item.filename = title;
+        item.mediaTitle = title;
         item.formattedDuration = MiscUtils::formatTime(duration);
         item.duration = duration;
 

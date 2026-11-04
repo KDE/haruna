@@ -68,12 +68,17 @@ void M3uParser::write(const PlaylistFilterProxyModel *playlistProxyModel, const 
     out << "#EXTM3U\n";
     const auto playlistModel = playlistProxyModel->playlistProxyModel();
     for (int i{0}; i < playlistModel->rowCount(); ++i) {
-        const auto itemPath = playlistModel->data(playlistModel->index(i, 0), PlaylistModel::PathRole).toString();
-        const auto title = playlistModel->data(playlistModel->index(i, 0), PlaylistModel::TitleRole).toString();
-        const auto duration = playlistModel->data(playlistModel->index(i, 0), PlaylistModel::DurationRole).toDouble();
+        const auto index = playlistModel->index(i, 0);
+        const auto itemPath = playlistModel->data(index, PlaylistModel::PathRole).toString();
+        const auto title = playlistModel->data(index, PlaylistModel::TitleRole).toString();
+        const auto duration = playlistModel->data(index, PlaylistModel::DurationRole).toInt();
 
-        if (duration > 0 || !title.isEmpty()) {
-            out << u"#EXTINF:%1,%2\n"_s.arg(duration).arg(title);
+        const auto hasTitle = !title.isEmpty();
+        const auto hasDuration = duration > 0;
+
+        if (hasDuration || hasTitle) {
+            const auto d = hasDuration ? duration : 0.0;
+            out << u"#EXTINF:%1,%2\n"_s.arg(d).arg(title);
         }
         out << itemPath << "\n";
     }
