@@ -8,4 +8,6 @@
 import QtQuick
 import QtQuick.Controls
 
-TabBar {}
+TabBar {
+    signal clonePlaylistRequested(int index)
+}

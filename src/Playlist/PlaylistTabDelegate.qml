@@ -309,6 +309,12 @@ TabButton {
             onClicked: root.playlistsManager.renamePlaylist(root.index)
         }
         MenuItem {
+            text: KI18n.i18nc("@action:inmenu", "Clone")
+            icon.name: "edit-copy"
+            visible: root.index > 0
+            onClicked: root.playlistTabBar.clonePlaylistRequested(root.index)
+        }
+        MenuItem {
             text: KI18n.i18nc("@action:inmenu", "Remove")
             icon.name: "remove"
             visible: root.index > 0
