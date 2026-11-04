@@ -32,6 +32,7 @@ QHash<OsdUtils::Context, Function> functions()
         { OsdUtils::Context::MpvSubtitleDelay,    &OsdSettings::mpvSubtitleDelay },
         { OsdUtils::Context::MpvSubtitleScale,    &OsdSettings::mpvSubtitleScale },
         { OsdUtils::Context::MpvSubtitleToggle,   &OsdSettings::mpvSubtitleToggle },
+        { OsdUtils::Context::MpvSeek,             &OsdSettings::mpvSeek },
         { OsdUtils::Context::MpvTrack,            &OsdSettings::mpvTrack },
         { OsdUtils::Context::MpvVolume,           &OsdSettings::mpvVolume },
     };
@@ -78,6 +79,7 @@ QList<OsdOption> OsdUtils::options()
         { u"mpvImageAdjustments"_s, i18nc("@option:check", "Image adjustments (contrast, brightness, gamma and saturation)") },
         { u"mpvPlaybackSpeed"_s,    i18nc("@option:check", "Playback speed change") },
         { u"mpvLoadFile"_s,         i18nc("@option:check", "Playing new file") },
+        { u"mpvSeek"_s,             i18nc("@option:check", "On seek") },
         { u"mpvChapter"_s,          i18nc("@option:check", "Skip chapter") },
         { u"mpvSubtitleScale"_s,    i18nc("@option:check", "Subtitle scale change") },
         { u"mpvSubtitleDelay"_s,    i18nc("@option:check", "Subtitle timing change") },

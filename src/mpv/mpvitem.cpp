@@ -41,6 +41,7 @@
 #if HAVE_DBUS
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <osdsettings.h>
 #endif
 
 using namespace Qt::StringLiterals;
@@ -212,6 +213,17 @@ void MpvItem::setupConnections()
     // clang-format off
     connect(mpvController(), &MpvController::propertyChanged,
             this, &MpvItem::onPropertyChanged, Qt::QueuedConnection);
+
+    connect(mpvController(), &MpvController::seek, this, [this]() {
+        if (!m_showOsdOnSeek) {
+            return;
+        }
+        const auto pos = getProperty(MpvProperties::self()->Position).toDouble();
+        const auto formattedPos = MiscUtils::formatTime(pos);
+        const auto msg = i18nc("@info:tooltip osd message shown on seek", "%1 / %2", formattedPos, formattedDuration());
+        OsdUtils::instance().message(msg, OsdUtils::Context::MpvSeek);
+        m_showOsdOnSeek = false;
+    });
 
     connect(mpvController(), &MpvController::fileStarted,
             this, &MpvItem::fileStarted, Qt::QueuedConnection);
@@ -782,6 +794,7 @@ void MpvItem::stop()
 
 void MpvItem::seek(int seconds, SeekMode seekMode)
 {
+    m_showOsdOnSeek = OsdSettings::mpvSeek();
     switch (seekMode) {
     case SeekMode::Absolute:
         commandAsync({u"seek"_s, QString::number(seconds), u"absolute"_s});

@@ -47,6 +47,7 @@ public:
         MpvSubtitleScale,
         MpvSubtitleToggle,
         MpvVolume,
+        MpvSeek,
         MpvTrack,
         MpvZoom,
     };
