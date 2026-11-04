@@ -94,6 +94,23 @@ ResizeablePage {
                     Layout.alignment: Qt.AlignLeft | Qt.AlignBottom
                     Layout.fillWidth: true
 
+                    onClonePlaylistRequested: function(index) {
+                        const properties = {
+                            "placeholderText": KI18n.i18nc("@placeholder", "playlist name"),
+                            "buttonText": KI18n.i18nc("@action:button", "Clone")
+                        }
+
+                        const input = inputPopupComponent.createObject(root, properties) as InputPopup
+                        input.submitted.connect(function(playlistName) {
+                            if (index < 0 || index > playlistTabView.count || playlistName === "") {
+                                return
+                            }
+
+                            root.manager.clonePlaylist(index, playlistName)
+                        })
+                        input.open()
+                    }
+
                     Repeater {
                         model: root.manager
                         delegate: PlaylistTabDelegate {
@@ -692,6 +709,16 @@ ResizeablePage {
         onRejected: root.m_mpv.focus = true
         onVisibleChanged: {
             HarunaApp.actionsEnabled = !visible
+        }
+    }
+
+    Component {
+        id: inputPopupComponent
+        InputPopup {
+            x: Kirigami.Units.largeSpacing
+            y: Kirigami.Units.largeSpacing
+            width: toolbar.width - Kirigami.Units.largeSpacing * 2
+            onClosed: destroy()
         }
     }
 

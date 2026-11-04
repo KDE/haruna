@@ -306,6 +306,37 @@ void PlaylistsManager::createNewPlaylist(const QString &playlistName)
     savePlaylist(playlistName, m_data.back().playlist.get());
 }
 
+void PlaylistsManager::clonePlaylist(uint pIndex, const QString &playlistName)
+{
+    const auto &playlistToClone = m_data.at(pIndex);
+    const auto playlistFile = playlistToClone.playlistUrl.toLocalFile();
+
+    QFileInfo fi(playlistFile);
+    if (!fi.exists()) {
+        qCDebug(HarunaPlaylist) << "Playlist file doesn't exist:" << fi.absoluteFilePath();
+    }
+
+    const auto newPlaylistFile = std::filesystem::path(fi.absolutePath().toStdString()) / playlistName.toStdString();
+    const auto _newPlaylistFile = QString(newPlaylistFile.generic_u16string());
+
+    if (QFile::copy(playlistFile, _newPlaylistFile)) {
+        qCDebug(HarunaPlaylist) << "Failed to copy playlist:" << fi.absoluteFilePath() << "to" << newPlaylistFile;
+    }
+
+    PlaylistsModelItem newItem;
+    newItem.playlistName = playlistName;
+    newItem.jsonData = playlistToJson(pIndex);
+
+    addPlaylist(std::move(newItem));
+    initPlaylist(m_data.size() - 1);
+
+    auto &item = m_data[m_data.size() - 1];
+    item.playlistUrl = QUrl::fromLocalFile(_newPlaylistFile);
+    item.playlist->playlistModel()->addM3uItems(item.playlistUrl, PlaylistModel::Behavior::Append);
+
+    savePlaylist(playlistName, m_data.back().playlist.get());
+}
+
 void PlaylistsManager::removePlaylist(uint pIndex)
 {
     // Cannot and should not delete default

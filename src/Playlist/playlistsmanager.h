@@ -64,6 +64,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
 
     Q_INVOKABLE void createNewPlaylist(const QString &playlistName);
+    Q_INVOKABLE void clonePlaylist(uint pIndex, const QString &playlistName);
     Q_INVOKABLE void removePlaylist(uint pIndex);
     Q_INVOKABLE void movePlaylist(uint row, uint destinationRow);
     Q_INVOKABLE void renamePlaylist(uint pIndex);
