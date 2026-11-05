@@ -548,6 +548,14 @@ ActionsModel::ActionsModel(QObject *parent)
     action.description = QString{};
     m_actions << action;
 
+    action.name = u"toggleChaptersPopupAction"_s;
+    action.text = i18nc("@action", "Toggle Chapters Popup");
+    action.iconName = u""_s;
+    action.defaultShortcut = {};
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = QString{};
+    m_actions << action;
+
     action.name = u"videoPanXLeftAction"_s;
     action.text = i18nc("@action", "Move Video Left");
     action.iconName = QString();

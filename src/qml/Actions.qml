@@ -31,6 +31,7 @@ Item {
     signal openSubtitleDialog()
     signal togglePlaylist()
     signal toggleTranscript()
+    signal toggleChaptersPopupAction()
 
     Instantiator {
         model: Models.actionsModel
@@ -422,6 +423,10 @@ Item {
 
         function onToggleTranscriptAction() {
             root.toggleTranscript()
+        }
+
+        function onToggleChaptersPopupAction() {
+            root.toggleChaptersPopupAction()
         }
 
         function onVideoPanXLeftAction() {
