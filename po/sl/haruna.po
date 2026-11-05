@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-04 01:01+0000\n"
-"PO-Revision-Date: 2026-10-30 06:10+0100\n"
+"PO-Revision-Date: 2026-11-04 10:22+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -73,6 +73,10 @@ msgid ""
 "lower than the version of the database file (%2). Changes are not persisted. "
 "Either update to the latest version of delete/rename the database file (%3)."
 msgstr ""
+"Uporablja se podatkovna baza v pomnilniku, saj je različica podatkovne baze "
+"v aplikaciji (%1) nižja od različice datoteke podatkovne baze (%2). "
+"Spremembe se ne shranjujejo trajno. Posodobite aplikacijo na najnovejšo "
+"različico ali pa izbrišite oziroma preimenujte datoteko podatkovne baze (%3)."
 
 #: src/lockmanager.cpp:49
 #, kde-format
@@ -126,57 +130,49 @@ msgstr "Nastavitve"
 #, kde-format
 msgctxt "@action"
 msgid "Open General Settings"
-msgstr ""
+msgstr "Odpri splošne nastavitve"
 
 #: src/models/actionsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Open Osd Settings"
-msgstr "Nastavitve"
+msgstr "Nastavitve nastavitve Osd"
 
 #: src/models/actionsmodel.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playback Settings"
-msgstr "Odpri seznam predvajanja"
+msgstr "Odpri nastavitve playbacka"
 
 #: src/models/actionsmodel.cpp:104
 #, kde-format
 msgctxt "@action"
 msgid "Open Video Settings"
-msgstr ""
+msgstr "Odpri nastavitve videa"
 
 #: src/models/actionsmodel.cpp:112
 #, kde-format
 msgctxt "@action"
 msgid "Open Audio Settings"
-msgstr ""
+msgstr "Odpri nastavitve zvoka"
 
 #: src/models/actionsmodel.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@action"
 msgid "Open Subtitles Settings"
-msgstr "Podnapisi vključeni"
+msgstr "Odpri nastavite podnapisov"
 
 #: src/models/actionsmodel.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playlist Settings"
-msgstr "Odpri seznam predvajanja"
+msgstr "Odpri nastavitve seznamov predvajanja"
 
 #: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Open Mouse Settings"
-msgstr ""
+msgstr "Odpri nastavitve miške"
 
 #: src/models/actionsmodel.cpp:144
 #, kde-format
@@ -185,24 +181,22 @@ msgid "Configure Keyboard Shortcuts"
 msgstr "Nastavi bližnjice na tipkovnici"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open custom commands config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Custom Commands Settings"
-msgstr "Odpri datoteko config ukazov po meri"
+msgstr "Odpri nastavitve ukazov po meri"
 
 #: src/models/actionsmodel.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Open Database Settings"
-msgstr ""
+msgstr "Odpri nastavitve zbirke podatkov"
 
 #: src/models/actionsmodel.cpp:168
 #, kde-format
 msgctxt "@action"
 msgid "Open Debug Settings"
-msgstr ""
+msgstr "Odpri nastavitve za odpravljanje napak"
 
 #: src/models/actionsmodel.cpp:176
 #, kde-format
@@ -1811,9 +1805,6 @@ msgstr "Splošno"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:24
 #: src/qml/Menus/SettingsMenu.qml:23
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Osd"
 msgctxt "@action:inmenu"
 msgid "Osd"
 msgstr "Osd"
@@ -1868,12 +1859,9 @@ msgstr "Ukazi po meri"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
 #: src/qml/Menus/SettingsMenu.qml:59
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Database"
 msgctxt "@action:inmenu"
 msgid "Database"
-msgstr "Podatkovna baza"
+msgstr "Zbirka podatkov"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:85
 #: src/qml/Menus/SettingsMenu.qml:63
