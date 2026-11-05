@@ -145,6 +145,7 @@ Q_SIGNALS:
     void toggleHeaderAction();
     void togglePlaylistAction();
     void toggleTranscriptAction();
+    void toggleChaptersPopupAction();
     void videoPanXLeftAction();
     void videoPanXRightAction();
     void videoPanYUpAction();

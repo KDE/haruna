@@ -432,6 +432,9 @@ ApplicationWindow {
         function onToggleTranscript() {
             transcript.toggle()
         }
+        function onToggleChaptersPopupAction() {
+            footerItem.progressBar.openChapterPopup(null)
+        }
         function onOpenSettingsWindow(page) {
             settingsLoader.openSettingPage(page)
         }

@@ -29,6 +29,16 @@ RowLayout {
                                       && m_mpv.chaptersModel.rowCount * 20 < width
 
     function openChapterPopup(triggerItem: Item) {
+        if (listView.count <= 0) {
+            return
+        }
+
+        if (triggerItem === null) {
+            chaptersPopup.x = 0
+            chaptersPopup.open()
+            return
+        }
+
         const x = (chaptersPopup.width + triggerItem.width) * -0.5
         const globalPoint = root.mapToGlobal(x, 0)
         const localPoint = root.mapFromGlobal(Kirigami.Units.largeSpacing, 0)
@@ -287,6 +297,13 @@ RowLayout {
             onOpened: {
                 listView.forceActiveFocus()
                 listView.positionViewAtIndex(root.m_mpv.chapter, ListView.Beginning)
+            }
+
+            // since the popup blocks the actions
+            Shortcut {
+                enabled: chaptersPopup.visible
+                sequence: HarunaApp.actions.toggleChaptersPopupAction.shortcut
+                onActivated: chaptersPopup.close()
             }
 
             ColumnLayout {
