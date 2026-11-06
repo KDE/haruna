@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-04 01:01+0000\n"
-"PO-Revision-Date: 2026-10-30 09:35+0100\n"
+"PO-Revision-Date: 2026-11-05 10:27+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -73,6 +73,10 @@ msgid ""
 "lower than the version of the database file (%2). Changes are not persisted. "
 "Either update to the latest version of delete/rename the database file (%3)."
 msgstr ""
+"L'ús de la base de dades de memòria des de la versió de la base de dades "
+"(%1) de l'aplicació és més baixa que la versió del fitxer de la base de "
+"dades (%2). Els canvis no són persistents. S'actualitza a l'última versió de "
+"supressió/canvi de nom del fitxer de base de dades (%3)."
 
 #: src/lockmanager.cpp:49
 #, kde-format
@@ -126,57 +130,49 @@ msgstr "Configuració"
 #, kde-format
 msgctxt "@action"
 msgid "Open General Settings"
-msgstr ""
+msgstr "Obre la configuració general"
 
 #: src/models/actionsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Open Osd Settings"
-msgstr "Configuració"
+msgstr "Obre la configuració de l'OSD"
 
 #: src/models/actionsmodel.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playback Settings"
-msgstr "Obre la llista de reproducció"
+msgstr "Obre la configuració de reproducció"
 
 #: src/models/actionsmodel.cpp:104
 #, kde-format
 msgctxt "@action"
 msgid "Open Video Settings"
-msgstr ""
+msgstr "Obre la configuració de vídeo"
 
 #: src/models/actionsmodel.cpp:112
 #, kde-format
 msgctxt "@action"
 msgid "Open Audio Settings"
-msgstr ""
+msgstr "Obre la configuració d'àudio"
 
 #: src/models/actionsmodel.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@action"
 msgid "Open Subtitles Settings"
-msgstr "Activa els subtítols"
+msgstr "Obre la configuració dels subtítols"
 
 #: src/models/actionsmodel.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playlist Settings"
-msgstr "Obre la llista de reproducció"
+msgstr "Obre la configuració de llistes de reproducció"
 
 #: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Open Mouse Settings"
-msgstr ""
+msgstr "Obre la configuració del ratolí"
 
 #: src/models/actionsmodel.cpp:144
 #, kde-format
@@ -185,24 +181,22 @@ msgid "Configure Keyboard Shortcuts"
 msgstr "Configura les dreceres de teclat"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open custom commands config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Custom Commands Settings"
-msgstr "Obre el fitxer de configuració d'ordres personalitzades"
+msgstr "Obre la configuració d'ordres personalitzades"
 
 #: src/models/actionsmodel.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Open Database Settings"
-msgstr ""
+msgstr "Obre la configuració de la base de dades"
 
 #: src/models/actionsmodel.cpp:168
 #, kde-format
 msgctxt "@action"
 msgid "Open Debug Settings"
-msgstr ""
+msgstr "Obre la configuració de depuració"
 
 #: src/models/actionsmodel.cpp:176
 #, kde-format
@@ -1820,9 +1814,6 @@ msgstr "General"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:24
 #: src/qml/Menus/SettingsMenu.qml:23
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Osd"
 msgctxt "@action:inmenu"
 msgid "Osd"
 msgstr "OSD"
@@ -1877,9 +1868,6 @@ msgstr "Ordres personalitzades"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
 #: src/qml/Menus/SettingsMenu.qml:59
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Database"
 msgctxt "@action:inmenu"
 msgid "Database"
 msgstr "Base de dades"

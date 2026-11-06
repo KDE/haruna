@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-04 01:01+0000\n"
-"PO-Revision-Date: 2026-10-30 07:28-0300\n"
+"PO-Revision-Date: 2026-11-05 07:28-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -75,6 +75,10 @@ msgid ""
 "lower than the version of the database file (%2). Changes are not persisted. "
 "Either update to the latest version of delete/rename the database file (%3)."
 msgstr ""
+"Utilizando um banco de dados em memória, uma vez que a versão do banco de "
+"dados do aplicativo (%1) é inferior à versão do arquivo de banco de dados "
+"(%2). As alterações não são persistidas. Atualize para a versão mais recente "
+"ou exclua/renomeie o arquivo de banco de dados (%3)."
 
 #: src/lockmanager.cpp:49
 #, kde-format
@@ -128,57 +132,49 @@ msgstr "Configurações"
 #, kde-format
 msgctxt "@action"
 msgid "Open General Settings"
-msgstr ""
+msgstr "Abrir as configurações gerais"
 
 #: src/models/actionsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Open Osd Settings"
-msgstr "Configurações"
+msgstr "Abrir as configurações OSD"
 
 #: src/models/actionsmodel.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playback Settings"
-msgstr "Lista de reprodução"
+msgstr "Abrir as configurações de reprodução"
 
 #: src/models/actionsmodel.cpp:104
 #, kde-format
 msgctxt "@action"
 msgid "Open Video Settings"
-msgstr ""
+msgstr "Abrir as configurações de vídeo"
 
 #: src/models/actionsmodel.cpp:112
 #, kde-format
 msgctxt "@action"
 msgid "Open Audio Settings"
-msgstr ""
+msgstr "Abrir as configurações de áudio"
 
 #: src/models/actionsmodel.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@action"
 msgid "Open Subtitles Settings"
-msgstr "Legendas ligadas"
+msgstr "Abrir as configurações de legenda"
 
 #: src/models/actionsmodel.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playlist Settings"
-msgstr "Lista de reprodução"
+msgstr "Abrir as configurações da lista de reprodução"
 
 #: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Open Mouse Settings"
-msgstr ""
+msgstr "Abrir as configurações do mouse"
 
 #: src/models/actionsmodel.cpp:144
 #, kde-format
@@ -187,24 +183,22 @@ msgid "Configure Keyboard Shortcuts"
 msgstr "Configurar atalhos do teclado"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open custom commands config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Custom Commands Settings"
-msgstr "Abrir arquivo de configuração de comando personalizado"
+msgstr "Abrir as configurações de comandos personalizados"
 
 #: src/models/actionsmodel.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Open Database Settings"
-msgstr ""
+msgstr "Abrir as configurações do banco de dados"
 
 #: src/models/actionsmodel.cpp:168
 #, kde-format
 msgctxt "@action"
 msgid "Open Debug Settings"
-msgstr ""
+msgstr "Abrir as configurações de depuração"
 
 #: src/models/actionsmodel.cpp:176
 #, kde-format
@@ -1819,9 +1813,6 @@ msgstr "Geral"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:24
 #: src/qml/Menus/SettingsMenu.qml:23
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Osd"
 msgctxt "@action:inmenu"
 msgid "Osd"
 msgstr "OSD"
@@ -1876,9 +1867,6 @@ msgstr "Comandos personalizados"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
 #: src/qml/Menus/SettingsMenu.qml:59
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Database"
 msgctxt "@action:inmenu"
 msgid "Database"
 msgstr "Banco de dados"
