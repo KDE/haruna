@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-04 01:01+0000\n"
-"PO-Revision-Date: 2026-11-01 10:49+0100\n"
+"PO-Revision-Date: 2026-11-05 14:01+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -70,6 +70,11 @@ msgid ""
 "lower than the version of the database file (%2). Changes are not persisted. "
 "Either update to the latest version of delete/rename the database file (%3)."
 msgstr ""
+"Utilisation de la base de données en mémoire. En effet, la version de la "
+"base de données (%1) de l'application est inférieure à la version du fichier "
+"de base de données (%2). Les modifications ne sont pas conservées. Veuillez "
+"soit faire une mise à jour vers la dernière version, soit supprimer / "
+"renommer le fichier de base de données (%3)."
 
 #: src/lockmanager.cpp:49
 #, kde-format
@@ -120,61 +125,52 @@ msgid "Settings"
 msgstr "Configuration"
 
 #: src/models/actionsmodel.cpp:80
-#, fuzzy, kde-format
-#| msgid "Haruna Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Open General Settings"
-msgstr "Configuration de Haruna"
+msgstr "Ouvrir la configuration générale"
 
 #: src/models/actionsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Open Osd Settings"
-msgstr "Configuration"
+msgstr "Ouvrir la configuration OSD"
 
 #: src/models/actionsmodel.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playback Settings"
-msgstr "Ouvrir une liste de lecture"
+msgstr "Ouvrir la configuration de lecture"
 
 #: src/models/actionsmodel.cpp:104
 #, kde-format
 msgctxt "@action"
 msgid "Open Video Settings"
-msgstr ""
+msgstr "Ouvrir la configuration de la vidéo"
 
 #: src/models/actionsmodel.cpp:112
 #, kde-format
 msgctxt "@action"
 msgid "Open Audio Settings"
-msgstr ""
+msgstr "Ouvrir la configuration de l'audio"
 
 #: src/models/actionsmodel.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@action"
 msgid "Open Subtitles Settings"
-msgstr "Sous-titres actifs"
+msgstr "Ouvrir la configuration des sous-titres"
 
 #: src/models/actionsmodel.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playlist Settings"
-msgstr "Ouvrir une liste de lecture"
+msgstr "Ouvrir la configuration de la liste de lecture"
 
 #: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Open Mouse Settings"
-msgstr ""
+msgstr "Ouvrir la configuration de la souris"
 
 #: src/models/actionsmodel.cpp:144
 #, kde-format
@@ -183,24 +179,22 @@ msgid "Configure Keyboard Shortcuts"
 msgstr "Configurer les raccourcis de clavier"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open custom commands config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Custom Commands Settings"
-msgstr "Ouvrir un fichier de configuration pour des commandes personnalisées"
+msgstr "Ouvrir la configuration des commandes personnalisées"
 
 #: src/models/actionsmodel.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Open Database Settings"
-msgstr ""
+msgstr "Ouvrir la configuration de la base de données"
 
 #: src/models/actionsmodel.cpp:168
 #, kde-format
 msgctxt "@action"
 msgid "Open Debug Settings"
-msgstr ""
+msgstr "Ouvrir la configuration de débogage"
 
 #: src/models/actionsmodel.cpp:176
 #, kde-format
@@ -1820,9 +1814,6 @@ msgstr "Général"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:24
 #: src/qml/Menus/SettingsMenu.qml:23
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Osd"
 msgctxt "@action:inmenu"
 msgid "Osd"
 msgstr "OSD"
@@ -1877,9 +1868,6 @@ msgstr "Commandes personnalisées"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
 #: src/qml/Menus/SettingsMenu.qml:59
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Database"
 msgctxt "@action:inmenu"
 msgid "Database"
 msgstr "Base de données"
