@@ -452,15 +452,33 @@ Metadata Database::getMetadata(const QUrl &url)
 bool Database::deleteMetadata(const QUrl &url)
 {
     QSqlQuery query(connection());
-    query.prepare(u"DELETE FROM " % METADATA_CACHE_TABLE % u" WHERE url = :url");
+    query.prepare(u"SELECT url_id FROM "_s % URLS_TABLE % u" WHERE url = :url LIMIT 1"_s);
     query.bindValue(u":url"_s, url);
+    if (!query.exec()) {
+        qCDebug(HarunaDatabase) << query.lastError() << getLastExecutedQuery(query);
 
-    const auto result = query.exec();
-    if (!result) {
-        qCDebug(HarunaDatabase) << query.lastError().text() << getLastExecutedQuery(query);
+        return false;
     }
 
-    return result;
+    if (!query.first()) {
+        qCDebug(HarunaDatabase) << "No url_id found for url:" << url;
+
+        return false;
+    }
+
+    int urlId = query.value(0).toInt();
+    query.finish();
+
+    query.prepare(u"DELETE FROM " % METADATA_CACHE_TABLE % u" WHERE url_id = :url_id");
+    query.bindValue(u":url_id"_s, urlId);
+
+    if (!query.exec()) {
+        qCDebug(HarunaDatabase) << query.lastError().text() << getLastExecutedQuery(query);
+
+        return false;
+    }
+
+    return true;
 }
 
 bool Database::deleteAllMetadata()
