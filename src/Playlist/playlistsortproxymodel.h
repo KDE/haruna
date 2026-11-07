@@ -24,8 +24,8 @@ public:
 
     // Properties that are mostly unique, ideal for sorting
     // clang-format off
-    enum Sort {
-        None        = Qt::DisplayRole,
+    enum class SortAndGroupFields {
+        None,
         FileName    = PlaylistModel::Roles::NameRole,
         Duration    = PlaylistModel::Roles::DurationRole,
         Date        = PlaylistModel::Roles::DateRole,
@@ -37,11 +37,6 @@ public:
         Bitrate     = PlaylistModel::Roles::BitrateRole,
         // Custom role, indicates a combination of multiple sort roles or at least one group role
         Custom,
-    };
-    Q_ENUM(Sort)
-
-    // Properties that are mostly common between items, ideal for grouping
-    enum Group {
         Folder      = PlaylistModel::Roles::DirNameRole,
         FileType    = PlaylistModel::Roles::TypeRole,
         Extension   = PlaylistModel::Roles::ExtensionRole,
@@ -63,21 +58,21 @@ public:
         Resolution,
         Separator,
     };
-    Q_ENUM(Group)
+    Q_ENUM(SortAndGroupFields)
     // clang-format on
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
     void setSourceModel(QAbstractItemModel *sourceModel) override;
 
-    Sort sortPreset() const;
-    void setSortPreset(Sort sortRole);
+    SortAndGroupFields sortPreset() const;
+    void setSortPreset(SortAndGroupFields sortRole);
     void setSortOrder(Qt::SortOrder order);
     void sortItems();
     Qt::SortOrder sortingOrder() const;
 
-    void addToActiveSortProperties(int sort);
-    void addToActiveGroup(Group group);
+    void addToActiveSortProperties(SortAndGroupFields sort);
+    void addToActiveGroup(SortAndGroupFields group);
     void removeFromActiveSortProperties(uint index);
     void removeFromActiveGroup(uint index);
 
@@ -98,7 +93,7 @@ Q_SIGNALS:
 
 private:
     Qt::SortOrder m_sortingOrder{Qt::SortOrder::AscendingOrder};
-    Sort m_sortPreset{Sort::None};
+    SortAndGroupFields m_sortPreset{SortAndGroupFields::None};
 
     void onActiveSortPropertiesChanged();
     void onActiveGroupsChanged();
@@ -124,6 +119,5 @@ private:
     QHash<uint, QSharedPointer<QString>> m_indexToSection;
     QHash<QString, QSharedPointer<QString>> m_sectionToPtr;
 };
-Q_DECLARE_METATYPE(PlaylistSortProxyModel::Sort)
-Q_DECLARE_METATYPE(PlaylistSortProxyModel::Group)
+Q_DECLARE_METATYPE(PlaylistSortProxyModel::SortAndGroupFields)
 #endif // PLAYLISTSORTPROXYMODEL_H

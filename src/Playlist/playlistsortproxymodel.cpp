@@ -30,161 +30,161 @@ PlaylistSortProxyModel::PlaylistSortProxyModel(QObject *parent)
     SortProperty sortProperty;
     // Set available sorting properties
     sortProperty.text = i18nc("@label:button file name", "File Name");
-    sortProperty.sort = Sort::FileName;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::FileName);
     sortProperty.category = Category::FileCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button duration", "Duration");
-    sortProperty.sort = Sort::Duration;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Duration);
     sortProperty.category = Category::FileCategory;
     sortProperty.type = SortProperty::Type::StringType; // formattedDuration is a QString
     m_availableSortProperties->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button date", "Date");
-    sortProperty.sort = Sort::Date;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Date);
     sortProperty.category = Category::FileCategory;
     sortProperty.type = SortProperty::Type::DateType;
     m_availableSortProperties->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button file size", "File Size");
-    sortProperty.sort = Sort::FileSize;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::FileSize);
     sortProperty.category = Category::FileCategory;
     sortProperty.type = SortProperty::Type::IntType;
     m_availableSortProperties->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button title", "Title");
-    sortProperty.sort = Sort::Title;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Title);
     sortProperty.category = Category::FileCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button, as in 'Track no on a Audio CD', not 'subtitle track'", "Track No");
-    sortProperty.sort = Sort::TrackNo;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::TrackNo);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::IntType;
     m_availableSortProperties->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button sample rate", "Sample Rate");
-    sortProperty.sort = Sort::SampleRate;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::SampleRate);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::IntType;
     m_availableSortProperties->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button bitrate", "Bitrate");
-    sortProperty.sort = Sort::Bitrate;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Bitrate);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::IntType;
     m_availableSortProperties->appendSortProperty(sortProperty);
 
     // Set available grouping properties
     sortProperty.text = i18nc("@label:button folder", "Folder");
-    sortProperty.sort = Group::Folder;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Folder);
     sortProperty.category = Category::FileCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button file type", "Type");
-    sortProperty.sort = Group::FileType;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::FileType);
     sortProperty.category = Category::FileCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button file extension", "Extension");
-    sortProperty.sort = Group::Extension;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Extension);
     sortProperty.category = Category::FileCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button disc no", "Disc No");
-    sortProperty.sort = Group::DiscNo;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::DiscNo);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::IntType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button release year", "Release Year");
-    sortProperty.sort = Group::ReleaseYear;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::ReleaseYear);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::IntType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button genre", "Genre");
-    sortProperty.sort = Group::Genre;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Genre);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button album", "Album");
-    sortProperty.sort = Group::Album;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Album);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button artist", "Artist");
-    sortProperty.sort = Group::Artist;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Artist);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button album artist", "Album Artist");
-    sortProperty.sort = Group::AlbumArtist;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::AlbumArtist);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button composer", "Composer");
-    sortProperty.sort = Group::Composer;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Composer);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button lyricist", "Lyricist");
-    sortProperty.sort = Group::Lyricist;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Lyricist);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button audio codec", "Audio Codec");
-    sortProperty.sort = Group::AudioCodec;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::AudioCodec);
     sortProperty.category = Category::AudioCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button framerate", "Framerate");
-    sortProperty.sort = Group::Framerate;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Framerate);
     sortProperty.category = Category::VideoCategory;
     sortProperty.type = SortProperty::Type::RealType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button video codec", "Video Codec");
-    sortProperty.sort = Group::VideoCodec;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::VideoCodec);
     sortProperty.category = Category::VideoCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button video orientation", "Orientation");
-    sortProperty.sort = Group::Orientation;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Orientation);
     sortProperty.category = Category::VideoCategory;
     sortProperty.type = SortProperty::Type::IntType;
     m_availableSortProperties->appendSortProperty(sortProperty);
     m_availableGroups->appendSortProperty(sortProperty);
 
     sortProperty.text = i18nc("@label:button resolution", "Resolution");
-    sortProperty.sort = Group::Resolution;
+    sortProperty.sort = static_cast<int>(SortAndGroupFields::Resolution);
     sortProperty.category = Category::VideoCategory;
     sortProperty.type = SortProperty::Type::StringType;
     m_availableSortProperties->appendSortProperty(sortProperty);
@@ -224,7 +224,7 @@ bool PlaylistSortProxyModel::lessThan(const QModelIndex &source_left, const QMod
         int compare = 0;
 
         // Handle special comparison cases
-        if (sortProperty.sort == Group::Resolution) {
+        if (sortProperty.sort == static_cast<int>(SortAndGroupFields::Resolution)) {
             // Sort by width first, then height
             auto leftH = sourceModel()->data(source_left, PlaylistModel::DisplayedHeightRole);
             auto leftW = sourceModel()->data(source_left, PlaylistModel::DisplayedWidthRole);
@@ -265,7 +265,7 @@ bool PlaylistSortProxyModel::lessThan(const QModelIndex &source_left, const QMod
         }
     }
 
-    if (m_sortPreset == Sort::None) {
+    if (m_sortPreset == SortAndGroupFields::None) {
         switch (m_sortingOrder) {
         case Qt::AscendingOrder:
             return source_left.row() < source_right.row();
@@ -287,12 +287,12 @@ void PlaylistSortProxyModel::setSourceModel(QAbstractItemModel *sourceModel)
     connect(this, &QAbstractItemModel::rowsRemoved, this, &PlaylistSortProxyModel::scheduleSectionRecreation);
 }
 
-PlaylistSortProxyModel::Sort PlaylistSortProxyModel::sortPreset() const
+PlaylistSortProxyModel::SortAndGroupFields PlaylistSortProxyModel::sortPreset() const
 {
     return m_sortPreset;
 }
 
-void PlaylistSortProxyModel::setSortPreset(Sort preset)
+void PlaylistSortProxyModel::setSortPreset(SortAndGroupFields preset)
 {
     m_sortPreset = preset;
     qsizetype size = m_activeSortProperties->properties().size();
@@ -300,7 +300,7 @@ void PlaylistSortProxyModel::setSortPreset(Sort preset)
         removeFromActiveSortProperties(0);
     }
 
-    if (preset != Sort::None) {
+    if (preset != SortAndGroupFields::None) {
         addToActiveSortProperties(preset);
     }
     sortItems();
@@ -326,23 +326,23 @@ Qt::SortOrder PlaylistSortProxyModel::sortingOrder() const
     return m_sortingOrder;
 }
 
-void PlaylistSortProxyModel::addToActiveSortProperties(int sort)
+void PlaylistSortProxyModel::addToActiveSortProperties(SortAndGroupFields sort)
 {
-    SortProperty property = m_availableSortProperties->takeSortProperty(sort);
+    SortProperty property = m_availableSortProperties->takeSortProperty(static_cast<int>(sort));
     m_activeSortProperties->appendSortProperty(property);
 }
 
-void PlaylistSortProxyModel::addToActiveGroup(Group group)
+void PlaylistSortProxyModel::addToActiveGroup(SortAndGroupFields group)
 {
-    if (group == Group::Separator) {
+    if (group == SortAndGroupFields::Separator) {
         SortProperty sortProperty;
         sortProperty.text = i18nc("@label:button put new line", "New Line");
         sortProperty.category = Category::SeparatorCategory;
-        sortProperty.sort = Group::Separator;
+        sortProperty.sort = static_cast<int>(SortAndGroupFields::Separator);
         m_activeGroups->appendSortProperty(sortProperty);
         return;
     }
-    SortProperty property = m_availableGroups->takeSortProperty(group);
+    SortProperty property = m_availableGroups->takeSortProperty(static_cast<int>(group));
     m_activeGroups->appendSortProperty(property);
 }
 
@@ -357,7 +357,7 @@ void PlaylistSortProxyModel::removeFromActiveGroup(uint index)
 {
     SortProperty property = m_activeGroups->properties().at(index);
     m_activeGroups->removeProperty(index);
-    if (property.sort == Group::Separator) {
+    if (property.sort == static_cast<int>(SortAndGroupFields::Separator)) {
         return;
     }
     m_availableGroups->appendSortProperty(property);
@@ -367,7 +367,7 @@ void PlaylistSortProxyModel::onActiveSortPropertiesChanged()
 {
     const auto properties = m_activeSortProperties->properties();
     if (properties.isEmpty()) {
-        m_sortPreset = Sort::None;
+        m_sortPreset = SortAndGroupFields::None;
         sortItems();
         recreateSections();
         return;
@@ -376,24 +376,24 @@ void PlaylistSortProxyModel::onActiveSortPropertiesChanged()
     if (properties.size() == 1) {
         int preset = properties.first().sort;
 
-        switch (preset) {
-        case Sort::FileName:
-        case Sort::Duration:
-        case Sort::Date:
-        case Sort::FileSize:
-        case Sort::Title:
-        case Sort::TrackNo:
-        case Sort::SampleRate:
-        case Sort::Bitrate: {
-            m_sortPreset = Sort(preset);
+        switch (static_cast<SortAndGroupFields>(preset)) {
+        case SortAndGroupFields::FileName:
+        case SortAndGroupFields::Duration:
+        case SortAndGroupFields::Date:
+        case SortAndGroupFields::FileSize:
+        case SortAndGroupFields::Title:
+        case SortAndGroupFields::TrackNo:
+        case SortAndGroupFields::SampleRate:
+        case SortAndGroupFields::Bitrate: {
+            m_sortPreset = SortAndGroupFields(preset);
             break;
         }
         default:
-            m_sortPreset = Sort::Custom;
+            m_sortPreset = SortAndGroupFields::Custom;
             break;
         }
     } else {
-        m_sortPreset = Sort::Custom;
+        m_sortPreset = SortAndGroupFields::Custom;
     }
 
     sortItems();
@@ -523,17 +523,17 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
 
     // Initialize placeholder values for missing properties.
     // clang-format off
-    QHash<Group, QString> placeholders = {
-        {Group::Genre,         i18nc("@title:group", "No Genre")},
-        {Group::Album,         i18nc("@title:group", "No Album")},
-        {Group::Artist,        i18nc("@title:group", "No Artist")},
-        {Group::AlbumArtist,   i18nc("@title:group", "No Album Artist")},
-        {Group::Composer,      i18nc("@title:group", "No Composer")},
-        {Group::Lyricist,      i18nc("@title:group", "No Lyricist")},
-        {Group::ReleaseYear,   i18nc("@title:group", "No Release Year")},
-        {Group::Resolution,    i18nc("@title:group", "Not a Video")},
-        {Group::AudioCodec,    i18nc("@title:group", "No Audio Codec")},
-        {Group::VideoCodec,    i18nc("@title:group", "No Video Codec")},
+    QHash<SortAndGroupFields, QString> placeholders = {
+        {SortAndGroupFields::Genre,         i18nc("@title:group", "No Genre")},
+        {SortAndGroupFields::Album,         i18nc("@title:group", "No Album")},
+        {SortAndGroupFields::Artist,        i18nc("@title:group", "No Artist")},
+        {SortAndGroupFields::AlbumArtist,   i18nc("@title:group", "No Album Artist")},
+        {SortAndGroupFields::Composer,      i18nc("@title:group", "No Composer")},
+        {SortAndGroupFields::Lyricist,      i18nc("@title:group", "No Lyricist")},
+        {SortAndGroupFields::ReleaseYear,   i18nc("@title:group", "No Release Year")},
+        {SortAndGroupFields::Resolution,    i18nc("@title:group", "Not a Video")},
+        {SortAndGroupFields::AudioCodec,    i18nc("@title:group", "No Audio Codec")},
+        {SortAndGroupFields::VideoCodec,    i18nc("@title:group", "No Video Codec")},
     };
     // clang-format on
 
@@ -541,20 +541,20 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
     for (const auto &sortProperty : properties) {
         bool hideBlank = sortProperty.hideBlank; // show in the section if and only if it exists
 
-        switch (Group(sortProperty.sort)) {
-        case Folder: {
+        switch (SortAndGroupFields(sortProperty.sort)) {
+        case SortAndGroupFields::Folder: {
             QString folderPath = sourceModel()->data(mapToSource(index), sortProperty.sort).toString();
             currentSectionRow.append(folderPath);
             hideBlankRow.append(hideBlank);
             break;
         }
-        case Extension: {
+        case SortAndGroupFields::Extension: {
             QString extension = sourceModel()->data(mapToSource(index), sortProperty.sort).toString();
             currentSectionRow.append(extension);
             hideBlankRow.append(hideBlank);
             break;
         }
-        case DiscNo: {
+        case SortAndGroupFields::DiscNo: {
             int discNo = sourceModel()->data(mapToSource(index), sortProperty.sort).toInt();
             QString disc = i18nc("@title:group disc", "Disc") + u" " + QString::number(discNo);
             // Disc No should be 0 if the metadata field for it does not exist
@@ -565,11 +565,11 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             hideBlankRow.append(hideBlank);
             break;
         }
-        case ReleaseYear: {
+        case SortAndGroupFields::ReleaseYear: {
             int releaseYear = sourceModel()->data(mapToSource(index), sortProperty.sort).toInt();
             if (releaseYear <= 0) {
                 if (!hideBlank) {
-                    QString placeholder = placeholders.value(Group(sortProperty.sort));
+                    QString placeholder = placeholders.value(SortAndGroupFields(sortProperty.sort));
                     currentSectionRow.append(placeholder);
                     hideBlankRow.append(hideBlank);
                 }
@@ -580,7 +580,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             hideBlankRow.append(hideBlank);
             break;
         }
-        case Framerate: {
+        case SortAndGroupFields::Framerate: {
             double fps = sourceModel()->data(mapToSource(index), sortProperty.sort).toDouble();
             int fpsDecimal = static_cast<int>(fps);
             if (fps > fpsDecimal) {
@@ -592,12 +592,12 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             hideBlankRow.append(hideBlank);
             break;
         }
-        case Resolution: {
+        case SortAndGroupFields::Resolution: {
             int height = sourceModel()->data(mapToSource(index), PlaylistModel::DisplayedHeightRole).toInt();
             int width = sourceModel()->data(mapToSource(index), PlaylistModel::DisplayedWidthRole).toInt();
             if (height == 0 || width == 0) {
                 if (!hideBlank) {
-                    QString placeholder = placeholders.value(Group(sortProperty.sort));
+                    QString placeholder = placeholders.value(SortAndGroupFields(sortProperty.sort));
                     currentSectionRow.append(placeholder);
                     hideBlankRow.append(hideBlank);
                 }
@@ -608,7 +608,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             hideBlankRow.append(hideBlank);
             break;
         }
-        case FileType: {
+        case SortAndGroupFields::FileType: {
             QString type = sourceModel()->data(mapToSource(index), sortProperty.sort).toString();
             if (type == u"video") {
                 currentSectionRow.append(i18nc("@title:group", "Video File"));
@@ -619,12 +619,12 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             }
             break;
         }
-        case AudioCodec:
-        case VideoCodec: {
+        case SortAndGroupFields::AudioCodec:
+        case SortAndGroupFields::VideoCodec: {
             QString codec = sourceModel()->data(mapToSource(index), sortProperty.sort).toString();
             if (codec.isEmpty()) {
                 if (!hideBlank) {
-                    QString placeholder = placeholders.value(Group(sortProperty.sort));
+                    QString placeholder = placeholders.value(SortAndGroupFields(sortProperty.sort));
                     currentSectionRow.append(placeholder);
                     hideBlankRow.append(hideBlank);
                 }
@@ -634,7 +634,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             hideBlankRow.append(hideBlank);
             break;
         }
-        case Orientation: {
+        case SortAndGroupFields::Orientation: {
             int orientation = sourceModel()->data(mapToSource(index), sortProperty.sort).toInt();
             switch (VideoMetaData::Orientation(orientation)) {
             case VideoMetaData::Landscape:
@@ -653,16 +653,17 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             break;
         }
         // Media Data
-        case Genre:
-        case Album:
-        case Artist:
-        case AlbumArtist:
-        case Composer:
-        case Lyricist: {
-            QString itemString = sourceModel()->data(mapToSource(index), Group(sortProperty.sort)).toString();
+        case SortAndGroupFields::Genre:
+        case SortAndGroupFields::Album:
+        case SortAndGroupFields::Artist:
+        case SortAndGroupFields::AlbumArtist:
+        case SortAndGroupFields::Composer:
+        case SortAndGroupFields::Lyricist: {
+            const auto sgField = static_cast<int>(SortAndGroupFields(sortProperty.sort));
+            QString itemString = sourceModel()->data(mapToSource(index), sgField).toString();
             if (itemString.isEmpty()) {
                 if (!hideBlank) {
-                    QString placeholder = placeholders.value(Group(sortProperty.sort));
+                    QString placeholder = placeholders.value(SortAndGroupFields(sortProperty.sort));
                     currentSectionRow.append(placeholder);
                     hideBlankRow.append(hideBlank);
                 }
@@ -686,7 +687,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             hideBlankRow.append(hideBlank);
             break;
         }
-        case Separator: {
+        case SortAndGroupFields::Separator: {
             if (!currentSectionRow.isEmpty()) {
                 // Append U+200B (zero width space) to make the section different
                 // otherwise, sections will not be updated for some cases
@@ -697,6 +698,17 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
             }
             break;
         }
+        case SortAndGroupFields::None:
+        case SortAndGroupFields::Custom:
+        case SortAndGroupFields::FileName:
+        case SortAndGroupFields::Duration:
+        case SortAndGroupFields::Date:
+        case SortAndGroupFields::FileSize:
+        case SortAndGroupFields::Title:
+        case SortAndGroupFields::TrackNo:
+        case SortAndGroupFields::SampleRate:
+        case SortAndGroupFields::Bitrate:
+            return {};
         }
     }
 

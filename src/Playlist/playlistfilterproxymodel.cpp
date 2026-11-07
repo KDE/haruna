@@ -97,12 +97,12 @@ void PlaylistFilterProxyModel::setSearchText(const QString &text)
     Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0), {PlaylistModel::RowNumberRole});
 }
 
-Sort PlaylistFilterProxyModel::sortPreset()
+SortAndGroupFields PlaylistFilterProxyModel::sortPreset()
 {
     return playlistSortProxyModel()->sortPreset();
 }
 
-void PlaylistFilterProxyModel::setSortPreset(PlaylistSortProxyModel::Sort pSortRole)
+void PlaylistFilterProxyModel::setSortPreset(PlaylistSortProxyModel::SortAndGroupFields pSortRole)
 {
     if (sortPreset() == pSortRole) {
         // Reset custom ordering
@@ -678,11 +678,11 @@ PlaylistSortPropertyProxyModel *PlaylistFilterProxyModel::availableGroupProxyMod
 
 void PlaylistFilterProxyModel::addToActiveSortProperties(int sort)
 {
-    playlistSortProxyModel()->addToActiveSortProperties(sort);
+    playlistSortProxyModel()->addToActiveSortProperties(static_cast<SortAndGroupFields>(sort));
     Q_EMIT itemsSorted();
 }
 
-void PlaylistFilterProxyModel::addToActiveGroup(Group group) const
+void PlaylistFilterProxyModel::addToActiveGroup(SortAndGroupFields group) const
 {
     playlistSortProxyModel()->addToActiveGroup(group);
 }

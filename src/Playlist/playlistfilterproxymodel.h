@@ -14,8 +14,7 @@
 #include "playlistproxymodel.h"
 #include "playlistsortproxymodel.h"
 
-using Sort = PlaylistSortProxyModel::Sort;
-using Group = PlaylistSortProxyModel::Group;
+using SortAndGroupFields = PlaylistSortProxyModel::SortAndGroupFields;
 
 class PlaylistModel;
 class PlaylistSortProxyModel;
@@ -60,9 +59,9 @@ public:
     QString searchText();
     void setSearchText(const QString &text);
 
-    Q_PROPERTY(PlaylistSortProxyModel::Sort sortPreset READ sortPreset WRITE setSortPreset NOTIFY itemsSorted)
-    Sort sortPreset();
-    void setSortPreset(Sort preset);
+    Q_PROPERTY(PlaylistSortProxyModel::SortAndGroupFields sortPreset READ sortPreset WRITE setSortPreset NOTIFY itemsSorted)
+    SortAndGroupFields sortPreset();
+    void setSortPreset(SortAndGroupFields preset);
 
     Q_PROPERTY(Qt::SortOrder sortOrder READ sortOrder WRITE changeSortOrder NOTIFY sortOrderChanged)
     Qt::SortOrder sortOrder();
@@ -102,7 +101,7 @@ public:
     Q_INVOKABLE PlaylistSortPropertyProxyModel *availableSortPropertiesProxyModel();
     Q_INVOKABLE PlaylistSortPropertyProxyModel *availableGroupProxyModel();
     Q_INVOKABLE void addToActiveSortProperties(int sort);
-    Q_INVOKABLE void addToActiveGroup(Group group) const;
+    Q_INVOKABLE void addToActiveGroup(SortAndGroupFields group) const;
     Q_INVOKABLE void removeFromActiveSortProperties(uint index);
     Q_INVOKABLE void removeFromActiveGroup(uint index) const;
     Q_INVOKABLE void setGroupHideBlank(uint index, bool hide) const;

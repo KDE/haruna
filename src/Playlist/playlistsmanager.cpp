@@ -311,7 +311,7 @@ void PlaylistsManager::initPlaylist(uint row, bool addItemsToPlaylist)
         for (auto property : std::as_const(groups)) {
             QJsonObject groupProperty = property.toObject();
             int index = groupProperty.value(u"index").toInt();
-            Group group = Group(groupProperty.value(u"group").toInt());
+            SortAndGroupFields group = SortAndGroupFields(groupProperty.value(u"group").toInt());
             bool hideBlank = groupProperty.value(u"hideBlank").toBool();
             item.playlist->addToActiveGroup(group);
             item.playlist->setGroupHideBlank(index, hideBlank);
