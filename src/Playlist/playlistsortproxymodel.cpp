@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+#include <QMetaEnum>
 #include <QTimer>
 
 #include <KLocalizedString>
@@ -415,6 +416,27 @@ void PlaylistSortProxyModel::setSortPropertySortingOrder(uint index, int order)
 {
     m_activeSortProperties->setOrder(index, order);
     onActiveSortPropertiesChanged();
+}
+
+QString PlaylistSortProxyModel::sortAndGroupFieldsToString(SortAndGroupFields value)
+{
+    const auto *key = QMetaEnum::fromType<SortAndGroupFields>().valueToKey(static_cast<int>(value));
+    if (key == nullptr) {
+        return u"None"_s;
+    }
+    return QString::fromLatin1(key);
+}
+
+PlaylistSortProxyModel::SortAndGroupFields PlaylistSortProxyModel::sortAndGroupFieldsFromString(const QString &str)
+{
+    bool ok = false;
+    const int value = QMetaEnum::fromType<SortAndGroupFields>().keyToValue(str.toLatin1().constData(), &ok);
+
+    if (!ok) {
+        return SortAndGroupFields::None;
+    }
+
+    return static_cast<SortAndGroupFields>(value);
 }
 
 int PlaylistSortProxyModel::compareVariants(const QVariant &l, const QVariant &r, SortProperty::Type type) const

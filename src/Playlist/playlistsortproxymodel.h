@@ -88,6 +88,9 @@ public:
     void setGroupHideBlank(uint index, bool hide);
     void setSortPropertySortingOrder(uint index, int order);
 
+    static QString sortAndGroupFieldsToString(SortAndGroupFields value);
+    static SortAndGroupFields sortAndGroupFieldsFromString(const QString &str);
+
 Q_SIGNALS:
     void groupingChanged();
 
