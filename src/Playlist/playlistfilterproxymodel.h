@@ -117,6 +117,7 @@ public:
     Q_INVOKABLE void addItem(const QUrl &url, PlaylistModel::Behavior behavior);
     Q_INVOKABLE void addItems(const QList<QUrl> &urls, PlaylistModel::Behavior behavior);
     Q_INVOKABLE void updateMetadata();
+    Q_INVOKABLE void updateMetadataForRow(int row);
 
     // Model getters for convenience
     PlaylistProxyModel *playlistProxyModel() const;

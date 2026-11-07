@@ -121,6 +121,7 @@ public:
     void setPlaylistName(const QString &newPlaylistName);
 
     void updateMetadata();
+    void updateMetadataForRow(int row);
     QString padNumberWithZeros(int number, int length) const;
 
     // shuffling

@@ -818,14 +818,29 @@ void PlaylistModel::updateMetadata()
     const auto playlist = m_playlist;
     const auto expectedPlaylistVersion = m_playlistVersion.load();
     m_threadPool.start([this, playlist = std::move(playlist), expectedPlaylistVersion]() {
+        qsizetype i = 0;
         for (const auto &item : playlist) {
             if (m_isShuttingDown || m_playlistVersion != expectedPlaylistVersion) {
                 return;
             }
             Database::instance()->updateMetadata(item.url);
+            const auto metadata = Database::instance()->getMetadata(item.url);
+            Q_EMIT metaDataReady(i, item.url, metadata.properties);
+            ++i;
         }
         Q_EMIT metadataUpdateFinished();
     });
+}
+
+void PlaylistModel::updateMetadataForRow(int row)
+{
+    const auto modelIndex = index(row, 0);
+    const auto url = data(modelIndex, PlaylistModel::Roles::PathRole).toUrl();
+
+    if (Database::instance()->updateMetadata(url)) {
+        const auto metadata = Database::instance()->getMetadata(url);
+        Q_EMIT metaDataReady(row, url, metadata.properties);
+    }
 }
 
 QString PlaylistModel::padNumberWithZeros(int number, int length) const

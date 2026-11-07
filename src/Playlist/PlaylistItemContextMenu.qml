@@ -93,10 +93,7 @@ Menu {
         icon.name: "view-refresh"
         visible: root.index != -1
         onClicked: {
-            const playlist = root.playlistsManager.visiblePlaylist
-            const modelIndex = playlist.index(root.index, 0)
-            const url = playlist.data(modelIndex, PlaylistModel.PathRole)
-            Database.updateMetadata(url)
+            root.playlistsManager.visiblePlaylist.updateMetadataForRow(root.index)
         }
 
         ToolTip {

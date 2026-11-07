@@ -761,6 +761,13 @@ void PlaylistFilterProxyModel::updateMetadata()
     playlistModel()->updateMetadata();
 }
 
+void PlaylistFilterProxyModel::updateMetadataForRow(int row)
+{
+    const auto modelIndex = index(row, 0);
+    const auto sourceModelIndex = mapToSource(modelIndex);
+    playlistModel()->updateMetadataForRow(sourceModelIndex.row());
+}
+
 void PlaylistFilterProxyModel::onSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
     const auto sIndexes = selected.indexes();
