@@ -100,7 +100,7 @@ public:
     Q_INVOKABLE PlaylistSortPropertyModel *activeGroupModel();
     Q_INVOKABLE PlaylistSortPropertyProxyModel *availableSortPropertiesProxyModel();
     Q_INVOKABLE PlaylistSortPropertyProxyModel *availableGroupProxyModel();
-    Q_INVOKABLE void addToActiveSortProperties(int sort);
+    Q_INVOKABLE void addToActiveSortProperties(SortAndGroupFields sort);
     Q_INVOKABLE void addToActiveGroup(SortAndGroupFields group) const;
     Q_INVOKABLE void removeFromActiveSortProperties(uint index);
     Q_INVOKABLE void removeFromActiveGroup(uint index) const;

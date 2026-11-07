@@ -676,9 +676,9 @@ PlaylistSortPropertyProxyModel *PlaylistFilterProxyModel::availableGroupProxyMod
     return sortModel->availableGroupsProxy();
 }
 
-void PlaylistFilterProxyModel::addToActiveSortProperties(int sort)
+void PlaylistFilterProxyModel::addToActiveSortProperties(SortAndGroupFields sort)
 {
-    playlistSortProxyModel()->addToActiveSortProperties(static_cast<SortAndGroupFields>(sort));
+    playlistSortProxyModel()->addToActiveSortProperties(sort);
     Q_EMIT itemsSorted();
 }
 

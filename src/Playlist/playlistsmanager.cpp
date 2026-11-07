@@ -26,6 +26,8 @@
 
 using namespace Qt::StringLiterals;
 
+const int SORT_AND_GROUP_FIELD_NO_INT = -9009;
+
 inline void swap(QJsonValueRef v1, QJsonValueRef v2)
 {
     QJsonValue temp(v1);
@@ -298,7 +300,13 @@ void PlaylistsManager::initPlaylist(uint row, bool addItemsToPlaylist)
         for (auto property : std::as_const(sortProperties)) {
             QJsonObject sortProperty = property.toObject();
             int index = sortProperty.value(u"index").toInt();
-            int sort = sortProperty.value(u"sort").toInt();
+            SortAndGroupFields sort = PlaylistSortProxyModel::SortAndGroupFields::None;
+            int sortInt = sortProperty.value(u"sort").toInt(SORT_AND_GROUP_FIELD_NO_INT);
+            if (sortInt == SORT_AND_GROUP_FIELD_NO_INT) {
+                sort = PlaylistSortProxyModel::sortAndGroupFieldsFromString(sortProperty.value(u"sort").toString());
+            } else {
+                sort = static_cast<SortAndGroupFields>(sortInt);
+            }
             int order = sortProperty.value(u"order").toInt();
             item.playlist->addToActiveSortProperties(sort);
             item.playlist->setSortPropertySortingOrder(index, order);
@@ -311,7 +319,14 @@ void PlaylistsManager::initPlaylist(uint row, bool addItemsToPlaylist)
         for (auto property : std::as_const(groups)) {
             QJsonObject groupProperty = property.toObject();
             int index = groupProperty.value(u"index").toInt();
-            SortAndGroupFields group = SortAndGroupFields(groupProperty.value(u"group").toInt());
+            SortAndGroupFields group = PlaylistSortProxyModel::SortAndGroupFields::None;
+            int groupInt = groupProperty.value(u"group").toInt(SORT_AND_GROUP_FIELD_NO_INT);
+            if (groupInt == SORT_AND_GROUP_FIELD_NO_INT) {
+                group = PlaylistSortProxyModel::sortAndGroupFieldsFromString(groupProperty.value(u"group").toString());
+            } else {
+                group = static_cast<SortAndGroupFields>(groupInt);
+            }
+
             bool hideBlank = groupProperty.value(u"hideBlank").toBool();
             item.playlist->addToActiveGroup(group);
             item.playlist->setGroupHideBlank(index, hideBlank);
@@ -622,7 +637,8 @@ QJsonObject PlaylistsManager::playlistToJson(uint i)
     for (const auto &property : activeSortProperties) {
         QJsonObject propertyStruct;
         propertyStruct.insert(u"index", index);
-        propertyStruct.insert(u"sort", property.sort);
+        SortAndGroupFields sortField = static_cast<SortAndGroupFields>(property.sort);
+        propertyStruct.insert(u"sort", PlaylistSortProxyModel::sortAndGroupFieldsToString(sortField));
         propertyStruct.insert(u"order", property.order);
 
         sortProperties.append(propertyStruct);
@@ -634,7 +650,8 @@ QJsonObject PlaylistsManager::playlistToJson(uint i)
     for (const auto &property : activeGroupProperties) {
         QJsonObject groupStruct;
         groupStruct.insert(u"index", index);
-        groupStruct.insert(u"group", property.sort);
+        SortAndGroupFields groupField = static_cast<SortAndGroupFields>(property.sort);
+        groupStruct.insert(u"group", PlaylistSortProxyModel::sortAndGroupFieldsToString(groupField));
         groupStruct.insert(u"hideBlank", property.hideBlank);
 
         groups.append(groupStruct);
