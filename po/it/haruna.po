@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-08 02:56+0000\n"
-"PO-Revision-Date: 2026-10-23 19:50+0200\n"
+"PO-Revision-Date: 2026-11-04 17:43+0100\n"
 "Last-Translator: Valter Mura <valtermura@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 26.08.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -65,6 +65,7 @@ msgstr "Sviluppatore"
 msgid "Feature-rich command-line audio/video downloader"
 msgstr "Scaricatore audio/video a riga di comando ricco di funzionalità"
 
+# VM: it seems there's some error in the sentences.
 #: src/Database/database.cpp:83
 #, kde-format
 msgid ""
@@ -72,6 +73,11 @@ msgid ""
 "lower than the version of the database file (%2). Changes are not persisted. "
 "Either update to the latest version of delete/rename the database file (%3)."
 msgstr ""
+"Viene utilizzato una banca dati in memoria poiché la versione della banca "
+"dati dell'applicazione (%1) è precedente a quella del file di banca dati "
+"(%2). Le modifiche non verranno salvate in modo permanente. È necessario "
+"eseguire l'aggiornamento alla versione più recente oppure eliminare o "
+"rinominare il file di banca dati (%3)."
 
 #: src/lockmanager.cpp:49
 #, kde-format
@@ -125,57 +131,49 @@ msgstr "Impostazioni"
 #, kde-format
 msgctxt "@action"
 msgid "Open General Settings"
-msgstr ""
+msgstr "Apri impostazioni generali"
 
 #: src/models/actionsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Open Osd Settings"
-msgstr "Impostazioni"
+msgstr "Apri impostazioni OSD"
 
 #: src/models/actionsmodel.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playback Settings"
-msgstr "Apri scaletta"
+msgstr "Apri impostazioni di riproduzione"
 
 #: src/models/actionsmodel.cpp:104
 #, kde-format
 msgctxt "@action"
 msgid "Open Video Settings"
-msgstr ""
+msgstr "Apri impostazioni video"
 
 #: src/models/actionsmodel.cpp:112
 #, kde-format
 msgctxt "@action"
 msgid "Open Audio Settings"
-msgstr ""
+msgstr "Apri impostazioni audio"
 
 #: src/models/actionsmodel.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@action"
 msgid "Open Subtitles Settings"
-msgstr "Sottotitoli attivi"
+msgstr "Apri impostazioni dei sottotitoli"
 
 #: src/models/actionsmodel.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playlist Settings"
-msgstr "Apri scaletta"
+msgstr "Apri impostazioni della scaletta"
 
 #: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Open Mouse Settings"
-msgstr ""
+msgstr "Apri impostazioni del mouse"
 
 #: src/models/actionsmodel.cpp:144
 #, kde-format
@@ -184,24 +182,22 @@ msgid "Configure Keyboard Shortcuts"
 msgstr "Configura le scorciatoie da tastiera"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open custom commands config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Custom Commands Settings"
-msgstr "Apri file di configurazione dei comandi personalizzati"
+msgstr "Apri impostazioni dei comandi personalizzati"
 
 #: src/models/actionsmodel.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Open Database Settings"
-msgstr ""
+msgstr "Apri impostazioni della banca dati"
 
 #: src/models/actionsmodel.cpp:168
 #, kde-format
 msgctxt "@action"
 msgid "Open Debug Settings"
-msgstr ""
+msgstr "Apri impostazioni di debug"
 
 #: src/models/actionsmodel.cpp:176
 #, kde-format
@@ -253,12 +249,10 @@ msgid "Open File"
 msgstr "Apri file"
 
 #: src/models/actionsmodel.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Open File"
+#, kde-format
 msgctxt "@action"
 msgid "Open Folder"
-msgstr "Apri file"
+msgstr "Apri cartella"
 
 #: src/models/actionsmodel.cpp:240
 #, kde-format
@@ -847,9 +841,6 @@ msgid "Add…"
 msgstr "Aggiungi…"
 
 #: src/Playlist/Playlist.qml:161
-#, fuzzy
-#| msgctxt "@label:button folder"
-#| msgid "Folder"
 msgctxt "@action:button"
 msgid "Folder"
 msgstr "Cartella"
@@ -1819,9 +1810,6 @@ msgstr "Generale"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:24
 #: src/qml/Menus/SettingsMenu.qml:23
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Osd"
 msgctxt "@action:inmenu"
 msgid "Osd"
 msgstr "OSD"
@@ -1876,9 +1864,6 @@ msgstr "Comandi personalizzati"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
 #: src/qml/Menus/SettingsMenu.qml:59
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Database"
 msgctxt "@action:inmenu"
 msgid "Database"
 msgstr "Banca dati"
