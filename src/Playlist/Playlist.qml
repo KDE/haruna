@@ -72,14 +72,12 @@ ResizeablePage {
 
         visible: PlaylistSettings.showToolbar
 
-        leftPadding: 1
         topPadding: 1
-        rightPadding: 1
-        bottomPadding: 0
+        padding: Kirigami.Units.smallSpacing
 
         ColumnLayout {
             anchors.fill: parent
-            spacing: 0
+            spacing: Kirigami.Units.smallSpacing
 
             RowLayout {
                 PlaylistTabBar {
@@ -134,12 +132,14 @@ ResizeablePage {
                         icon.name: "search"
                         icon.width: root.buttonSize
                         icon.height: root.buttonSize
-                        displayHint: Kirigami.DisplayHint.IconOnly
+                        displayHint: Kirigami.DisplayHint.KeepVisible
                         displayComponent: Kirigami.SearchField {
                             id: searchComponent
-                            delaySearch: true
 
-                            onTextChanged: {
+                            delaySearch: false
+                            width: 110
+
+                            onAccepted: {
                                 root.manager.visiblePlaylist.searchText = text
                                 playlistView.positionViewAtIndex(0, ListView.Beginning)
                             }
@@ -151,9 +151,7 @@ ResizeablePage {
                     },
                     Kirigami.Action {
                         text: KI18n.i18nc("@action:button", "Add…")
-                        displayHint: root.isSmallWindowSize
-                                     ? Kirigami.DisplayHint.IconOnly
-                                     : Kirigami.DisplayHint.NoPreference
+                        displayHint: Kirigami.DisplayHint.KeepVisible
                         icon.name: "list-add"
                         icon.width: root.buttonSize
                         icon.height: root.buttonSize
@@ -194,9 +192,7 @@ ResizeablePage {
                     },
                     Kirigami.Action {
                         text: KI18n.i18nc("@action:button", "Sort")
-                        displayHint: root.isSmallWindowSize
-                                     ? Kirigami.DisplayHint.IconOnly
-                                     : Kirigami.DisplayHint.NoPreference
+                        displayHint: Kirigami.DisplayHint.KeepVisible
                         icon.name: "view-sort"
                         icon.width: root.buttonSize
                         icon.height: root.buttonSize
