@@ -30,6 +30,7 @@ Item {
     signal openFolderDialog()
     signal openSubtitleDialog()
     signal togglePlaylist()
+    signal focusPlaylistSearch()
     signal toggleTranscript()
     signal toggleChaptersPopupAction()
 
@@ -419,6 +420,10 @@ Item {
 
         function onTogglePlaylistAction() {
             root.togglePlaylist()
+        }
+
+        function onFocusPlaylistSearchAction() {
+            root.focusPlaylistSearch()
         }
 
         function onToggleTranscriptAction() {

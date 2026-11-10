@@ -540,6 +540,14 @@ ActionsModel::ActionsModel(QObject *parent)
     action.description = QString{};
     m_actions << action;
 
+    action.name = u"focusPlaylistSearchAction"_s;
+    action.text = i18nc("@action", "Focus Playlist Search Field");
+    action.iconName = u""_s;
+    action.defaultShortcut = Qt::CTRL | Qt::Key_F;
+    action.shortcut = getShortcut(action.name, action.defaultShortcut);
+    action.description = i18nc("@action", "Playlist will be opened if it is closed");
+    m_actions << action;
+
     action.name = u"toggleTranscriptAction"_s;
     action.text = i18nc("@action", "Toggle Transcript Panel");
     action.iconName = u""_s;

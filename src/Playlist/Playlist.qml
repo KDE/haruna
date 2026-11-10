@@ -32,6 +32,8 @@ ResizeablePage {
 
     property PlaylistsManager manager: PlaylistsManager {}
 
+    signal focusSearchFieldRequested()
+
     edge: PlaylistSettings.position === "right" ? Qt.RightEdge : Qt.LeftEdge
     customWidth: PlaylistSettings.playlistWidth
     width: limitWidth(customWidth * fsScale)
@@ -153,6 +155,8 @@ ResizeablePage {
                         displayComponent: Kirigami.SearchField {
                             id: searchComponent
 
+                            focusSequence: ""
+                            focusSequences: []
                             delaySearch: false
                             width: 110
 
@@ -163,6 +167,14 @@ ResizeablePage {
 
                             Component.onCompleted: {
                                 text = root.manager.visiblePlaylist.searchText
+                            }
+
+                            Connections {
+                                target: root
+                                function onFocusSearchFieldRequested() {
+                                    root.state = "visible"
+                                    searchComponent.forceActiveFocus()
+                                }
                             }
                         }
                     },

@@ -429,6 +429,9 @@ ApplicationWindow {
                 playlist.state = "visible"
             }
         }
+        function onFocusPlaylistSearch() {
+            playlist.focusSearchFieldRequested()
+        }
         function onToggleTranscript() {
             transcript.toggle()
         }
