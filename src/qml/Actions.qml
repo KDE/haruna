@@ -567,10 +567,12 @@ Item {
         SelectActionPopup {
             id: triggerActionPopup
 
-            onActionSelected: function(actionName) {
-                HarunaApp.actions[actionName].trigger()
-            }
             onClosed: destroy()
+            Component.onDestruction: {
+                if (actionName !== "") {
+                    HarunaApp.actions[actionName].trigger()
+                }
+            }
         }
     }
 }
