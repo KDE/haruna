@@ -19,9 +19,11 @@ import org.kde.haruna
 Kirigami.SearchDialog {
     id: root
 
+    property string actionName: ""
     signal actionSelected(string actionName)
 
     onActionSelected: function(actionName) {
+        root.actionName = actionName
         close()
     }
 
@@ -40,8 +42,8 @@ Kirigami.SearchDialog {
         sortModel.filterString = text
     }
 
-    delegate: Loader {
-        id: actionDelegateLoader
+    delegate: ItemDelegate {
+        id: actionDelegate
 
         required property int index
         required property string actionName
@@ -50,60 +52,48 @@ Kirigami.SearchDialog {
         required property string actionDescription
         required property string actionType
 
-        active: true
-        asynchronous: true
         width: ListView.view.width
-        height: actionDescription === "" ? Kirigami.Units.gridUnit * 2 : Kirigami.Units.gridUnit * 3
+        onClicked: root.actionSelected(actionName)
+        Keys.onEnterPressed: root.actionSelected(actionName)
+        Keys.onReturnPressed: root.actionSelected(actionName)
 
-        Keys.forwardTo: [item]
+        contentItem: RowLayout {
 
-        sourceComponent: ItemDelegate {
-            id: actionDelegate
+            ColumnLayout {
+                Layout.fillWidth: true
 
-            highlighted: actionDelegateLoader.ListView.view.currentIndex === actionDelegateLoader.index
+                Label {
+                    id: shortcutTextLabel
 
-            onClicked: root.actionSelected(actionDelegateLoader.actionName)
-            Keys.onEnterPressed: root.actionSelected(actionDelegateLoader.actionName)
-            Keys.onReturnPressed: root.actionSelected(actionDelegateLoader.actionName)
-
-            contentItem: RowLayout {
-
-                ColumnLayout {
+                    text: actionDelegate.actionText
                     Layout.fillWidth: true
-
-                    Label {
-                        id: shortcutTextLabel
-
-                        text: actionDelegateLoader.actionText
-                        Layout.fillWidth: true
-                    }
-                    Label {
-                        text: actionDelegateLoader.actionDescription
-                        visible: text !== ""
-                        opacity: 0.9
-                        font.pointSize: shortcutTextLabel.font.pointSize - 1
-                    }
                 }
+                Label {
+                    text: actionDelegate.actionDescription
+                    visible: text !== ""
+                    opacity: 0.9
+                    font.pointSize: shortcutTextLabel.font.pointSize - 1
+                }
+            }
 
-                Repeater {
-                    model: actionDelegateLoader.actionShortcut.split("+")
-                    delegate: Kirigami.Chip {
-                        id: shortcutDelgate
+            Repeater {
+                model: actionDelegate.actionShortcut === "" ? 0 : actionDelegate.actionShortcut.split("+")
+                delegate: Kirigami.Chip {
+                    id: shortcutDelgate
 
-                        required property string modelData
+                    required property string modelData
 
-                        Layout.preferredWidth: actionShortcutLabel.width + Kirigami.Units.largeSpacing
-                        Layout.preferredHeight: actionShortcutLabel.height + Kirigami.Units.largeSpacing
+                    Layout.preferredWidth: actionShortcutLabel.width + Kirigami.Units.largeSpacing
+                    Layout.preferredHeight: actionShortcutLabel.height + Kirigami.Units.largeSpacing
 
-                        closable: false
-                        checkable: false
+                    closable: false
+                    checkable: false
 
-                        Label {
-                            id: actionShortcutLabel
+                    Label {
+                        id: actionShortcutLabel
 
-                            text: shortcutDelgate.modelData
-                            anchors.centerIn: parent
-                        }
+                        text: shortcutDelgate.modelData
+                        anchors.centerIn: parent
                     }
                 }
             }
