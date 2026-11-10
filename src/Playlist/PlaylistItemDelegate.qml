@@ -83,6 +83,7 @@ Item {
         isLocal: root.isLocal
         playlistsManager: root.playlistsManager
     }
+    ContextMenu.onRequested: root.selectItem(root.index, PlaylistFilterProxyModel.Single)
 
     Rectangle {
         id: backgroundRect
@@ -202,10 +203,8 @@ Item {
                 default:
                     if (PlaylistSettings.openWithSingleClick) {
                         setPlayingItem(root.index)
-                        root.selectItem(root.index, PlaylistFilterProxyModel.Clear)
-                    } else {
-                        root.selectItem(root.index, PlaylistFilterProxyModel.ClearSingle)
                     }
+                    root.selectItem(root.index, PlaylistFilterProxyModel.ClearSingle)
                     break
                 }
                 break
@@ -219,7 +218,7 @@ Item {
             if (mouseButton === Qt.LeftButton) {
                 if (!PlaylistSettings.openWithSingleClick) {
                     setPlayingItem(root.index)
-                    root.selectItem(root.index, PlaylistFilterProxyModel.Clear)
+                    root.selectItem(root.index, PlaylistFilterProxyModel.ClearSingle)
                     Models.recentFilesModel.addRecentFile(root.playlistsManager.activeItemPath(), RecentFilesModel.OpenedFrom.Playlist)
                 }
             }
