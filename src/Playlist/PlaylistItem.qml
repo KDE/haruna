@@ -1,131 +1,148 @@
 /*
- * SPDX-FileCopyrightText: 2020 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2026 George Florea Bănuș <georgefb899@gmail.com>
+ * SPDX-FileCopyrightText: 2025 Muhammet Sadık Uğursoy <sadikugursoy@gmail.com>
  *
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+import QtQuick.Shapes
 
 import org.kde.kirigami as Kirigami
+
 import org.kde.haruna
+import org.kde.haruna.playlist
 import org.kde.haruna.settings
 
-PlaylistItemDelegate {
+Loader {
     id: root
 
-    property real dragHandleWidth: Math.max(rowNumberItem.implicitWidth, dragHandle.implicitWidth)
+    required property int index
+    required property string rowNumber
+    required property string titleWithFallback
+    required property string nameWithFallbackRole
+    required property double duration
+    required property string formattedDuration
+    required property string path
+    required property bool isLocal
+    required property bool isPlaying
+    required property bool isSelected
+    required property string section
+    required property real playbackPosition
 
-    implicitHeight: (getFontSize() * 3)
+    required property MpvItem mpvItem
+    required property PlaylistsManager playlistsManager
 
-    contentItem: Rectangle {
-        width: root.width
+    property bool removeAnimationRunning: false
+    property int fontSizeAdjustment: PlaylistSettings.bigFontFullscreen ? 5 : 0
+    property int labelFontSize: (Window.window as Main)?.isFullScreen()
+                                ? Kirigami.Theme.defaultFont.pointSize + fontSizeAdjustment
+                                : Kirigami.Theme.defaultFont.pointSize
+    property color labelFontColor: isPlaying ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
 
-        RowLayout {
-            anchors.fill: parent
-            spacing: Kirigami.Units.largeSpacing
+    function moveItems(from: int, to: int) : void {
+        root.playlistsManager.visiblePlaylist.moveItems(from, to)
+    }
 
-            Item {
-                clip: true
-                Layout.alignment: Qt.AlignCenter
-                Layout.fillHeight: true
-                Layout.leftMargin: Kirigami.Units.largeSpacing
-                Layout.bottomMargin: Kirigami.Units.largeSpacing
-                Layout.topMargin: Kirigami.Units.largeSpacing
+    function selectItem(index: int, selectionType: int) : void {
+        root.playlistsManager.visiblePlaylist.selectItem(index, selectionType)
+    }
 
-                Layout.preferredWidth: {
-                    if (rowNumberItem.visible || root.hovered) {
-                        return root.dragHandleWidth
-                    }
-                    return 0
-                }
+    function setPlayingItem(index: int) : void {
+        root.playlistsManager.visiblePlaylist.setPlayingItem(index)
+    }
 
-                Behavior on Layout.preferredWidth {
-                    NumberAnimation {
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.OutCubic
-                    }
-                }
+    function scrollToPlayingItem() : void {
+        if (root.playlistsManager.visiblePlaylist === root.playlistsManager.activePlaylist) {
+            const index = root.playlistsManager.visiblePlaylist.getPlayingItem()
+            root.ListView.view.positionViewAtIndex(index, ListView.Beginning)
+        }
+    }
 
-                Row {
-                    height: parent.height
-                    spacing: 0
+    ListView.onRemove: {
+        removeAnimation.start()
+    }
 
-                    x: root.hovered ? 0 : -parent.width
+    SequentialAnimation {
+        id: removeAnimation
 
-                    Behavior on x {
-                        NumberAnimation {
-                            duration: Kirigami.Units.longDuration
-                            easing.type: Easing.OutCubic
-                        }
-                    }
+        PropertyAction { target: root; property: "ListView.delayRemove"; value: true }
+        PropertyAction { target: root; property: "removeAnimationRunning"; value: true }
 
-                    Kirigami.ListItemDragHandle {
-                        id: dragHandle
+        ParallelAnimation {
+            NumberAnimation { target: root; property: "height"; to: 0; duration: Kirigami.Units.shortDuration }
+            NumberAnimation { target: root; property: "opacity"; to: 0; duration: Kirigami.Units.shortDuration }
+        }
 
-                        listItem: root.dragRect
-                        listView: root.ListView?.view
-                        width: root.dragHandleWidth
+        PropertyAction { target: root; property: "ListView.delayRemove"; value: false }
+        PropertyAction { target: root; property: "removeAnimationRunning"; value: false }
 
-                        onMoveRequested: function (oldIndex, newIndex) {
-                            root.selectItem(oldIndex, PlaylistFilterProxyModel.Single)
-                            root.moveItems(oldIndex, newIndex)
-                        }
+        onFinished: {
+            root.opacity = 1.0
+            root.height = Qt.binding(function() { return root.implicitHeight })
+        }
+    }
 
-                        onDragActiveChanged: {
-                            root.cacheItem()
-                        }
+    sourceComponent: ItemDelegate {
+        id: itemDelegate
 
-                        anchors.verticalCenter: parent.verticalCenter
-                    }
+        implicitWidth: root.ListView.view.width
+        height: PlaylistSettings.style == "withThumbnails"
+                ? (Kirigami.Units.gridUnit - 6) * 8
+                : implicitHeight
+        highlighted: root.isPlaying || root.isSelected
+        topPadding: Kirigami.Units.smallSpacing
+        bottomPadding: Kirigami.Units.smallSpacing
 
-                    Label {
-                        id: rowNumberItem
+        contentItem: RowLayout {
+            id: content
 
-                        text: root.rowNumber
-                        color: root.getLabelColor()
-                        visible: PlaylistSettings.showRowNumber
-                        font.pointSize: root.getFontSize()
-                        horizontalAlignment: Qt.AlignHCenter
-                        anchors.verticalCenter: parent.verticalCenter
-                        width: root.dragHandleWidth
-                    }
-                }
+            width: itemDelegate.width
+
+            NumberAndDragHandleItem {
+                delegate: itemDelegate
             }
 
-            Rectangle {
-                color: Qt.alpha(Kirigami.Theme.textColor, 0.2)
-                visible: PlaylistSettings.showRowNumber
-                Layout.preferredWidth: 1
-                Layout.fillHeight: true
-                Layout.topMargin: Kirigami.Units.smallSpacing
-                Layout.bottomMargin: Kirigami.Units.smallSpacing
+            Loader {
+                active: PlaylistSettings.style == "withThumbnails"
+                visible: active
+                sourceComponent: ThumbnailItem {}
+                Layout.alignment: Qt.AlignCenter
             }
 
             Kirigami.Icon {
                 source: "media-playback-start"
-                color: root.getLabelColor()
+                color: root.labelFontColor
                 visible: root.isPlaying
                 Layout.preferredWidth: Kirigami.Units.iconSizes.small
                 Layout.preferredHeight: Kirigami.Units.iconSizes.small
             }
 
             LabelWithTooltip {
-                color: root.getLabelColor()
+                text: PlaylistSettings.showMediaTitle ? root.titleWithFallback : root.nameWithFallbackRole
+                elide: Text.ElideRight
+                wrapMode: Text.WrapAtWordBoundaryOrAnywhere
+                font.pointSize: root.labelFontSize
+                color: root.labelFontColor
                 horizontalAlignment: Qt.AlignLeft
                 verticalAlignment: Qt.AlignVCenter
-                elide: Text.ElideRight
-                font.pointSize: root.getFontSize()
-                text: PlaylistSettings.showMediaTitle ? root.titleWithFallback : root.nameWithFallbackRole
+                maximumLineCount: PlaylistSettings.style == "withThumbnails" ? 3 : 1
+
                 Layout.fillWidth: true
+                Layout.fillHeight: true
             }
 
             Label {
                 text: root.formattedDuration.length > 0 ? root.formattedDuration : ""
-                color: root.getLabelColor()
-                font.pointSize: root.getFontSize()
-                Layout.margins: Kirigami.Units.largeSpacing
+                font.pointSize: root.labelFontSize
+                color: root.labelFontColor
+                visible: PlaylistSettings.style !== "withThumbnails"
+
+                Layout.margins: Kirigami.Units.smallSpacing
 
                 Rectangle {
                     visible: PlaybackSettings.restoreFilePosition
@@ -138,12 +155,251 @@ PlaylistItemDelegate {
                     Rectangle {
                         height: 2
                         width: root.isPlaying
-                               ? root.m_mpv.position/root.m_mpv.duration * parent.width
+                               ? root.mpvItem.position/root.duration * parent.width
                                : root.playbackPosition * parent.width
                         color: Kirigami.Theme.visitedLinkColor
                     }
                 }
+            }
+        }
 
+        ContextMenu.menu: PlaylistItemContextMenu {
+            index: root.index
+            isLocal: root.isLocal
+            playlistsManager: root.playlistsManager
+        }
+        ContextMenu.onRequested: root.selectItem(root.index, PlaylistFilterProxyModel.Single)
+
+        TapHandler {
+            id: tapHandler
+
+            acceptedButtons: Qt.LeftButton | Qt.MiddleButton
+            onSingleTapped: function(eventPoint, mouseButton) {
+                switch (mouseButton) {
+                case Qt.LeftButton:
+                    switch (point.modifiers) {
+                    case Qt.ControlModifier:
+                        root.selectItem(root.index, PlaylistFilterProxyModel.Toggle)
+                        break
+                    case Qt.ShiftModifier:
+                        root.selectItem(root.index, PlaylistFilterProxyModel.Range)
+                        break
+                    case Qt.AltModifier:
+                        root.selectItem(root.index, PlaylistFilterProxyModel.ClearSingle)
+                        break
+                    default:
+                        if (PlaylistSettings.openWithSingleClick) {
+                            root.setPlayingItem(root.index)
+                        }
+                        root.selectItem(root.index, PlaylistFilterProxyModel.ClearSingle)
+                        break
+                    }
+                    break
+                case Qt.MiddleButton:
+                    root.scrollToPlayingItem()
+                    break
+                }
+            }
+
+            onDoubleTapped: function(eventPoint, mouseButton) {
+                if (mouseButton === Qt.LeftButton) {
+                    if (!PlaylistSettings.openWithSingleClick) {
+                        root.setPlayingItem(root.index)
+                        root.selectItem(root.index, PlaylistFilterProxyModel.ClearSingle)
+                        Models.recentFilesModel.addRecentFile(root.playlistsManager.activeItemPath(), RecentFilesModel.OpenedFrom.Playlist)
+                    }
+                }
+            }
+        }
+
+        DropArea {
+            id: itemDropArea
+
+            anchors.fill: parent
+            keys: ["text/uri-list"]
+
+            onDropped: function (drop) {
+                if (!containsDrag) {
+                    return
+                }
+                root.playlistsManager.visiblePlaylist.addFilesAndFolders(drop.urls, PlaylistModel.Insert, root.index)
+            }
+        }
+
+        Shape {
+            visible: itemDropArea.containsDrag
+            antialiasing: true
+            z: 1
+            ShapePath {
+                id: shape
+
+                property int arrowWidth: 6
+                property int arrowHeight: 6
+                property int centerThickness: 1
+                property int listViewSpacing: root.ListView?.view.spacing
+                strokeWidth: 0
+                startX: 0
+                startY: 0
+                fillColor: Kirigami.Theme.highlightColor
+                /* Order of PathLines:
+              8\                  /5
+              | \                / |
+              |  7--------------6  |
+              |  2--------------3  |
+              | /                \ |
+              1/                  \4
+            */
+                PathLine {
+                    x: 0;
+                    y: shape.arrowHeight
+                }
+                PathLine {
+                    x: shape.arrowWidth
+                    y: shape.centerThickness
+                }
+                PathLine {
+                    x: root.width - shape.arrowWidth
+                    y: shape.centerThickness
+                }
+                PathLine {
+                    x: root.width;
+                    y: shape.arrowHeight
+                }
+                PathLine {
+                    x: root.width;
+                    y: -(shape.arrowHeight + shape.listViewSpacing)
+                }
+                PathLine {
+                    x: root.width - shape.arrowWidth;
+                    y: -(shape.centerThickness + shape.listViewSpacing)
+                }
+                PathLine {
+                    x: shape.arrowWidth;
+                    y: -(shape.centerThickness + shape.listViewSpacing)
+                }
+                PathLine {
+                    x: 0;
+                    y: -(shape.arrowHeight + shape.listViewSpacing)
+                }
+            }
+        }
+    }
+
+    component ThumbnailItem: Item {
+        visible: !root.removeAnimationRunning
+        implicitWidth: visible ? root.height * 1.33
+                                 // keeps text at the same x position during the remove animation
+                               : (Kirigami.Units.gridUnit - 6) * 8 * 1.33
+        implicitHeight: root.height - Kirigami.Units.smallSpacing * 2
+
+        Image {
+            anchors.fill: parent
+            source: "image://thumbnail/%1".arg(root.path)
+            sourceSize.width: parent.width
+            sourceSize.height: parent.height
+            asynchronous: true
+            fillMode: Image.PreserveAspectCrop
+
+            Rectangle {
+                visible: root.formattedDuration.length > 0
+                height: thumbDurationLayout.height
+                anchors.left: parent.left
+                anchors.bottom: parent.bottom
+                anchors.right: parent.right
+                color: Qt.alpha(Kirigami.Theme.backgroundColor, 0.7)
+
+                ColumnLayout {
+                    id: thumbDurationLayout
+
+                    width: parent.width
+                    spacing: 1
+
+                    Label {
+                        id: thumbDurationLabel
+
+                        Layout.alignment: Qt.AlignCenter
+                        Layout.fillHeight: true
+                        color: Kirigami.Theme.textColor
+                        horizontalAlignment: Qt.AlignCenter
+                        text: root.formattedDuration
+                    }
+
+                    Rectangle {
+                        visible: PlaybackSettings.restoreFilePosition
+                        color: Qt.alpha(Kirigami.Theme.visitedLinkColor, 1.0)
+                        Layout.preferredWidth: root.isPlaying
+                                               ? root.mpvItem.position/root.mpvItem.duration * parent.width
+                                               : root.playbackPosition * parent.width
+                        Layout.preferredHeight: 2
+                        Layout.alignment: Qt.AlignLeft
+                    }
+                }
+            }
+        }
+    }
+
+    component NumberAndDragHandleItem: Item {
+        id: numberAndDragHandleComponent
+
+        required property ItemDelegate delegate
+
+        clip: true
+
+        Layout.fillHeight: true
+        Layout.preferredWidth: rowNumberItem.visible || delegate.hovered
+                               ? Math.max(rowNumberItem.implicitWidth, dragHandle.implicitWidth)
+                               : 0
+        Layout.rightMargin: Kirigami.Units.largeSpacing
+
+        Behavior on Layout.preferredWidth {
+            NumberAnimation {
+                duration: Kirigami.Units.longDuration
+                easing.type: Easing.OutCubic
+            }
+        }
+
+        Row {
+            width: numberAndDragHandleComponent.Layout.preferredWidth
+            height: parent.height
+            spacing: 0
+            x: numberAndDragHandleComponent.delegate.hovered ? 0 : -width
+
+            Behavior on x {
+                NumberAnimation {
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.OutCubic
+                }
+            }
+
+            Kirigami.ListItemDragHandle {
+                id: dragHandle
+
+                width: numberAndDragHandleComponent.Layout.preferredWidth
+                height: parent.height
+
+                listItem: numberAndDragHandleComponent.delegate
+                listView: root.ListView?.view
+
+                onMoveRequested: function (oldIndex, newIndex) {
+                    root.selectItem(oldIndex, PlaylistFilterProxyModel.Single)
+                    root.moveItems(oldIndex, newIndex)
+                }
+
+                anchors.verticalCenter: parent.verticalCenter
+            }
+
+            Label {
+                id: rowNumberItem
+
+                visible: PlaylistSettings.showRowNumber
+                width: numberAndDragHandleComponent.Layout.preferredWidth
+                height: parent.height
+
+                text: root.rowNumber
+                font.pointSize: root.labelFontSize
+                color: root.labelFontColor
+                horizontalAlignment: Qt.AlignHCenter
+                verticalAlignment: Qt.AlignVCenter
             }
         }
     }

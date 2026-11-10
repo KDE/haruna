@@ -16,7 +16,6 @@ qt_add_qml_module(playlist
         PlaylistItem.qml
         PlaylistItemContextMenu.qml
         PlaylistItemDelegate.qml
-        PlaylistItemWithThumbnail.qml
         PlaylistSectionDelegate.qml
         PlaylistTabBar.qml
         PlaylistTabDelegate.qml

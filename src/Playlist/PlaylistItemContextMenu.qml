@@ -130,7 +130,7 @@ Menu {
         text: KI18n.i18nc("@action:inmenu", "Remove from Playlist")
         icon.name: "remove"
         onClicked: root.playlistsManager.visiblePlaylist.removeItem(root.index)
-        visible: root.playlistsManager.visiblePlaylist.selectionCount === 1 && root.index != -1
+        visible: root.playlistsManager.visiblePlaylist.selectionCount <= 1 && root.index != -1
     }
 
     MenuItem {

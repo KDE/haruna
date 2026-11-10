@@ -555,15 +555,9 @@ ResizeablePage {
                     }
                 }
 
-                delegate: {
-                    switch (PlaylistSettings.style) {
-                    case "default":
-                        return playlistItemSimple
-                    case "withThumbnails":
-                        return playlistItemWithThumbnail
-                    default:
-                        return playlistItemSimple
-                    }
+                delegate: PlaylistItem {
+                    mpvItem: root.m_mpv
+                    playlistsManager: root.manager
                 }
 
                 section {
@@ -618,22 +612,6 @@ ResizeablePage {
             }
         },
 
-        Component {
-            id: playlistItemWithThumbnail
-            PlaylistItemWithThumbnail {
-                m_mpv: root.m_mpv
-                playlistsManager: root.manager
-            }
-        },
-
-        Component {
-            id: playlistItemSimple
-            PlaylistItem {
-                m_mpv: root.m_mpv
-                playlistsManager: root.manager
-            }
-        },
-
         // without a timer the scroll position is incorrect
         Timer {
             id: scrollPositionTimer
@@ -674,10 +652,18 @@ ResizeablePage {
         },
 
         FastBlur {
+            id: blur
+
             visible: PlaylistSettings.overlayVideo
             anchors.fill: shaderEffect
             radius: 100
             source: shaderEffect
+        },
+
+        ColorOverlay {
+            anchors.fill: blur
+            source: blur
+            color: Qt.alpha(Kirigami.Theme.backgroundColor, 0.7)
         }
     ]
 
