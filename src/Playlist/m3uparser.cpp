@@ -140,14 +140,12 @@ void M3uParser::parseExtendedLine(const QString &line, const QString &playlistPa
 
 QUrl M3uParser::stringToUrl(const QString &urlString, const QString &parentPath)
 {
-    const QString decoded = QUrl::fromPercentEncoding(urlString.toUtf8());
-
-    const QUrl url(decoded);
+    const QUrl url(urlString);
     if (url.isValid() && !url.scheme().isEmpty()) {
         return url;
     }
 
-    std::filesystem::path path(decoded.toStdString());
+    std::filesystem::path path(urlString.toStdString());
     std::filesystem::path playlistParentPath(parentPath.toStdString());
 
     if (path.is_relative()) {
