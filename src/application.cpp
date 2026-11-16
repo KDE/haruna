@@ -188,6 +188,7 @@ void Application::setupAboutData()
     m_aboutData.setHomepage(u"https://haruna.kde.org"_s);
     m_aboutData.setBugAddress(u"https://bugs.kde.org/enter_bug.cgi?product=Haruna"_s.toUtf8());
     m_aboutData.setDesktopFileName(u"org.kde.haruna"_s);
+    m_aboutData.setUrl(KAboutData::Donation, u"https://github.com/sponsors/g-fb"_s);
 
     m_aboutData.addAuthor(i18nc("@info:credit", "George Florea Bănuș"),
                           i18nc("@info:credit", "Developer"),
