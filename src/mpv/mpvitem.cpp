@@ -618,7 +618,7 @@ void MpvItem::onAsyncReply(const QVariant &data, mpv_event event)
         if (filename.isEmpty()) {
             OsdUtils::instance().message(i18nc("@info:tooltip osd", "Screenshot taken"), OsdUtils::Context::MpvScreenshot);
         } else {
-            OsdUtils::instance().message(i18nc("@info:tooltip osd; %1 is a filename with path", "Screenshot: %1"), OsdUtils::Context::MpvScreenshot);
+            OsdUtils::instance().message(i18nc("@info:tooltip osd; is a filename with path", "Screenshot: %1", filename), OsdUtils::Context::MpvScreenshot);
         }
         break;
     }
