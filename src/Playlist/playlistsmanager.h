@@ -75,6 +75,7 @@ Q_SIGNALS:
 private:
     PlaylistFilterProxyModel *getFilterProxy(const QString &playlistName);
 
+    bool restorePlaylists();
     void addPlaylist(PlaylistsModelItem newItem);
     void initPlaylist(uint row, bool addItemsToPlaylist = true);
     QUrl getPlaylistCacheUrl();

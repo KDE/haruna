@@ -44,17 +44,33 @@ PlaylistsManager::PlaylistsManager(QObject *parent)
 
     connect(this, &PlaylistsManager::visibleIndexChanged, this, &PlaylistsManager::visiblePlaylistChanged);
 
-    const auto urls = CommandLineOptions::instance().startupUrls();
+    if (!restorePlaylists()) {
+        PlaylistsModelItem item;
+        item.playlistName = u"Default"_s;
+        item.playlistUrl = getDefaultPlaylistUrl();
+        item.jsonData = {};
 
+        addPlaylist(std::move(item));
+        initPlaylist(0, true);
+        if (PlaybackSettings::openLastPlayedFile()) {
+            activePlaylist()->setPlayingItem(0);
+        }
+
+        savePlaylistCache();
+    }
+}
+
+bool PlaylistsManager::restorePlaylists()
+{
     QUrl cacheUrl = getPlaylistCacheUrl();
     if (cacheUrl.isEmpty()) {
-        return;
+        return false;
     }
 
     QFile cacheFile(cacheUrl.toString(QUrl::PreferLocalFile));
     if (!cacheFile.open(QFile::ReadOnly)) {
         qCDebug(HarunaPlaylist) << "Can't open internal playlist cache";
-        return;
+        return false;
     }
 
     const QByteArray data = cacheFile.readAll();
@@ -64,55 +80,58 @@ PlaylistsManager::PlaylistsManager(QObject *parent)
     QJsonDocument doc = QJsonDocument::fromJson(data, &parseErr);
     if (parseErr.error != QJsonParseError::NoError) {
         qWarning() << "Failed loading playlist cache";
-        savePlaylistCache();
-        return;
+        return false;
     }
 
-    if (doc.isArray()) {
-        for (int i = 0; i < doc.array().count(); ++i) {
-            const QJsonValue &value = doc.array().at(i);
-            if (!value.isObject()) {
+    if (!doc.isArray()) {
+        return false;
+    }
+
+    const auto urls = CommandLineOptions::instance().startupUrls();
+    for (int i = 0; i < doc.array().count(); ++i) {
+        const QJsonValue &value = doc.array().at(i);
+        if (!value.isObject()) {
+            continue;
+        }
+        QJsonObject playlist = value.toObject();
+
+        QString playlistName = playlist.value(u"name").toString();
+        QUrl playlistUrl = getPlaylistUrl(playlistName);
+        if (playlistName == u"Default"_s) {
+            playlistUrl = getDefaultPlaylistUrl();
+        }
+        if (playlistUrl.isEmpty()) {
+            continue;
+        }
+
+        PlaylistsModelItem item;
+        item.playlistName = playlistName;
+        item.playlistUrl = playlistUrl;
+        item.jsonData = playlist;
+
+        addPlaylist(std::move(item));
+        if (!urls.isEmpty()) {
+            initPlaylist(0, false);
+            continue;
+        }
+        // this code must be run after the sorting and grouping have been setup, else when
+        // the savePlaylist() function is called (triggered by PlaylistModel::playingItemChanged signal)
+        // the sorting and grouping data is not available on the playlist and will be lost
+        bool active = playlist.value(u"isActive").toBool();
+        if (active) {
+            initPlaylist(i);
+
+            setActiveIndex(i);
+            setVisibleIndex(i);
+
+            if (!PlaybackSettings::openLastPlayedFile()) {
                 continue;
             }
-            QJsonObject playlist = value.toObject();
-
-            QString playlistName = playlist.value(u"name").toString();
-            QUrl playlistUrl = getPlaylistUrl(playlistName);
-            if (playlistName == u"Default"_s) {
-                playlistUrl = getDefaultPlaylistUrl();
-            }
-            if (playlistUrl.isEmpty()) {
-                continue;
-            }
-
-            PlaylistsModelItem item;
-            item.playlistName = playlistName;
-            item.playlistUrl = playlistUrl;
-            item.jsonData = playlist;
-
-            addPlaylist(std::move(item));
-            if (!urls.isEmpty()) {
-                initPlaylist(0, false);
-                continue;
-            }
-            // this code must be run after the sorting and grouping have been setup, else when
-            // the savePlaylist() function is called (triggered by PlaylistModel::playingItemChanged signal)
-            // the sorting and grouping data is not available on the playlist and will be lost
-            bool active = playlist.value(u"isActive").toBool();
-            if (active) {
-                initPlaylist(i);
-
-                setActiveIndex(i);
-                setVisibleIndex(i);
-
-                if (!PlaybackSettings::openLastPlayedFile()) {
-                    continue;
-                }
-                uint index = playlist.value(u"currentItem").toInt();
-                activePlaylist()->setPlayingItem(index);
-            }
+            uint index = playlist.value(u"currentItem").toInt();
+            activePlaylist()->setPlayingItem(index);
         }
     }
+    return true;
 }
 
 void PlaylistsManager::setActiveIndex(uint pIndex)
