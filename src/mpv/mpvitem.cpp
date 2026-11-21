@@ -107,6 +107,9 @@ MpvItem::MpvItem(QQuickItem *parent)
             resetTimePosition();
         }
     });
+    connect(PlaybackSettings::self(), &PlaybackSettings::SavePositionIntervalChanged, this, [this]() {
+        m_saveTimePositionTimer->setInterval(PlaybackSettings::savePositionInterval() * 1000);
+    });
 
     connect(QApplication::instance(), &QApplication::aboutToQuit, this, [this]() {
         if (playbackState() == PlaybackState::Stopped) {
@@ -1163,6 +1166,11 @@ void MpvItem::setPlaybackState(PlaybackState newPlaybackState)
     }
 
     m_playbackState = newPlaybackState;
+    if (m_playbackState == MpvItem::PlaybackState::Playing) {
+        m_saveTimePositionTimer->start();
+    } else {
+        m_saveTimePositionTimer->stop();
+    }
     Q_EMIT playbackStateChanged();
 }
 
