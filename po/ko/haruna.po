@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: haruna\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-11-17 01:05+0000\n"
-"PO-Revision-Date: 2026-10-05 22:28+0200\n"
+"PO-Revision-Date: 2026-11-21 23:46+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -70,6 +70,9 @@ msgid ""
 "lower than the version of the database file (%2). Changes are not persisted. "
 "Either update to the latest version of delete/rename the database file (%3)."
 msgstr ""
+"앱의 데이터베이스 버전(%1)이 데이터베이스 파일의 버전(%2)보다 낮아서 메모리 "
+"데이터베이스를 사용합니다. 변경 사항은 유지되지 않습니다. 최신 버전으로 업데"
+"이트하거나 데이터베이스 파일(%3)의 이름을 바꾸거나 삭제하십시오."
 
 #: src/lockmanager.cpp:49
 #, kde-format
@@ -120,61 +123,52 @@ msgid "Settings"
 msgstr "설정"
 
 #: src/models/actionsmodel.cpp:80
-#, fuzzy, kde-format
-#| msgid "Haruna Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Open General Settings"
-msgstr "Haruna 설정"
+msgstr "일반 설정 열기"
 
 #: src/models/actionsmodel.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Settings"
+#, kde-format
 msgctxt "@action"
 msgid "Open Osd Settings"
-msgstr "설정"
+msgstr "OSD 설정 열기"
 
 #: src/models/actionsmodel.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playback Settings"
-msgstr "재생 목록 열기"
+msgstr "재생 설정 열기"
 
 #: src/models/actionsmodel.cpp:104
 #, kde-format
 msgctxt "@action"
 msgid "Open Video Settings"
-msgstr ""
+msgstr "비디오 설정 열기"
 
 #: src/models/actionsmodel.cpp:112
 #, kde-format
 msgctxt "@action"
 msgid "Open Audio Settings"
-msgstr ""
+msgstr "오디오 설정 열기"
 
 #: src/models/actionsmodel.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitles on"
+#, kde-format
 msgctxt "@action"
 msgid "Open Subtitles Settings"
-msgstr "자막 켜짐"
+msgstr "자막 설정 열기"
 
 #: src/models/actionsmodel.cpp:128
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Open Playlist"
+#, kde-format
 msgctxt "@action"
 msgid "Open Playlist Settings"
-msgstr "재생 목록 열기"
+msgstr "재생 목록 설정 열기"
 
 #: src/models/actionsmodel.cpp:136
 #, kde-format
 msgctxt "@action"
 msgid "Open Mouse Settings"
-msgstr ""
+msgstr "마우스 설정 열기"
 
 #: src/models/actionsmodel.cpp:144
 #, kde-format
@@ -183,24 +177,22 @@ msgid "Configure Keyboard Shortcuts"
 msgstr "키보드 단축키 설정"
 
 #: src/models/actionsmodel.cpp:152
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Open custom commands config file"
+#, kde-format
 msgctxt "@action"
 msgid "Open Custom Commands Settings"
-msgstr "사용자 정의 명령 설정 파일 열기"
+msgstr "사용자 정의 명령 설정 열기"
 
 #: src/models/actionsmodel.cpp:160
 #, kde-format
 msgctxt "@action"
 msgid "Open Database Settings"
-msgstr ""
+msgstr "데이터베이스 설정 열기"
 
 #: src/models/actionsmodel.cpp:168
 #, kde-format
 msgctxt "@action"
 msgid "Open Debug Settings"
-msgstr ""
+msgstr "디버그 설정 열기"
 
 #: src/models/actionsmodel.cpp:176
 #, kde-format
@@ -251,12 +243,10 @@ msgid "Open File"
 msgstr "파일 열기"
 
 #: src/models/actionsmodel.cpp:232
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Open File"
+#, kde-format
 msgctxt "@action"
 msgid "Open Folder"
-msgstr "파일 열기"
+msgstr "폴더 열기"
 
 #: src/models/actionsmodel.cpp:240
 #, kde-format
@@ -778,9 +768,7 @@ msgid "Screenshot taken"
 msgstr "스크린샷 찍음"
 
 #: src/mpv/mpvitem.cpp:621
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip osd; %1 is a filename with path"
-#| msgid "Screenshot: %1"
+#, kde-format
 msgctxt "@info:tooltip osd; is a filename with path"
 msgid "Screenshot: %1"
 msgstr "스크린샷: %1"
@@ -845,9 +833,6 @@ msgid "Add…"
 msgstr "추가…"
 
 #: src/Playlist/Playlist.qml:159
-#, fuzzy
-#| msgctxt "@label:button folder"
-#| msgid "Folder"
 msgctxt "@action:button"
 msgid "Folder"
 msgstr "폴더"
@@ -1817,7 +1802,7 @@ msgstr "일반"
 #: src/qml/Menus/SettingsMenu.qml:23
 msgctxt "@action:inmenu"
 msgid "Osd"
-msgstr ""
+msgstr "OSD"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:30
 #: src/qml/Menus/SettingsMenu.qml:27
@@ -1869,9 +1854,6 @@ msgstr "사용자 정의 명령"
 
 #: src/qml/Menus/Global/GlobalSettingsMenu.qml:79
 #: src/qml/Menus/SettingsMenu.qml:59
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Database"
 msgctxt "@action:inmenu"
 msgid "Database"
 msgstr "데이터베이스"
@@ -2609,7 +2591,7 @@ msgstr "OSD 글꼴 크기"
 #: src/Settings/OsdPage.qml:43
 msgctxt "@title"
 msgid "Choose when to show osd"
-msgstr ""
+msgstr "OSD를 표시할 상황 선택"
 
 #: src/Settings/PlaybackPage.qml:27
 msgctxt "@label:spinbox"
@@ -2993,7 +2975,7 @@ msgstr "일반"
 #: src/Settings/SettingsWindow.qml:99
 msgctxt "@action"
 msgid "Osd"
-msgstr ""
+msgstr "OSD"
 
 #: src/Settings/SettingsWindow.qml:108
 msgctxt "@action"
@@ -3088,7 +3070,7 @@ msgstr "글꼴 종류"
 #: src/Settings/SubtitlesPage.qml:230
 msgctxt "@info:tooltip"
 msgid "Click to change font"
-msgstr ""
+msgstr "글꼴을 바꾸려면 클릭하십시오"
 
 #: src/Settings/SubtitlesPage.qml:256
 msgctxt "@label:spinbox"
@@ -3286,9 +3268,7 @@ msgid "Middle click on the sliders to reset them"
 msgstr "슬라이더에서 가운데 단추로 클릭하여 초기화"
 
 #: src/Transcript/subtitleparser.cpp:96
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu all"
-#| msgid "All"
+#, kde-format
 msgctxt "@item:listbox combobox option to show all ASS subtitle styles"
 msgid "All"
 msgstr "모두"
@@ -3304,12 +3284,9 @@ msgid "Follow active subtitle"
 msgstr "활성 자막 따라가기"
 
 #: src/Transcript/Transcript.qml:216
-#, fuzzy
-#| msgctxt "@action"
-#| msgid "Subtitle Cycle Up"
 msgctxt "@info:tooltip"
 msgid "ASS subtitle styles"
-msgstr "다음 자막으로 전환"
+msgstr "ASS 자막 스타일"
 
 #: src/Utilities/commandlineoptions.cpp:33
 #, kde-format
@@ -3331,93 +3308,73 @@ msgstr ""
 #, kde-format
 msgctxt "@option:check"
 msgid "AB loop"
-msgstr ""
+msgstr "AB 반복"
 
 #: src/Utilities/osdutils.cpp:78
 #, kde-format
 msgctxt "@option:check"
 msgid "Image adjustments (contrast, brightness, gamma and saturation)"
-msgstr ""
+msgstr "이미지 조정(명암, 밝기, 감마, 색 농도)"
 
 #: src/Utilities/osdutils.cpp:79
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Playback Speed Increase"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playback speed change"
-msgstr "재생 속도 증가"
+msgstr "재생 속도 변경"
 
 #: src/Utilities/osdutils.cpp:80
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Play new file"
+#, kde-format
 msgctxt "@option:check"
 msgid "Playing new file"
 msgstr "새 파일 재생"
 
 #: src/Utilities/osdutils.cpp:81
-#, fuzzy, kde-format
-#| msgctxt "@option:check"
-#| msgid "Skip chapters"
+#, kde-format
 msgctxt "@option:check"
 msgid "Skip chapter"
 msgstr "챕터 건너뛰기"
 
 #: src/Utilities/osdutils.cpp:82
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle scale: %1"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle scale change"
-msgstr "자막 크기 조정: %1"
+msgstr "자막 크기 조정"
 
 #: src/Utilities/osdutils.cpp:83
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Subtitle timing: %1 seconds"
+#, kde-format
 msgctxt "@option:check"
 msgid "Subtitle timing change"
-msgstr "자막 시간 조정: %1초"
+msgstr "자막 시간 조정"
 
 #: src/Utilities/osdutils.cpp:84
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Screenshot"
+#, kde-format
 msgctxt "@option:check"
 msgid "Taking screenshot"
-msgstr "스크린샷"
+msgstr "스크린샷 찍기"
 
 #: src/Utilities/osdutils.cpp:85
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Deinterlacing"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle deinterlace"
 msgstr "디인터레이싱 전환"
 
 #: src/Utilities/osdutils.cpp:86
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Toggle Subtitles"
+#, kde-format
 msgctxt "@option:check"
 msgid "Toggle subtitle"
 msgstr "자막 전환"
 
 #: src/Utilities/osdutils.cpp:87
-#, fuzzy, kde-format
-#| msgctxt "@info:tooltip"
-#| msgid "Save changes"
+#, kde-format
 msgctxt "@option:check"
 msgid "Track change"
-msgstr "변경 사항 저장"
+msgstr "트랙 변경"
 
 #: src/Utilities/osdutils.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Volume Down"
+#, kde-format
 msgctxt "@option:check"
 msgid "Volume change"
-msgstr "음량 감소"
+msgstr "음량 변경"
 
 #: src/YouTube/youtube.cpp:80
 #, kde-format
