@@ -31,13 +31,14 @@ Loader {
     required property bool isLocal
     required property bool isPlaying
     required property bool isSelected
+    required property bool isLastPlayed
     required property string section
     required property real playbackPosition
 
     required property MpvItem mpvItem
     required property PlaylistsManager playlistsManager
 
-    property bool highlighted: root.isPlaying || root.isSelected
+    property bool highlighted: root.isPlaying || root.isSelected || root.isLastPlayed
     property bool removeAnimationRunning: false
     property int fontSizeAdjustment: PlaylistSettings.bigFontFullscreen ? 5 : 0
     property int labelFontSize: (Window.window as Main)?.isFullScreen()
@@ -137,9 +138,9 @@ Loader {
             }
 
             Kirigami.Icon {
-                source: "media-playback-start"
+                source: root.isPlaying && root.isLastPlayed ? "media-playback-start" : "media-playback-stopped"
                 color: root.labelFontColor
-                visible: root.isPlaying
+                visible: root.isPlaying || root.isLastPlayed
                 Layout.preferredWidth: Kirigami.Units.iconSizes.small
                 Layout.preferredHeight: Kirigami.Units.iconSizes.small
             }
