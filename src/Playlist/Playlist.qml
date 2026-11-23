@@ -535,6 +535,16 @@ ResizeablePage {
 
                 property bool startupScrollDone: false
 
+                function scrollToCurrentItem() : void {
+                    const index = root.manager.visiblePlaylist.getPlayingItem()
+                    if (index === -1) {
+                        const index = root.manager.visiblePlaylist.getLastPlayedItem()
+                        playlistView.positionViewAtIndex(index, ListView.Beginning)
+                    }
+
+                    playlistView.positionViewAtIndex(index, ListView.Beginning)
+                }
+
                 // set bottomMargin so that the footer doesn't block playlist items
                 bottomMargin: 100
 
@@ -595,19 +605,13 @@ ResizeablePage {
 
                     MenuItem {
                         text: KI18n.i18nc("@action:inmenu", "Scroll to Playing Item")
-                        onClicked: {
-                            const index = root.manager.visiblePlaylist.getPlayingItem()
-                            playlistView.positionViewAtIndex(index, ListView.Beginning)
-                        }
+                        onClicked: playlistView.scrollToCurrentItem()
                     }
                 }
 
                 TapHandler {
                     acceptedButtons: Qt.MiddleButton
-                    onSingleTapped: function(eventPoint, mouseButton) {
-                        const index = root.manager.visiblePlaylist.getPlayingItem()
-                        playlistView.positionViewAtIndex(index, ListView.Beginning)
-                    }
+                    onSingleTapped: playlistView.scrollToCurrentItem()
                 }
             }
         },
