@@ -37,12 +37,13 @@ Loader {
     required property MpvItem mpvItem
     required property PlaylistsManager playlistsManager
 
+    property bool highlighted: root.isPlaying || root.isSelected
     property bool removeAnimationRunning: false
     property int fontSizeAdjustment: PlaylistSettings.bigFontFullscreen ? 5 : 0
     property int labelFontSize: (Window.window as Main)?.isFullScreen()
                                 ? Kirigami.Theme.defaultFont.pointSize + fontSizeAdjustment
                                 : Kirigami.Theme.defaultFont.pointSize
-    property color labelFontColor: isPlaying ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+    property color labelFontColor: highlighted ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
 
     function moveItems(from: int, to: int) : void {
         root.playlistsManager.visiblePlaylist.moveItems(from, to)
@@ -106,7 +107,7 @@ Loader {
         height: PlaylistSettings.style == "withThumbnails"
                 ? (Kirigami.Units.gridUnit - 6) * 8
                 : implicitHeight
-        highlighted: root.isPlaying || root.isSelected
+        highlighted: root.highlighted
         topPadding: Kirigami.Units.smallSpacing
         bottomPadding: Kirigami.Units.smallSpacing
 
