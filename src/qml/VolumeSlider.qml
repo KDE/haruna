@@ -55,7 +55,7 @@ Slider {
 
     Label {
         id: volumeLabel
-        text: root.value
+        text: Math.round(root.value)
         anchors.centerIn: root
         color: "#fff"
         layer.enabled: true
