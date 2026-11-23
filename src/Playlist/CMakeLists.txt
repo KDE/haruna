@@ -15,7 +15,6 @@ qt_add_qml_module(playlist
         PlaylistAdvancedSortWindow.qml
         PlaylistItem.qml
         PlaylistItemContextMenu.qml
-        PlaylistItemDelegate.qml
         PlaylistSectionDelegate.qml
         PlaylistTabBar.qml
         PlaylistTabDelegate.qml
