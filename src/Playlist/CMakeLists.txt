@@ -19,6 +19,7 @@ qt_add_qml_module(playlist
         PlaylistSectionDelegate.qml
         PlaylistTabBar.qml
         PlaylistTabDelegate.qml
+        PlaylistView.qml
     SOURCES
         m3uparser.h
         m3uparser.cpp

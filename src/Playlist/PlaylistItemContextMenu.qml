@@ -10,6 +10,7 @@ import QtQuick.Controls
 import org.kde.ki18n
 import org.kde.kirigami as Kirigami
 import org.kde.haruna
+import org.kde.haruna.playlist
 import org.kde.haruna.utilities
 import org.kde.haruna.settings
 
@@ -18,6 +19,7 @@ Menu {
 
     required property int index
     required property bool isLocal
+    required property PlaylistView playlistView
     required property PlaylistsManager playlistsManager
 
     MenuItem {
@@ -149,10 +151,7 @@ Menu {
 
     MenuItem {
         text: KI18n.i18nc("@action:inmenu", "Scroll to Playing Item")
-        onClicked: {
-            const index = root.playlistsManager.visiblePlaylist.getPlayingItem()
-            root.ListView.view.positionViewAtIndex(index, ListView.Beginning)
-        }
+        onClicked: root.playlistView.scrollToCurrentItem()
     }
 
     MenuSeparator {

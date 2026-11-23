@@ -530,89 +530,10 @@ ResizeablePage {
 
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
 
-            ListView {
+            PlaylistView {
                 id: playlistView
-
-                property bool startupScrollDone: false
-
-                function scrollToCurrentItem() : void {
-                    const index = root.manager.visiblePlaylist.getPlayingItem()
-                    if (index === -1) {
-                        const index = root.manager.visiblePlaylist.getLastPlayedItem()
-                        playlistView.positionViewAtIndex(index, ListView.Beginning)
-                    }
-
-                    playlistView.positionViewAtIndex(index, ListView.Beginning)
-                }
-
-                // set bottomMargin so that the footer doesn't block playlist items
-                bottomMargin: 100
-
-                model: root.manager.visiblePlaylist
-                onModelChanged: {
-                    Qt.callLater(root.manager.visiblePlaylist.refreshData)
-                }
-
-                reuseItems: true
-                spacing: 1
-                currentIndex: root.manager.visiblePlaylist.getPlayingItem()
-                highlightFollowsCurrentItem: false
-
-                moveDisplaced: Transition {
-                    NumberAnimation {
-                        properties: "y"
-                        duration: Kirigami.Units.shortDuration
-                    }
-                }
-
-                delegate: PlaylistItem {
-                    mpvItem: root.m_mpv
-                    playlistsManager: root.manager
-                }
-
-                section {
-                    property: "section"
-                    delegate: PlaylistSectionDelegate {
-                        model: root.manager.visiblePlaylist
-                    }
-                }
-
-                onCountChanged: {
-                    if (startupScrollDone || count <= 0) {
-                        return
-                    }
-                    startupScrollDone = true
-                    Qt.callLater(positionViewAtIndex, currentIndex, ListView.Beginning)
-                }
-
-                ContextMenu.menu: Menu {
-                    MenuItem {
-                        text: KI18n.i18nc("@action:inmenu", "Select All")
-                        onClicked: root.manager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.All)
-                    }
-
-                    MenuItem {
-                        text: KI18n.i18nc("@action:inmenu", "Deselect All")
-                        onClicked: root.manager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Clear)
-                    }
-
-                    MenuItem {
-                        text: KI18n.i18nc("@action:inmenu", "Invert Selection")
-                        onClicked: root.manager.visiblePlaylist.selectItem(0, PlaylistFilterProxyModel.Invert)
-                    }
-
-                    MenuSeparator {}
-
-                    MenuItem {
-                        text: KI18n.i18nc("@action:inmenu", "Scroll to Playing Item")
-                        onClicked: playlistView.scrollToCurrentItem()
-                    }
-                }
-
-                TapHandler {
-                    acceptedButtons: Qt.MiddleButton
-                    onSingleTapped: playlistView.scrollToCurrentItem()
-                }
+                manager: root.manager
+                mpvItem: root.m_mpv
             }
         },
 

@@ -189,6 +189,7 @@ Loader {
         ContextMenu.menu: PlaylistItemContextMenu {
             index: root.index
             isLocal: root.isLocal
+            playlistView: root.ListView.view as PlaylistView
             playlistsManager: root.playlistsManager
         }
         ContextMenu.onRequested: root.selectItem(root.index, PlaylistFilterProxyModel.Single)
