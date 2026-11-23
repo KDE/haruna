@@ -298,10 +298,7 @@ TabButton {
         width: Math.min(progressTimer.progress * root.width, root.width)
     }
 
-    ContextMenu.menu: tabContextMenu
-    Menu {
-        id: tabContextMenu
-
+    ContextMenu.menu: Menu {
         MenuItem {
             text: KI18n.i18nc("@action:inmenu", "Rename")
             icon.name: "edit-rename"
@@ -326,8 +323,7 @@ TabButton {
         }
 
         // Playlists
-        Instantiator {
-            active: tabContextMenu.visible
+        Repeater {
             model: root.playlistsManager
             delegate: MenuItem {
                 required property int index
@@ -339,8 +335,6 @@ TabButton {
                 icon.name: isVisible ? "draw-circle" : ""
                 onClicked: root.playlistTabBar.setCurrentIndex(index)
             }
-            onObjectAdded: (index, object) => tabContextMenu.insertItem(index + 3, object)
-            onObjectRemoved: (index, object) => tabContextMenu.removeItem(object)
         }
     }
 
