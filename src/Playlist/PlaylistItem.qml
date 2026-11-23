@@ -115,6 +115,15 @@ Loader {
             id: content
 
             width: itemDelegate.width
+            spacing: Kirigami.Units.smallSpacing
+
+            Rectangle {
+                color: root.isSelected ? Kirigami.Theme.highlightedTextColor : "transparent"
+                radius: 100
+
+                Layout.preferredWidth: 6
+                Layout.preferredHeight: 6
+            }
 
             NumberAndDragHandleItem {
                 delegate: itemDelegate
