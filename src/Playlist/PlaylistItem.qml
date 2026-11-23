@@ -67,6 +67,18 @@ Loader {
         removeAnimation.start()
     }
 
+    Item {
+        z: 100
+        anchors.left: root.left
+        anchors.top: root.top
+        anchors.bottom: root.bottom
+        width: 50
+
+        HoverHandler {
+            id: showDragHandleHH
+        }
+    }
+
     SequentialAnimation {
         id: removeAnimation
 
@@ -346,7 +358,7 @@ Loader {
         clip: true
 
         Layout.fillHeight: true
-        Layout.preferredWidth: rowNumberItem.visible || delegate.hovered
+        Layout.preferredWidth: rowNumberItem.visible || showDragHandleHH.hovered
                                ? Math.max(rowNumberItem.implicitWidth, dragHandle.implicitWidth)
                                : 0
         Layout.rightMargin: Kirigami.Units.largeSpacing
@@ -362,7 +374,7 @@ Loader {
             width: numberAndDragHandleComponent.Layout.preferredWidth
             height: parent.height
             spacing: 0
-            x: numberAndDragHandleComponent.delegate.hovered ? 0 : -width
+            x: showDragHandleHH.hovered ? 0 : -width
 
             Behavior on x {
                 NumberAnimation {
