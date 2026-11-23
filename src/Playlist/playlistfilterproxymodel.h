@@ -75,8 +75,9 @@ public:
     bool isUpdatingMetadata() const;
     void setIsUpdatingMetadata(bool newIsUpdatingMetadata);
 
-    Q_INVOKABLE uint getPlayingItem();
+    Q_INVOKABLE int getPlayingItem();
     Q_INVOKABLE void setPlayingItem(uint i);
+    Q_INVOKABLE int getLastPlayedItem();
     Q_INVOKABLE void playNext();
     Q_INVOKABLE void playPrevious();
     Q_INVOKABLE void saveM3uFile(const QString &path);

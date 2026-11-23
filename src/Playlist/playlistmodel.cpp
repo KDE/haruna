@@ -115,6 +115,8 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
             return false;
         }
         return static_cast<int>(m_playingIndex.row()) == index.row() && m_isPlaying;
+    case IsLastPlayedRole:
+        return static_cast<int>(m_lastPlayedIndex.row()) == index.row();
     case FolderPathRole:
         return item.folderPath;
     case DirNameRole:
@@ -306,6 +308,7 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
         {TypeRole,              QByteArrayLiteral("fileType")},
         {ExtensionRole,         QByteArrayLiteral("extension")},
         {PlayingRole,           QByteArrayLiteral("isPlaying")},
+        {IsLastPlayedRole,      QByteArrayLiteral("isLastPlayed")},
         {IsLocalRole,           QByteArrayLiteral("isLocal")},
         {IsSelectedRole,        QByteArrayLiteral("isSelected")},
         {SectionRole,           QByteArrayLiteral("section")},
@@ -706,6 +709,7 @@ void PlaylistModel::setPlayingItem(uint i)
     const auto previousIndex = m_playingIndex;
     m_playingIndex = QPersistentModelIndex(index(i, 0));
     m_isPlaying = true;
+    setLastPlayedIndex(i);
 
     if (previousIndex.isValid()) {
         m_playlist[previousIndex.row()].playbackPosition = getPlaybackPosition(previousIndex.row());
@@ -794,6 +798,26 @@ double PlaylistModel::getPlaybackPosition(const uint row)
 
     auto hash = MiscUtils::md5(url.toString());
     return Database::instance()->playbackPosition(hash) / duration;
+}
+
+QPersistentModelIndex PlaylistModel::lastPlayedIndex() const
+{
+    return m_lastPlayedIndex;
+}
+
+void PlaylistModel::setLastPlayedIndex(int newLastPlayedRow)
+{
+    if (m_lastPlayedIndex.row() == newLastPlayedRow) {
+        return;
+    }
+    const auto previousLastPlayedIndex = m_lastPlayedIndex;
+
+    m_lastPlayedIndex = QPersistentModelIndex(index(newLastPlayedRow, 0));
+    Q_EMIT dataChanged(index(m_lastPlayedIndex.row(), 0), index(m_lastPlayedIndex.row(), 0));
+
+    if (previousLastPlayedIndex.isValid()) {
+        Q_EMIT dataChanged(index(previousLastPlayedIndex.row(), 0), index(previousLastPlayedIndex.row(), 0));
+    }
 }
 
 void PlaylistModel::addPlaylist(const QList<PlaylistItem> &newPlaylist)

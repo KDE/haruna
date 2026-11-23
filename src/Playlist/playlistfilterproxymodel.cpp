@@ -159,7 +159,7 @@ void PlaylistFilterProxyModel::setIsUpdatingMetadata(bool newIsUpdatingMetadata)
     Q_EMIT isUpdatingMetadataChanged();
 }
 
-uint PlaylistFilterProxyModel::getPlayingItem()
+int PlaylistFilterProxyModel::getPlayingItem()
 {
     auto *model = playlistModel();
     return mapFromPlaylistModel(model->playingItem()).row();
@@ -169,6 +169,12 @@ void PlaylistFilterProxyModel::setPlayingItem(uint i)
 {
     auto *model = playlistModel();
     model->setPlayingItem(mapToPlaylistModel(i).row());
+}
+
+int PlaylistFilterProxyModel::getLastPlayedItem()
+{
+    const auto row = playlistModel()->lastPlayedIndex().row();
+    return mapFromPlaylistModel(row).row();
 }
 
 void PlaylistFilterProxyModel::playNext()

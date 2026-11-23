@@ -271,6 +271,9 @@ void PlaylistsManager::initPlaylist(uint row, bool addItemsToPlaylist)
         item.playlist->playlistModel()->addM3uItems(item.playlistUrl, PlaylistModel::Behavior::Append);
     }
 
+    const auto lastItem = item.jsonData.value(u"currentItem").toInt();
+    item.playlist->playlistModel()->setLastPlayedIndex(lastItem);
+
     item.playlist->playlistModel()->stop();
 
     if (item.jsonData.contains(u"showSections")) {
@@ -623,17 +626,21 @@ void PlaylistsManager::savePlaylistCache()
 
 QJsonObject PlaylistsManager::playlistToJson(uint i)
 {
+    const auto &item = m_data.at(i);
+    const auto isActive = m_activeIndex == i;
+    const auto currentItem = static_cast<int>(item.playlist->playlistModel()->lastPlayedIndex().row());
+
     QJsonObject json;
-    json.insert(u"name", m_data.at(i).playlistName);
-    json.insert(u"isActive", (m_activeIndex == i));
-    json.insert(u"currentItem", static_cast<int>(m_data.at(i).playlist->playlistModel()->playingItem()));
-    json.insert(u"showSections", m_data.at(i).playlist->showSections());
+    json.insert(u"name", item.playlistName);
+    json.insert(u"isActive", isActive);
+    json.insert(u"currentItem", currentItem);
+    json.insert(u"showSections", item.playlist->showSections());
 
     // Save sorting and grouping for non-default playlists
     QJsonArray sortProperties;
     QJsonArray groups;
     int index = 0;
-    const auto activeSortProperties = m_data.at(i).playlist->activeSortPropertiesModel()->properties();
+    const auto activeSortProperties = item.playlist->activeSortPropertiesModel()->properties();
     for (const auto &property : activeSortProperties) {
         QJsonObject propertyStruct;
         propertyStruct.insert(u"index", index);
@@ -646,7 +653,7 @@ QJsonObject PlaylistsManager::playlistToJson(uint i)
     }
 
     index = 0;
-    const auto activeGroupProperties = m_data.at(i).playlist->activeGroupModel()->properties();
+    const auto activeGroupProperties = item.playlist->activeGroupModel()->properties();
     for (const auto &property : activeGroupProperties) {
         QJsonObject groupStruct;
         groupStruct.insert(u"index", index);

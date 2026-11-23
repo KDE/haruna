@@ -62,6 +62,7 @@ public:
         TypeRole,
         ExtensionRole,
         PlayingRole,
+        IsLastPlayedRole,
         IsLocalRole,
         IsSelectedRole,
         SectionRole,
@@ -152,6 +153,9 @@ public:
     int currentShuffledIndex() const;
     void setCurrentShuffledIndex(int shuffledIndex);
 
+    QPersistentModelIndex lastPlayedIndex() const;
+    void setLastPlayedIndex(int newLastPlayedRow);
+
 Q_SIGNALS:
     void itemAdded(uint index, const QString &path, QString playlistName);
     void playingItemChanged(QString playlistName);
@@ -179,6 +183,7 @@ private:
     QString m_playlistName{u"Default"};
     // The flag to check if this is the active playlist.
     bool m_isPlaying{false};
+    QPersistentModelIndex m_lastPlayedIndex;
     QPersistentModelIndex m_playingIndex;
     QString m_playlistPath;
     YouTube youtube;
