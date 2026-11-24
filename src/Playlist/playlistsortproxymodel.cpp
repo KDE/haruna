@@ -407,19 +407,13 @@ void PlaylistSortProxyModel::onActiveGroupsChanged()
 
 void PlaylistSortProxyModel::setGroupHideBlank(uint index, bool hide)
 {
-    auto properties = m_activeGroups->properties();
-    properties[index].hideBlank = hide;
-    QModelIndex activeGroupIndex = m_activeGroups->index(index, 0);
-    Q_EMIT m_activeGroups->dataChanged(activeGroupIndex, activeGroupIndex);
+    m_activeGroups->setHideBlank(index, hide);
     onActiveGroupsChanged();
 }
 
 void PlaylistSortProxyModel::setSortPropertySortingOrder(uint index, int order)
 {
-    auto properties = m_activeSortProperties->properties();
-    properties[index].order = PlaylistSortPropertyModel::SortOrder(order);
-    QModelIndex activeSortPropertyIndex = m_activeSortProperties->index(index, 0);
-    Q_EMIT m_activeSortProperties->dataChanged(activeSortPropertyIndex, activeSortPropertyIndex);
+    m_activeSortProperties->setOrder(index, order);
     onActiveSortPropertiesChanged();
 }
 

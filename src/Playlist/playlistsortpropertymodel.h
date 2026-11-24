@@ -67,6 +67,8 @@ public:
     SortProperty takeSortProperty(const int group);
     void appendSortProperty(const SortProperty &property);
     void removeProperty(uint index);
+    void setOrder(uint row, int order);
+    void setHideBlank(uint row, bool hide);
 
     Q_INVOKABLE bool hasProperty(const int group);
     Q_INVOKABLE void moveSortProperty(int sourceRow, int destinationRow);

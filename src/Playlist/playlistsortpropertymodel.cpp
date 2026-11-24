@@ -115,6 +115,18 @@ void PlaylistSortPropertyModel::removeProperty(uint index)
     Q_EMIT propertiesChanged();
 }
 
+void PlaylistSortPropertyModel::setOrder(uint row, int order)
+{
+    m_properties[row].order = order;
+    Q_EMIT dataChanged(index(row, 0), index(row, 0));
+}
+
+void PlaylistSortPropertyModel::setHideBlank(uint row, bool hide)
+{
+    m_properties[row].hideBlank = hide;
+    Q_EMIT dataChanged(index(row, 0), index(row, 0), {HideBlankRole});
+}
+
 bool PlaylistSortPropertyModel::hasProperty(const int sort)
 {
     return std::any_of(m_properties.constBegin(), m_properties.constEnd(), [sort](const SortProperty &sortProperty) {
