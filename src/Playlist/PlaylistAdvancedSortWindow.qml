@@ -171,9 +171,8 @@ Loader {
                     isActiveModel: false
                     isGroup: false
 
-                    anchors.fill: parent
                     model: root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
-                    delegate: benchedItemDelegate
+                    delegate: PropertyDelegate {}
 
                     displaced: Transition {
                         NumberAnimation {
@@ -181,11 +180,6 @@ Loader {
                             duration: Kirigami.Units.shortDuration
                         }
                     }
-
-                    leftMargin: Kirigami.Units.largeSpacing
-                    rightMargin: Kirigami.Units.largeSpacing
-                    topMargin: Kirigami.Units.largeSpacing
-                    bottomMargin: Kirigami.Units.largeSpacing
                 }
             }
 
@@ -219,9 +213,8 @@ Loader {
                     isActiveModel: true
                     isGroup: false
 
-                    anchors.fill: parent
                     model: root.playlistsManager.visiblePlaylist.activeSortPropertiesModel()
-                    delegate: benchedItemDelegate
+                    delegate: PropertyDelegate {}
 
                     displaced: Transition {
                         NumberAnimation {
@@ -229,11 +222,6 @@ Loader {
                             duration: Kirigami.Units.shortDuration
                         }
                     }
-
-                    leftMargin: Kirigami.Units.largeSpacing
-                    rightMargin: Kirigami.Units.largeSpacing
-                    topMargin: Kirigami.Units.largeSpacing
-                    bottomMargin: Kirigami.Units.largeSpacing
                 }
             }
 
@@ -303,9 +291,8 @@ Loader {
                     isActiveModel: false
                     isGroup: true
 
-                    anchors.fill: parent
                     model: root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
-                    delegate: benchedItemDelegate
+                    delegate: PropertyDelegate {}
 
                     displaced: Transition {
                         NumberAnimation {
@@ -313,11 +300,6 @@ Loader {
                             duration: Kirigami.Units.shortDuration
                         }
                     }
-
-                    leftMargin: Kirigami.Units.largeSpacing
-                    rightMargin: Kirigami.Units.largeSpacing
-                    topMargin: Kirigami.Units.largeSpacing
-                    bottomMargin: Kirigami.Units.largeSpacing
                 }
             }
 
@@ -357,9 +339,8 @@ Loader {
                         isActiveModel: true
                         isGroup: true
 
-                        anchors.fill: parent
                         model: root.playlistsManager.visiblePlaylist.activeGroupModel()
-                        delegate: benchedItemDelegate
+                        delegate: PropertyDelegate {}
 
                         displaced: Transition {
                             NumberAnimation {
@@ -367,11 +348,6 @@ Loader {
                                 duration: Kirigami.Units.shortDuration
                             }
                         }
-
-                        leftMargin: Kirigami.Units.largeSpacing
-                        rightMargin: Kirigami.Units.largeSpacing
-                        topMargin: Kirigami.Units.largeSpacing
-                        bottomMargin: Kirigami.Units.largeSpacing
                     }
                 }
 
@@ -385,233 +361,6 @@ Loader {
                     }
                 }
 
-            }
-        }
-
-        Component {
-            id: benchedItemDelegate
-
-            Item {
-                id: itemDelegate
-
-                required property int index
-                required property string label
-                required property int sort
-                required property int category
-                required property int order
-                required property bool hideBlank
-                // which listview is this delegate is in?
-                readonly property SortListView view: ListView.view as SortListView
-                readonly property bool isActiveModel: view.isActiveModel
-                readonly property bool isGroup: view.isGroup
-
-                implicitHeight: Kirigami.Units.gridUnit * 2
-                width: view.width - (view.scrollbarWidth + view.leftMargin + view.rightMargin)
-
-                Rectangle {
-                    id: itemDelegateBackgroundRect
-
-                    width: itemDelegate.width
-                    height: itemDelegate.height
-                    radius: Kirigami.Units.cornerRadius
-
-                    border {
-                        width: itemDelegateHoverHandler.hovered ? 1 : 0
-                        color: Kirigami.Theme.hoverColor
-                    }
-
-                    color: {
-                        if (itemDelegateDragHandle.dragActive) {
-                            return Kirigami.Theme.positiveBackgroundColor
-                        }
-                        if (itemDelegate.isActiveModel && itemDelegateHoverHandler.hovered) {
-                            return Kirigami.Theme.negativeBackgroundColor
-                        }
-                        return "transparent"
-                    }
-
-                    RowLayout {
-                        anchors.fill: itemDelegateBackgroundRect
-                        spacing: 0
-
-                        Kirigami.ListItemDragHandle {
-                            id: itemDelegateDragHandle
-
-                            visible: itemDelegate.isActiveModel
-                            enabled: itemDelegate.isActiveModel
-                            listItem: itemDelegateBackgroundRect
-                            listView: itemDelegate.ListView?.view
-
-                            onMoveRequested: function(oldIndex, newIndex) {
-                                let model
-                                if (itemDelegate.isGroup) {
-                                    model = root.playlistsManager.visiblePlaylist.activeGroupModel()
-                                }
-                                else {
-                                    model = root.playlistsManager.visiblePlaylist.activeSortPropertiesModel()
-                                }
-                                const sortModel = model as PlaylistSortPropertyModel
-                                sortModel.moveSortProperty(oldIndex, newIndex)
-                            }
-
-                            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-                            Layout.leftMargin: Kirigami.Units.mediumSpacing
-                            Layout.rightMargin: Kirigami.Units.mediumSpacing
-                        }
-
-                        Kirigami.Separator {
-                            visible: itemDelegate.isActiveModel
-                            Layout.fillHeight: true
-                            Layout.topMargin: Kirigami.Units.largeSpacing
-                            Layout.bottomMargin: Kirigami.Units.largeSpacing
-                            Layout.rightMargin: Kirigami.Units.mediumSpacing
-                        }
-
-                        Kirigami.IconTitleSubtitle {
-                            title: itemDelegate.label
-
-                            icon.name: {
-                                switch(itemDelegate.category) {
-                                case (PlaylistSortPropertyModel.FileCategory):
-                                    return "folder-documents-symbolic"
-                                case (PlaylistSortPropertyModel.AudioCategory):
-                                    switch(itemDelegate.sort) {
-                                    case (PlaylistSortProxyModel.Genre):
-                                        return "view-media-genre"
-                                    case (PlaylistSortProxyModel.Album):
-                                        return "media-album-cover"
-                                    case (PlaylistSortProxyModel.Artist):
-                                    case (PlaylistSortProxyModel.AlbumArtist):
-                                    case (PlaylistSortProxyModel.Composer):
-                                    case (PlaylistSortProxyModel.Lyricist):
-                                        return "view-media-artist-symbolic"
-                                    case (PlaylistSortProxyModel.DiscNo):
-                                        return "media-optical-dvd-symbolic"
-                                    default:
-                                        return "folder-music-symbolic"
-                                    }
-                                case (PlaylistSortPropertyModel.VideoCategory):
-                                    return "folder-video-symbolic"
-                                case (PlaylistSortPropertyModel.SeparatorCategory):
-                                    return ""
-                                default:
-                                    return ""
-                                }
-                            }
-
-                            Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-                            Layout.fillWidth: true
-                            Layout.fillHeight: true
-                            Layout.leftMargin: itemDelegate.isActiveModel ? 0 : Kirigami.Units.largeSpacing
-
-                            TapHandler {
-                                id: itemDelegateTapHandler
-
-                                acceptedButtons: Qt.LeftButton
-
-                                onSingleTapped: function(eventPoint, mouseButton) {
-                                    switch (mouseButton) {
-                                    case Qt.LeftButton:
-                                        if (itemDelegate.isGroup) {
-                                            if (itemDelegate.isActiveModel) {
-                                                root.playlistsManager.visiblePlaylist.removeFromActiveGroup(itemDelegate.index)
-                                            } else {
-                                                root.playlistsManager.visiblePlaylist.addToActiveGroup(itemDelegate.sort)
-                                            }
-                                        }
-                                        else {
-                                            if (itemDelegate.isActiveModel) {
-                                                root.playlistsManager.visiblePlaylist.removeFromActiveSortProperties(itemDelegate.index)
-                                            } else {
-                                                root.playlistsManager.visiblePlaylist.addToActiveSortProperties(itemDelegate.sort)
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-
-                            HoverHandler {
-                                id: itemDelegateHoverHandler
-                            }
-                        }
-
-                        Button {
-                            flat: true
-                            hoverEnabled: true
-                            visible: itemDelegate.isActiveModel
-                            icon.width: Kirigami.Units.iconSizes.small
-                            icon.height: Kirigami.Units.iconSizes.small
-
-                            icon.name: {
-                                if (itemDelegate.isGroup) {
-                                    if (itemDelegate.hideBlank){
-                                        return "password-show-off"
-                                    } else {
-                                        return "password-show-on"
-                                    }
-                                } else {
-                                    switch(itemDelegate.order){
-                                    case (PlaylistSortPropertyModel.Ascending):
-                                        return "view-sort-ascending-name"
-                                    case (PlaylistSortPropertyModel.Descending):
-                                        return "view-sort-descending-name"
-                                    case (PlaylistSortPropertyModel.SameAsPrimary):
-                                        return "view-sort"
-                                    default:
-                                        return ""
-                                    }
-                                }
-                            }
-
-                            onClicked: {
-                                if (itemDelegate.isGroup) {
-                                    root.playlistsManager.visiblePlaylist.setGroupHideBlank(itemDelegate.index, !itemDelegate.hideBlank)
-                                    return
-                                } else {
-                                    switch(itemDelegate.order){
-                                    case (PlaylistSortPropertyModel.Ascending):
-                                        root.playlistsManager.visiblePlaylist.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.Descending)
-                                        return
-                                    case (PlaylistSortPropertyModel.Descending):
-                                        root.playlistsManager.visiblePlaylist.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.SameAsPrimary)
-                                        return
-                                    case (PlaylistSortPropertyModel.SameAsPrimary):
-                                        root.playlistsManager.visiblePlaylist.setSortPropertySortingOrder(itemDelegate.index, PlaylistSortPropertyModel.Ascending)
-                                        return
-                                    default:
-                                        return
-                                    }
-                                }
-                            }
-
-                            Layout.rightMargin: Kirigami.Units.smallSpacing
-                            Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                            ToolTip.visible: hovered
-                            ToolTip.delay: Kirigami.Units.shortDuration
-
-                            ToolTip.text: {
-                                if (itemDelegate.isGroup) {
-                                    if (itemDelegate.hideBlank) {
-                                        return KI18n.i18nc("@info:tooltip show blank", "Property is hidden if empty or not unique.")
-                                    } else {
-                                        return KI18n.i18nc("@info:tooltip hide blank", "Property is shown, if empty a placeholder will be shown.")
-                                    }
-                                } else {
-                                    switch(itemDelegate.order){
-                                    case (PlaylistSortPropertyModel.Ascending):
-                                        return KI18n.i18nc("@info:tooltip group order", "Sort ascending")
-                                    case (PlaylistSortPropertyModel.Descending):
-                                        return KI18n.i18nc("@info:tooltip group order", "Sort descending")
-                                    case (PlaylistSortPropertyModel.SameAsPrimary):
-                                        return KI18n.i18nc("@info:tooltip group order", "Same as primary sort order")
-                                    default:
-                                        return ""
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
             }
         }
 
@@ -716,6 +465,205 @@ Loader {
                 }
 
                 ActionGroup.group: sortFilterActionGroup
+            }
+        }
+    }
+
+    component PropertyDelegate: Loader {
+        id: propertyDelegate
+
+        required property int index
+        required property string label
+        required property int sort
+        required property int category
+        required property int order
+        required property bool hideBlank
+        // which listview is this delegate is in?
+        readonly property SortListView view: ListView.view as SortListView
+        readonly property bool isActiveModel: view.isActiveModel
+        readonly property bool isGroup: view.isGroup
+
+        function remove() : void {
+            if (!propertyDelegate.isActiveModel) {
+                return
+            }
+
+            const playlist = root.playlistsManager.visiblePlaylist
+            if (propertyDelegate.isGroup) {
+                playlist.removeFromActiveGroup(propertyDelegate.index)
+            } else {
+                playlist.removeFromActiveSortProperties(propertyDelegate.index)
+            }
+        }
+
+        function add() : void {
+            if (propertyDelegate.isActiveModel) {
+                return
+            }
+
+            const playlist = root.playlistsManager.visiblePlaylist
+            if (propertyDelegate.isGroup) {
+                playlist.addToActiveGroup(propertyDelegate.sort)
+            } else {
+                playlist.addToActiveSortProperties(propertyDelegate.sort)
+            }
+        }
+
+        function iconName() : string {
+            switch(propertyDelegate.category) {
+            case (PlaylistSortPropertyModel.FileCategory):
+                return "folder-documents-symbolic"
+            case (PlaylistSortPropertyModel.AudioCategory):
+                switch(propertyDelegate.sort) {
+                case (PlaylistSortProxyModel.Genre):
+                    return "view-media-genre"
+                case (PlaylistSortProxyModel.Album):
+                    return "media-album-cover"
+                case (PlaylistSortProxyModel.Artist):
+                case (PlaylistSortProxyModel.AlbumArtist):
+                case (PlaylistSortProxyModel.Composer):
+                case (PlaylistSortProxyModel.Lyricist):
+                    return "view-media-artist-symbolic"
+                case (PlaylistSortProxyModel.DiscNo):
+                    return "media-optical-dvd-symbolic"
+                default:
+                    return "folder-music-symbolic"
+                }
+            case (PlaylistSortPropertyModel.VideoCategory):
+                return "folder-video-symbolic"
+            case (PlaylistSortPropertyModel.SeparatorCategory):
+                return ""
+            default:
+                return ""
+            }
+        }
+
+        sourceComponent: ItemDelegate {
+            implicitWidth: propertyDelegate.view.width
+            text: propertyDelegate.label
+            onClicked: propertyDelegate.add()
+            contentItem: RowLayout {
+                spacing: 0
+
+                Kirigami.ListItemDragHandle {
+                    id: itemDelegateDragHandle
+
+                    visible: propertyDelegate.isActiveModel
+                    enabled: propertyDelegate.isActiveModel
+                    listItem: propertyDelegate.item as Item
+                    listView: propertyDelegate.view
+
+                    onMoveRequested: function(oldIndex, newIndex) {
+                        let model
+                        if (propertyDelegate.isGroup) {
+                            model = root.playlistsManager.visiblePlaylist.activeGroupModel()
+                        }
+                        else {
+                            model = root.playlistsManager.visiblePlaylist.activeSortPropertiesModel()
+                        }
+                        const sortModel = model as PlaylistSortPropertyModel
+                        sortModel.moveSortProperty(oldIndex, newIndex)
+                    }
+
+                    Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+                    Layout.rightMargin: Kirigami.Units.smallSpacing
+                }
+
+                Kirigami.IconTitleSubtitle {
+                    title: propertyDelegate.label
+                    icon.name: propertyDelegate.iconName()
+
+                    Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.leftMargin: propertyDelegate.isActiveModel ? 0 : Kirigami.Units.largeSpacing
+                }
+
+                ToolButton {
+                    visible: propertyDelegate.isActiveModel
+                    icon.width: Kirigami.Units.iconSizes.small
+                    icon.height: Kirigami.Units.iconSizes.small
+                    icon.name: {
+                        if (propertyDelegate.isGroup) {
+                            if (propertyDelegate.hideBlank){
+                                return "view-visible-off"
+                            } else {
+                                return "view-visible"
+                            }
+                        } else {
+                            switch(propertyDelegate.order){
+                            case (PlaylistSortPropertyModel.Ascending):
+                                return "view-sort-ascending-name"
+                            case (PlaylistSortPropertyModel.Descending):
+                                return "view-sort-descending-name"
+                            case (PlaylistSortPropertyModel.SameAsPrimary):
+                                return "view-sort"
+                            default:
+                                return ""
+                            }
+                        }
+                    }
+                    onClicked: {
+                        const playlist = root.playlistsManager.visiblePlaylist
+                        const row = propertyDelegate.index
+                        if (propertyDelegate.isGroup) {
+                            playlist.setGroupHideBlank(row, !propertyDelegate.hideBlank)
+                            return
+                        } else {
+                            let sortOrder = PlaylistSortPropertyModel.Ascending
+                            switch(propertyDelegate.order){
+                            case (PlaylistSortPropertyModel.Ascending):
+                                sortOrder = PlaylistSortPropertyModel.Descending
+                                break
+                            case (PlaylistSortPropertyModel.Descending):
+                                sortOrder = PlaylistSortPropertyModel.SameAsPrimary
+                                break
+                            case (PlaylistSortPropertyModel.SameAsPrimary):
+                                sortOrder = PlaylistSortPropertyModel.Ascending
+                                break
+                            default:
+                                sortOrder = PlaylistSortPropertyModel.Ascending
+                                break
+                            }
+                            playlist.setSortPropertySortingOrder(row, sortOrder)
+                        }
+                    }
+
+                    ToolTip.visible: hovered
+                    ToolTip.delay: Kirigami.Units.shortDuration
+                    ToolTip.text: {
+                        if (propertyDelegate.isGroup) {
+                            if (propertyDelegate.hideBlank) {
+                                return KI18n.i18nc("@info:tooltip show blank", "Property is hidden if empty or not unique.")
+                            } else {
+                                return KI18n.i18nc("@info:tooltip hide blank", "Property is shown, if empty a placeholder will be shown.")
+                            }
+                        } else {
+                            switch(propertyDelegate.order){
+                            case (PlaylistSortPropertyModel.Ascending):
+                                return KI18n.i18nc("@info:tooltip group order", "Sort ascending")
+                            case (PlaylistSortPropertyModel.Descending):
+                                return KI18n.i18nc("@info:tooltip group order", "Sort descending")
+                            case (PlaylistSortPropertyModel.SameAsPrimary):
+                                return KI18n.i18nc("@info:tooltip group order", "Same as primary sort order")
+                            default:
+                                return ""
+                            }
+                        }
+                    }
+                }
+
+                ToolButton {
+                    visible: propertyDelegate.isActiveModel
+                    icon.width: Kirigami.Units.iconSizes.small
+                    icon.height: Kirigami.Units.iconSizes.small
+                    icon.name: "delete"
+                    onClicked: propertyDelegate.remove()
+                }
+            }
+            TapHandler {
+                acceptedButtons: Qt.MiddleButton
+                onTapped: propertyDelegate.remove()
             }
         }
     }
