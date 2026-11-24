@@ -286,6 +286,12 @@ void PlaylistsManager::initPlaylist(uint row, bool addItemsToPlaylist)
         return val1 < val2;
     };
 
+    if (item.jsonData.contains(u"sortDirection")) {
+        const auto sortDirection = item.jsonData.value(u"sortDirection").toString();
+        const auto sortOrder = sortDirection == u"Ascending"_s ? Qt::AscendingOrder : Qt::DescendingOrder;
+        item.playlist->changeSortOrder(sortOrder);
+    }
+
     if (item.jsonData.contains(u"sortBy")) {
         QJsonArray sortProperties = item.jsonData.value(u"sortBy").toArray();
         std::sort(sortProperties.begin(), sortProperties.end(), sortJsonArray);
@@ -593,6 +599,10 @@ void PlaylistsManager::savePlaylistCache()
             groups.append(groupStruct);
             index++;
         }
+
+        const auto sortOrder = m_data.at(i).playlist->sortOrder();
+        const auto sortDirection = sortOrder == Qt::AscendingOrder ? u"Ascending"_s : u"Descending"_s;
+        json.insert(u"sortDirection", sortDirection);
         json.insert(u"sortBy", sortProperties);
         json.insert(u"groupBy", groups);
         array.append(json);
