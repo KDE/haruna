@@ -74,96 +74,9 @@ Loader {
                 Layout.fillWidth: true
             }
 
-
-            Kirigami.SearchField {
+            FilterField {
                 id: availableSortSearch
-
-                placeholderText: "Search"
-                delaySearch: true
-                Layout.preferredWidth: parent.width / 2
-                Layout.fillWidth: true
-
-                onTextChanged: {
-                    const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
-                    model.searchText = text
-                }
-
-                Component.onCompleted: {
-                    const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
-                    text = model.searchText
-                }
-
-                rightActions: [
-                    Kirigami.Action {
-                        text: KI18n.i18nc("@action:inmenu", "Filter")
-
-                        icon {
-                            name: "view-filter-symbolic"
-                            width: Kirigami.Units.iconSizes.medium
-                            height: Kirigami.Units.iconSizes.medium
-                        }
-
-                        onTriggered: {
-                            sortFilterMenu.open()
-                        }
-                    }
-                ]
-
-                Menu {
-                    id: sortFilterMenu
-
-                    x: availableSortSearch.width - Kirigami.Units.iconSizes.medium
-                    y: availableSortSearch.height
-                    title: KI18n.i18nc("@title:menu", "Filter")
-
-                    ActionGroup { id: sortFilterActionGroup }
-
-                    Kirigami.Action {
-                        checked: true
-                        checkable: true
-                        text: KI18n.i18nc("@action:inmenu all", "All")
-
-                        onTriggered: {
-                            const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
-                            model.filterCategory = PlaylistSortPropertyModel.All
-                        }
-
-                        ActionGroup.group: sortFilterActionGroup
-                    }
-                    Kirigami.Action {
-                        checkable: true
-                        text: KI18n.i18nc("@action:inmenu file", "File")
-
-                        onTriggered: {
-                            const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
-                            model.filterCategory = PlaylistSortPropertyModel.FileCategory
-                        }
-
-                        ActionGroup.group: sortFilterActionGroup
-                    }
-                    Kirigami.Action {
-                        checkable: true
-                        text: KI18n.i18nc("@action:inmenu audio", "Audio")
-
-                        onTriggered: {
-                            const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
-                            model.filterCategory = PlaylistSortPropertyModel.AudioCategory
-                        }
-
-                        ActionGroup.group: sortFilterActionGroup
-                    }
-                    Kirigami.Action {
-                        checkable: true
-                        text: KI18n.i18nc("@action:inmenu video", "Video")
-
-                        onTriggered: {
-                            const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
-                            model.filterCategory = PlaylistSortPropertyModel.VideoCategory
-                        }
-
-                        ActionGroup.group: sortFilterActionGroup
-                    }
-                }
+                model: root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
             }
 
             Kirigami.ActionToolBar {
@@ -335,95 +248,9 @@ Loader {
                 Layout.fillWidth: true
             }
 
-            Kirigami.SearchField {
+            FilterField {
                 id: availableGroupSearch
-
-                placeholderText: "Search"
-                delaySearch: true
-                Layout.preferredWidth: parent.width / 2
-                Layout.fillWidth: true
-
-                onTextChanged: {
-                    const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
-                    model.searchText = text
-                }
-
-                Component.onCompleted: {
-                    const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
-                    text = model.searchText
-                }
-
-                rightActions: [
-                    Kirigami.Action {
-                        text: KI18n.i18nc("@action:inmenu", "Filter")
-
-                        icon {
-                            name: "view-filter-symbolic"
-                            width: Kirigami.Units.iconSizes.medium
-                            height: Kirigami.Units.iconSizes.medium
-                        }
-
-                        onTriggered: {
-                            groupFilterMenu.open()
-                        }
-                    }
-                ]
-
-                Menu {
-                    id: groupFilterMenu
-
-                    x: availableGroupSearch.width - Kirigami.Units.iconSizes.medium
-                    y: availableGroupSearch.height
-                    title: KI18n.i18nc("@title:menu", "Filter")
-
-                    ActionGroup { id: groupFilterActionGroup }
-
-                    Kirigami.Action {
-                        checked: true
-                        checkable: true
-                        text: KI18n.i18nc("@action:inmenu all", "All")
-
-                        onTriggered: {
-                            const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
-                            model.filterCategory = PlaylistSortPropertyModel.All
-                        }
-
-                        ActionGroup.group: groupFilterActionGroup
-                    }
-                    Kirigami.Action {
-                        checkable: true
-                        text: KI18n.i18nc("@action:inmenu file", "File")
-
-                        onTriggered: {
-                            const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
-                            model.filterCategory = PlaylistSortPropertyModel.FileCategory
-                        }
-
-                        ActionGroup.group: groupFilterActionGroup
-                    }
-                    Kirigami.Action {
-                        checkable: true
-                        text: KI18n.i18nc("@action:inmenu audio", "Audio")
-
-                        onTriggered: {
-                            const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
-                            model.filterCategory = PlaylistSortPropertyModel.AudioCategory
-                        }
-
-                        ActionGroup.group: groupFilterActionGroup
-                    }
-                    Kirigami.Action {
-                        checkable: true
-                        text: KI18n.i18nc("@action:inmenu video", "Video")
-
-                        onTriggered: {
-                            const model = root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
-                            model.filterCategory = PlaylistSortPropertyModel.VideoCategory
-                        }
-
-                        ActionGroup.group: groupFilterActionGroup
-                    }
-                }
+                model: root.playlistsManager.visiblePlaylist.availableGroupProxyModel()
             }
 
             RowLayout {
@@ -803,5 +630,93 @@ Loader {
         required property real scrollbarWidth
         required property bool isActiveModel
         required property bool isGroup
+    }
+
+    component FilterField: Kirigami.SearchField {
+        id: filterField
+
+        required property PlaylistSortPropertyProxyModel model
+
+        placeholderText: "Search"
+        delaySearch: true
+        Layout.preferredWidth: parent.width / 2
+        Layout.fillWidth: true
+
+        onTextChanged: {
+            filterField.model.searchText = text
+        }
+
+        Component.onCompleted: {
+            const model = root.playlistsManager.visiblePlaylist.availableSortPropertiesProxyModel()
+            text = filterField.model.searchText
+        }
+
+        rightActions: [
+            Kirigami.Action {
+                text: KI18n.i18nc("@action:inmenu", "Filter")
+
+                icon {
+                    name: "view-filter-symbolic"
+                    width: Kirigami.Units.iconSizes.medium
+                    height: Kirigami.Units.iconSizes.medium
+                }
+
+                onTriggered: {
+                    sortFilterMenu.open()
+                }
+            }
+        ]
+
+        Menu {
+            id: sortFilterMenu
+
+            x: filterField.width - Kirigami.Units.iconSizes.medium
+            y: filterField.height
+            title: KI18n.i18nc("@title:menu", "Filter")
+
+            ActionGroup { id: sortFilterActionGroup }
+
+            Kirigami.Action {
+                checked: true
+                checkable: true
+                text: KI18n.i18nc("@action:inmenu all", "All")
+
+                onTriggered: {
+                    filterField.model.filterCategory = PlaylistSortPropertyModel.All
+                }
+
+                ActionGroup.group: sortFilterActionGroup
+            }
+            Kirigami.Action {
+                checkable: true
+                text: KI18n.i18nc("@action:inmenu file", "File")
+
+                onTriggered: {
+                    filterField.model.filterCategory = PlaylistSortPropertyModel.FileCategory
+                }
+
+                ActionGroup.group: sortFilterActionGroup
+            }
+            Kirigami.Action {
+                checkable: true
+                text: KI18n.i18nc("@action:inmenu audio", "Audio")
+
+                onTriggered: {
+                    filterField.model.filterCategory = PlaylistSortPropertyModel.AudioCategory
+                }
+
+                ActionGroup.group: sortFilterActionGroup
+            }
+            Kirigami.Action {
+                checkable: true
+                text: KI18n.i18nc("@action:inmenu video", "Video")
+
+                onTriggered: {
+                    filterField.model.filterCategory = PlaylistSortPropertyModel.VideoCategory
+                }
+
+                ActionGroup.group: sortFilterActionGroup
+            }
+        }
     }
 }
