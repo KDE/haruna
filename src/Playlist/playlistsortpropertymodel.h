@@ -73,7 +73,7 @@ public:
     Q_INVOKABLE bool hasProperty(const int group);
     Q_INVOKABLE void moveSortProperty(int sourceRow, int destinationRow);
 
-    QList<SortProperty> properties() const;
+    const QList<SortProperty> &properties() const;
 
 Q_SIGNALS:
     void propertiesChanged();

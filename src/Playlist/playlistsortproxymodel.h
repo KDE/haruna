@@ -78,7 +78,7 @@ public:
 
     bool showSections() const;
     void setShowSections(bool newShowSections);
-    QHash<QString, QStringList> sectionMap() const;
+    const QHash<QString, QStringList> &sectionMap() const;
     void recreateSections();
 
     PlaylistSortPropertyModel *activeSortProperties() const;

@@ -141,7 +141,7 @@ void PlaylistSortPropertyModel::moveSortProperty(int sourceRow, int destinationR
     }
 }
 
-QList<SortProperty> PlaylistSortPropertyModel::properties() const
+const QList<SortProperty> &PlaylistSortPropertyModel::properties() const
 {
     return m_properties;
 }

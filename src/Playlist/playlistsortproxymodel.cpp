@@ -220,7 +220,7 @@ QVariant PlaylistSortProxyModel::data(const QModelIndex &index, int role) const
 bool PlaylistSortProxyModel::lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const
 {
     // Compare each group role in order
-    const auto properties = m_activeSortProperties->properties();
+    const auto &properties = m_activeSortProperties->properties();
     for (const auto &sortProperty : properties) {
         int compare = 0;
 
@@ -741,7 +741,7 @@ QStringList PlaylistSortProxyModel::getSectionLists(const QModelIndex &index)
     return sectionRows;
 }
 
-QHash<QString, QStringList> PlaylistSortProxyModel::sectionMap() const
+const QHash<QString, QStringList> &PlaylistSortProxyModel::sectionMap() const
 {
     return m_sectionMap;
 }
